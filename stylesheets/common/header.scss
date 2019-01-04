@@ -1,0 +1,58 @@
+@import '../base/color.scss';
+@import '../base/font.scss';
+@import '../base/mixin.scss';
+body {
+	background-color: $body-bg;
+}
+.header {
+	width: 100%;
+	z-index: 10;
+	.gnb {
+		@include flexbox();
+		@include justify-content(center);
+		width: 100%;
+		height: 3rem;
+		position: relative;
+		.menu {
+			@include flexbox();
+			@include justify-content(center);
+			width: 2rem;
+			height: 2rem;
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			left: 5%;
+			cursor: pointer;
+			.menu-line {
+				width: 2rem;
+				height: 0.2rem;
+				border-radius: 0.5rem;
+				background-color: $sub-purple2;
+				margin-top: 0.3rem;
+			}
+		}
+		.logo {
+			@include text-decoration(none);
+			display: inline-block;
+			height: 2rem;
+			position: absolute;
+			bottom: 0;
+			img {
+				height: 2rem;
+			}
+		}
+		.login {
+			@include text-decoration(none);
+			@include flexbox();
+			@include justify-content(center);
+			width: 2rem;
+			height: 2rem;
+			position: absolute;
+			right: 5%;
+			bottom: 0;
+			img {
+				height: 1.6rem;
+			}
+		}
+	}
+}
