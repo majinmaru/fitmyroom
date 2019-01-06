@@ -15,19 +15,19 @@
 		.slider-arrow {
 			width: 10%;
 			top: 48%;
-			z-index: 30;
+			z-index: 5;
 			position: absolute;
 			cursor: pointer;
 			img {
 				width: 100%;
 			}
 			&.left {
-				float: left;
+				
 				left: 0;
 				margin-left: 3%;
 			}
 			&.right {
-				float: right;
+				
 				right: 0;
 				margin-right: 3%;
 			}
