@@ -1,20 +1,33 @@
-@font-face { font-family: 'impactregular'; src: url("../../../font/impact_0-webfont.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-3Light'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-4Regular'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-5Medium'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-6Bold'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-8Heavy'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'S-CoreDream-9Black'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff") format("woff"); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Swagger'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff") format("woff"); font-weight: normal; font-style: normal; }
+/*
+@font-face { font-family: 'impactregular'; src: url('../../../font/impact_0-webfont.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+.nanumsquare { font-family: 'NanumSquare', sans-serif !important; }
+*/
+@font-face { font-family: 'BMDOHYEON'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff") format("woff"); font-weight: normal; font-style: normal; }
 body { background-color: #efefef; }
 
-.header { width: 100%; z-index: 10; }
+.header { width: 100%; z-index: 10; height: 3rem; position: relative; }
 .header .gnb { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 100%; height: 3rem; position: relative; }
+.header .gnb.sticky { -webkit-transform: translateY(3rem); -ms-transform: translateY(3rem); transform: translateY(3rem); -webkit-transition: transform 0.3s ease, background-color 0.3s ease; -o-transition: transform 0.3s ease, background-color 0.3s ease; transition: transform 0.3s ease, background-color 0.3s ease; position: fixed; background-color: rgba(239, 239, 239, 0.9); width: 100%; top: -3rem; z-index: 100; }
 .header .gnb .menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 2rem; height: 2rem; display: inline-block; position: absolute; bottom: 0; left: 5%; cursor: pointer; }
 .header .gnb .menu .menu-line { width: 2rem; height: 0.2rem; border-radius: 0.5rem; background-color: #5c4089; margin-top: 0.3rem; }
 .header .gnb .logo { -webkit-text-decoration: none; text-decoration: none; display: inline-block; height: 2rem; position: absolute; bottom: 0; }
 .header .gnb .logo img { height: 2rem; }
-.header .gnb .login { -webkit-text-decoration: none; text-decoration: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 2rem; height: 2rem; position: absolute; right: 5%; bottom: 0; }
+.header .gnb .login { -webkit-text-decoration: none; text-decoration: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 2rem; height: 2rem; position: absolute; right: 5%; bottom: 0; cursor: pointer; }
 .header .gnb .login img { height: 1.6rem; }
+
+.mobile-lnb { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; width: 80vw; height: 100vh; background-color: white; position: fixed; top: 0; left: -80vw; display: none; z-index: 101; }
+.mobile-lnb .lnb-header { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; height: 5rem; position: relative; border-bottom: 2px solid #5c4089; }
+.mobile-lnb .lnb-header .full-logo { width: 32%; height: 100%; position: relative; }
+.mobile-lnb .lnb-header .full-logo img { width: 100%; position: absolute; bottom: 0; left: 20%; }
+.mobile-lnb .lnb-header .close { width: 10%; height: 3rem; position: absolute; right: 10%; bottom: 25%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
+.mobile-lnb .lnb-header .close .close-line { width: 100%; height: 0.2rem; background-color: #5c4089; border-radius: 0.2rem; }
+.mobile-lnb .lnb-header .close .close-line:nth-of-type(1) { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); position: absolute; }
+.mobile-lnb .lnb-header .close .close-line:nth-of-type(2) { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.mobile-lnb .lnb { padding: 10%; }
+.mobile-lnb .lnb .lnb-tab { margin: 2rem 0; }
+.mobile-lnb .lnb .lnb-tab a { -webkit-text-decoration: none; text-decoration: none; font-family: 'BMDOHYEON'; font-size: 1.3rem; color: #5c4089; }
+.mobile-lnb .etc { width: 80%; margin-left: 10%; border-top: 2px solid #5c4089; }
+.mobile-lnb .etc .etc-tab { font-family: 'NanumSquare'; font-size: 0.8rem; color: #545454; margin-top: 1rem; }
 
 /*# sourceMappingURL=header.css.map */

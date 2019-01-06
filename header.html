@@ -8,23 +8,44 @@
 	<title>▦FitMyRoom</title>	
 	<link rel="stylesheet" type="text/css" href="vendor/stylesheets/reset.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/common/css/header.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="vendor/javascripts/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div class="header">
+	<div id="header" class="header">
 		<div class="gnb">
 			<div class="menu">
 				<div class="menu-line"></div>
 				<div class="menu-line"></div>
 				<div class="menu-line"></div>
 			</div>
-			<a href="index/html" class="logo">
+			<a href="index.html" class="logo">
 				<img src="images/common/logo.png">
 			</a>
-			<a class="login">
+			<a href="#" class="login">
 				<img src="images/common/login.svg">
 			</a>
+		</div>				
+	</div>
+	<div class="mobile-lnb">
+		<div class="lnb-header">
+			<div class="full-logo">
+				<img src="images/common/full-logo.svg">
+			</div>
+			<div class="close">
+				<div class="close-line"></div>
+				<div class="close-line"></div>
+			</div>
 		</div>
+		<ul class="lnb">
+			<li class="lnb-tab"><a href="#">룩마이룸</a></li>
+			<li class="lnb-tab"><a href="#">신상룸</a></li>
+			<li class="lnb-tab"><a href="#">세일룸</a></li>
+			<li class="lnb-tab"><a href="#">마이룸</a></li>
+		</ul>
+		<ul class="etc">
+			<li class="etc-tab">문의게시판</li>
+			<li class="etc-tab">고객센터</li>
+		</ul>
 	</div>
 </body>
 </html>

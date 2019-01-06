@@ -11,10 +11,45 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/index.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/common/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="vendor/javascripts/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<header id="header"></header>
+	<header id="header" class="header">
+		<div class="gnb">
+			<div class="menu">
+				<div class="menu-line"></div>
+				<div class="menu-line"></div>
+				<div class="menu-line"></div>
+			</div>
+			<a href="index.html" class="logo">
+				<img src="images/common/logo.png">
+			</a>
+			<a href="#" class="login">
+				<img src="images/common/login.svg">
+			</a>
+		</div>
+	</header>
+	<div class="mobile-lnb">
+		<div class="lnb-header">
+			<div class="full-logo">
+				<img src="images/common/full-logo.svg">
+			</div>
+			<div class="close">
+				<div class="close-line"></div>
+				<div class="close-line"></div>
+			</div>
+		</div>
+		<ul class="lnb">
+			<li class="lnb-tab"><a href="#">룩마이룸</a></li>
+			<li class="lnb-tab"><a href="#">신상룸</a></li>
+			<li class="lnb-tab"><a href="#">세일룸</a></li>
+			<li class="lnb-tab"><a href="#">마이룸</a></li>
+		</ul>
+		<ul class="etc">
+			<li class="etc-tab">문의게시판</li>
+			<li class="etc-tab">고객센터</li>
+		</ul>
+	</div>
 	<div class="wrapper">
 		<div class="slider">
 			<div class="slider-arrow left">
@@ -23,6 +58,7 @@
 			<div class="slider-arrow right">
 				<img src="images/index/arrow-right.png">
 			</div>
+			<div class="slider-nav"></div>
 			<div class="slide-list">
 				<div class="slide active">
 					<img src="images/index/mobile-slide-1.jpg">
@@ -102,6 +138,7 @@
 		<div class="section two">
 			<div class="indicator">
 				<div class="square"></div>
+				<div class="square"></div>
 			</div>
 			<h1 class="title">#신상룸 #갑.분.크</h1>
 			<h2 class="sub-title">갑자기 분위기 크리스마스?!<br>어떻게 꾸며야할지 난감하다면 여기 보자!</h2>
@@ -151,6 +188,8 @@
 		</div>
 		<div class="section three">
 			<div class="indicator">
+				<div class="square"></div>
+				<div class="square"></div>
 				<div class="square"></div>
 			</div>
 			<h1 class="title">#세일룸 #고급의자 거저 가져가시게</h1>
