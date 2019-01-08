@@ -86,7 +86,7 @@
 				}
 			}
 		}
-		&.one {
+		&.one, &.two {
 			.card-wrapper {
 				width: 100%;
 				@include flexbox();
@@ -126,6 +126,17 @@
 							right: 6%;
 							img {
 								width: 100%;
+								position: absolute;
+								top: 0;
+							}
+							&:before {
+								content: '';
+								width: 2rem;
+								height: 14rem;
+								@include transform(rotate(-45deg));
+								background-color: $main-purple;
+								display: block;
+								margin-top: -6rem;
 							}
 						}
 						.user {
