@@ -86,6 +86,24 @@
 				}
 			}
 		}
+		.more-btn {
+			@include transition(all 0.3s ease);
+			@include flexbox();
+			@include align-items(center);
+			border: 1px solid $sub-purple2;
+			color: $sub-purple2;
+			font-family: 'BMDOHYEON';
+			font-size: 0.8rem;
+			text-align: center;
+			border-radius: 1rem;
+			height: 2rem;
+			padding: 0 1.3rem;
+			margin-top: 2rem;
+			cursor: pointer;
+			&:hover {
+				letter-spacing: 0.2rem;
+			}
+		}
 		&.one, &.two {
 			.card-wrapper {
 				width: 100%;
