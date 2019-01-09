@@ -12,7 +12,7 @@ body { background-color: #efefef; }
 .header .gnb .menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 2rem; height: 2rem; display: inline-block; position: absolute; bottom: 0; left: 5%; cursor: pointer; }
 .header .gnb .menu .menu-line { width: 2rem; height: 0.2rem; border-radius: 0.5rem; background-color: #5c4089; margin-top: 0.3rem; }
 .header .gnb .logo { -webkit-text-decoration: none; text-decoration: none; display: inline-block; height: 2rem; position: absolute; bottom: 0; }
-.header .gnb .logo img { height: 2rem; }
+.header .gnb .logo img { height: 100%; }
 .header .gnb .login { -webkit-text-decoration: none; text-decoration: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; width: 2rem; height: 2rem; position: absolute; right: 5%; bottom: 0; cursor: pointer; }
 .header .gnb .login img { height: 1.6rem; }
 
@@ -32,9 +32,8 @@ body { background-color: #efefef; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-content .search .search-area { width: calc(100% - 4rem); margin-left: 0.5rem; color: #545454; font-size: 0.9rem; font-family: 'NanumSquare'; border: none; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-content .search .search-btn { width: 2rem; height: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-content .search .search-btn img { width: 80%; }
-.mobile-lnb .mobile-lnb-wrapper .lnb-content .menu { width: 80%; margin-left: 11%; margin-top: 3rem; }
-.mobile-lnb .mobile-lnb-wrapper .lnb-content .menu .menu-tab { margin: 2rem 0; }
-.mobile-lnb .mobile-lnb-wrapper .lnb-content .menu .menu-tab a { -webkit-text-decoration: none; text-decoration: none; font-family: 'BMDOHYEON'; font-size: 1.2rem; color: #5c4089; }
+.mobile-lnb .mobile-lnb-wrapper .lnb-content .lnb-menu { width: 80%; margin-left: 11%; margin-top: 3rem; }
+.mobile-lnb .mobile-lnb-wrapper .lnb-content .lnb-menu .lnb-menu-tab { margin: 2rem 0; -webkit-text-decoration: none; text-decoration: none; font-family: 'BMDOHYEON'; font-size: 1.2rem; color: #5c4089; display: block; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-etc { position: absolute; bottom: 2.9rem; width: 100%; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-etc .lnb-etc-tab { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; font-family: 'NanumSquare'; font-size: 0.8rem; color: #545454; padding: 1rem 0 1rem 10%; background-color: #eaeaea; border-bottom: 1px solid white; cursor: pointer; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-etc .lnb-etc-tab img { width: 0.8rem; margin-left: 0.4rem; }
@@ -42,5 +41,19 @@ body { background-color: #efefef; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-sns .lnb-sns-tab { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; width: 33.3%; height: 2.8rem; border-right: 1px solid white; background-color: #5c4089; cursor: pointer; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-sns .lnb-sns-tab:nth-of-type(3) { border-right: none; }
 .mobile-lnb .mobile-lnb-wrapper .lnb-sns .lnb-sns-tab img { width: 22%; }
+
+@media screen and (min-width: 768px) { .header { height: 5rem; }
+  .header .gnb { height: 5rem; }
+  .header .gnb.sticky { -webkit-transform: translateY(5rem); -ms-transform: translateY(5rem); transform: translateY(5rem); top: -5rem; }
+  .header .gnb .menu { width: 4rem; height: 4rem; }
+  .header .gnb .menu .menu-line { width: 3rem; margin-top: 0.8rem; margin-left: 0.5rem; }
+  .header .gnb .logo { height: 3.8rem; }
+  .header .gnb .login { width: 4rem; height: 4rem; }
+  .header .gnb .login img { margin-top: 0.4rem; height: 3rem; }
+  .mobile-lnb { width: 30vw; }
+  .mobile-lnb .mobile-lnb-wrapper .lnb-header .full-logo { width: 40%; }
+  .mobile-lnb .mobile-lnb-wrapper .lnb-header .close { bottom: 42%; }
+  .mobile-lnb .mobile-lnb-wrapper .lnb-content .menu { margin-top: 4rem; }
+  .mobile-lnb .mobile-lnb-wrapper .lnb-content .menu .menu-tab { margin: 3rem 0; } }
 
 /*# sourceMappingURL=header.css.map */

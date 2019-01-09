@@ -29,7 +29,7 @@
 			font-family: 'Raleway';
 			font-size: 1rem;
 			line-height: 2.4rem;
-			@include maincolor-gradient();
+			background-color: $main-purple;
 		}
 		.title {
 			margin-top: 2.5rem;
@@ -210,6 +210,12 @@
 								font-size: 1.2rem;
 								font-family: 'BMDOHYEON';
 								cursor: pointer;
+								white-space: normal;
+						        overflow: hidden;
+						        display: -webkit-box;
+						        -webkit-line-clamp: 1; 
+						        -webkit-box-orient: vertical;
+						        height: 1.2rem;
 								&:hover {
 									@include text-decoration(underline);
 								}
@@ -301,4 +307,31 @@
 			}
 		}
 	}
+}
+//tablet
+@media screen and (min-width: 768px){
+	.wrapper {
+		margin-top: -5rem;
+		.section {
+			&.one, &.two {
+				.card-wrapper {
+					@include flex-direction(row);
+					@include flex-wrap(wrap);
+					.card {
+						margin-top: 3rem;
+						width: 47%;
+						margin-left: 1.4%;
+						margin-right: 1.4%;
+						&:nth-of-type(1) {
+							margin-top: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//PC
+@media screen and (min-width: 1280px){
+
 }

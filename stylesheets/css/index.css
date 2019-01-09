@@ -17,9 +17,7 @@
 .wrapper .slider .slide-list .slide { width: 100%; height: 100%; display: inline-block; float: left; }
 .wrapper .slider .slide-list .slide img { width: 100%; height: 100%; }
 .wrapper .section { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; margin-top: 7rem; }
-.wrapper .section .contents-wrapper { width: 90%; height: 2.5rem; position: relative; background: -webkit-linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); background: -o-linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); background: linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; }
-.wrapper .section .contents-wrapper .top { width: 95%; height: 2rem; background-color: #efefef; position: absolute; bottom: 0; }
-.wrapper .section .contents-wrapper .bottom { width: 95%; height: 2rem; background-color: #efefef; position: absolute; top: 0; }
+.wrapper .section .box-title { font-family: 'Raleway'; color: white; background: -webkit-linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); background: -o-linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); background: linear-gradient(45deg, #ffc397 0%, #bb8df7 100%); text-align: center; padding: 0.5rem 1.6rem; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .wrapper .section .indicator { margin-top: 2rem; width: 10rem; height: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 .wrapper .section .indicator .square { background: -webkit-gradient(linear, left top, right top, from(#ffc397), to(#bb8df7)); background: -webkit-linear-gradient(left, #ffc397 0%, #bb8df7 100%); background: -o-linear-gradient(left, #ffc397 0%, #bb8df7 100%); background: linear-gradient(90deg, #ffc397 0%, #bb8df7 100%); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; width: 1.2rem; height: 1.2rem; margin-left: 0.8rem; }
 .wrapper .section .indicator .square:nth-of-type(1) { margin-left: 0; }
@@ -41,18 +39,16 @@
 .wrapper .section.one .lookmyroom .card .card-profile .user-info { width: 70%; display: inline-block; font-family: 'NanumSquare'; color: #545454; margin: auto 0; }
 .wrapper .section.one .lookmyroom .card .card-profile .user-info .user-id { font-size: 0.9rem; }
 .wrapper .section.one .lookmyroom .card .card-profile .user-info .user-level { font-size: 0.5rem; margin-top: 0.3rem; }
-.wrapper .section.two .newroom { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; overflow-x: scroll; width: 100%; height: calc(72vw + 4rem); margin-top: 2rem; }
-.wrapper .section.two .newroom .new-product { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -moz-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 38vw; height: 72vw; background-color: white; border: 0.5px solid #c6c6c6; margin-left: 1rem; }
-.wrapper .section.two .newroom .new-product:nth-of-type(1) { height: 69vw; }
+.wrapper .section.two .newroom { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-align-items: flex-start; -moz-align-items: flex-start; -ms-align-items: flex-start; align-items: flex-start; overflow-x: scroll; width: 100%; height: 50vh; margin-top: 2rem; }
+.wrapper .section.two .newroom .new-product { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -moz-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 38vw; background-color: white; border: 0.5px solid #c6c6c6; margin-left: 1rem; }
 .wrapper .section.two .newroom .new-product .new-product-image { width: 90%; margin-top: 5%; }
 .wrapper .section.two .newroom .new-product .new-product-image img { width: 100%; }
 .wrapper .section.two .newroom .new-product .new-product-title { text-align: center; color: #545454; font-family: 'NanumSquare'; font-size: 0.8rem; font-weight: 800; margin-top: 0.5rem; width: 90%; }
 .wrapper .section.two .newroom .new-product .new-product-price { color: #5c4089; font-family: 'NanumSquare'; font-size: 0.8rem; font-weight: 800; margin-top: 0.5rem; }
-.wrapper .section.two .newroom .new-product .new-product-btn { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #5c4089; font-family: 'NanumSquare'; font-size: 0.8rem; margin-top: 1rem; border: 1px solid #5c4089; padding: 0.3rem 1.2rem; }
+.wrapper .section.two .newroom .new-product .new-product-btn { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; color: #5c4089; font-family: 'NanumSquare'; font-size: 0.8rem; margin-top: 1rem; margin-bottom: 1.4rem; border: 1px solid #5c4089; padding: 0.3rem 1.2rem; }
 .wrapper .section.two .newroom .new-product .new-product-btn:hover { letter-spacing: 0.2rem; }
-.wrapper .section.three .saleroom { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; overflow-x: scroll; width: 100%; height: calc(84vw + 4rem); margin-top: 2rem; }
-.wrapper .section.three .saleroom .sale-product { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -moz-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 38vw; height: 84vw; background-color: white; border: 0.5px solid #c6c6c6; margin-left: 1rem; position: relative; }
-.wrapper .section.three .saleroom .sale-product:nth-of-type(2) { height: 88vw; }
+.wrapper .section.three .saleroom { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: no-wrap; flex-wrap: no-wrap; -webkit-align-items: flex-start; -moz-align-items: flex-start; -ms-align-items: flex-start; align-items: flex-start; overflow-x: scroll; width: 100%; height: 58vh; margin-top: 2rem; }
+.wrapper .section.three .saleroom .sale-product { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -moz-box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); box-shadow: 0px 7px 25px 0px rgba(97, 97, 97, 0.5); -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 38vw; background-color: white; border: 0.5px solid #c6c6c6; margin-left: 1rem; position: relative; }
 .wrapper .section.three .saleroom .sale-product .sale-product-image { width: 80%; margin-top: 5%; }
 .wrapper .section.three .saleroom .sale-product .sale-product-image img { width: 100%; }
 .wrapper .section.three .saleroom .sale-product .sale-product-image .sale-sticker { position: absolute; top: 0; left: 0; color: white; font-family: 'BMDOHYEON'; font-size: 0.8rem; background-color: #e52c58; padding: 0.2rem; }
@@ -61,7 +57,19 @@
 .wrapper .section.three .saleroom .sale-product .sale-product-brand { color: #545454; font-size: 0.7rem; margin-top: 0.5rem; line-height: 1rem; text-align: center; }
 .wrapper .section.three .saleroom .sale-product .sale-product-prev-price { -webkit-text-decoration: line-through; text-decoration: line-through; color: #545454; font-size: 0.7rem; margin-top: 0.7rem; text-align: center; }
 .wrapper .section.three .saleroom .sale-product .sale-product-price { color: #5c4089; font-size: 1rem; font-weight: 800; text-align: center; }
-.wrapper .section.three .saleroom .sale-product .sale-product-btn { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; margin-top: 0.7rem; text-align: center; color: #5c4089; font-size: 0.8rem; border: 1px solid #5c4089; padding: 0.3rem 1.2rem; }
+.wrapper .section.three .saleroom .sale-product .sale-product-btn { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; margin-top: 0.7rem; margin-bottom: 1.4rem; text-align: center; color: #5c4089; font-size: 0.8rem; border: 1px solid #5c4089; padding: 0.3rem 1.2rem; }
 .wrapper .section.three .saleroom .sale-product .sale-product-btn:hover { letter-spacing: 0.2rem; }
+
+@media screen and (min-width: 768px) { .wrapper { margin-top: -5rem; }
+  .wrapper .slider .slider-nav .navigation { height: 0.3rem; }
+  .wrapper .section { margin-top: 6rem; }
+  .wrapper .section.one .lookmyroom { height: calc(30vw + 4rem + 4rem); -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; -ms-flex-pack: space-between; }
+  .wrapper .section.one .lookmyroom .card { width: 30vw; height: calc(30vw + 4rem); }
+  .wrapper .section.one .lookmyroom .card:last-of-type { margin-right: 1rem; }
+  .wrapper .section.one .lookmyroom .card .card-profile { height: 4rem; }
+  .wrapper .section.two .newroom { height: 40vh; }
+  .wrapper .section.two .newroom .new-product { width: 26vw; }
+  .wrapper .section.three .saleroom { height: 45vh; }
+  .wrapper .section.three .saleroom .sale-product { width: 26vw; } }
 
 /*# sourceMappingURL=index.css.map */

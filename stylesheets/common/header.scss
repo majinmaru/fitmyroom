@@ -49,7 +49,7 @@ body {
 			position: absolute;
 			bottom: 0;
 			img {
-				height: 2rem;
+				height: 100%;
 			}
 		}
 		.login {
@@ -163,18 +163,17 @@ body {
 					}
 				}
 			}
-			.menu {
+			.lnb-menu {
 				width: 80%;
 				margin-left: 11%;
 				margin-top: 3rem;
-				.menu-tab {
+				.lnb-menu-tab {
 					margin: 2rem 0;
-					a {
-						@include text-decoration(none);
-						font-family: 'BMDOHYEON'; 
-						font-size: 1.2rem;
-						color: $sub-purple2;
-					}
+					@include text-decoration(none);
+					font-family: 'BMDOHYEON'; 
+					font-size: 1.2rem;
+					color: $sub-purple2;
+					display: block;
 				}
 			}
 		}
@@ -221,4 +220,62 @@ body {
 			}
 		}
 	}	
+}
+//tablet
+@media screen and (min-width: 768px){
+	.header {
+		height: 5rem;
+		.gnb {
+			height: 5rem;
+			&.sticky {
+				@include transform(translateY(5rem));
+				top: -5rem;
+			}
+			.menu {
+				width: 4rem;
+				height: 4rem;
+				.menu-line {
+					width: 3rem;
+					margin-top: 0.8rem;
+					margin-left: 0.5rem;
+				}
+			}
+			.logo {
+				height: 3.8rem;
+			}
+			.login {				
+				width: 4rem;
+				height: 4rem;
+				img {
+					margin-top: 0.4rem;
+					height: 3rem;
+				}
+			}
+		}
+	}
+	.mobile-lnb {
+		width: 30vw;
+		.mobile-lnb-wrapper {
+			.lnb-header {
+				.full-logo {
+					width: 40%;
+				}
+				.close {
+					bottom: 42%;
+				}
+			}
+			.lnb-content {
+				.menu {
+					margin-top: 4rem;
+					.menu-tab {
+						margin: 3rem 0;
+					}
+				}
+			}
+		}
+	}
+}
+//PC
+@media screen and (min-width: 1280px){
+	
 }

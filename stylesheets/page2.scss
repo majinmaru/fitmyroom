@@ -29,7 +29,7 @@
 			font-family: 'Raleway';
 			font-size: 1rem;
 			line-height: 2.4rem;
-			@include maincolor-gradient();
+			background-color: $main-purple;
 		}
 		.title {
 			margin-top: 2.5rem;
@@ -226,4 +226,45 @@
 			}
 		}
 	}
+}
+//tablet
+@media screen and (min-width: 768px){
+	.wrapper {
+		margin-top: -5rem;
+		.section {
+			&.one, &.two, &.three {
+				.new-product-list {
+					@include flex-direction(row);
+					@include flex-wrap(wrap);
+					.new-product {
+						@include flex-direction(column);
+						width: 31.5vw;
+						margin-top: 3rem;
+						margin-left: 1.4vw;
+						&:nth-of-type(1) {
+							margin-top: 3rem;
+						}
+						.new-product-image {
+							width: 31.5vw;
+						}
+						.new-product-content {
+							width: 31.5vw;
+							.new-product-part1 {
+								padding-left: 7%;
+								padding-right: 7%;
+							}							
+							.new-product-part2 {
+								margin: 0.6rem 7% 0.6rem 7%;
+								width: 86%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//PC
+@media screen and (min-width: 1280px){
+
 }

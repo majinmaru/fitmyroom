@@ -70,27 +70,14 @@
 		@include flex-direction(column);
 		@include align-items(center);
 		margin-top: 7rem;
-		.contents-wrapper {
-			width: 90%;
-			height: 2.5rem;
-			position: relative;
+		.box-title {
+			font-family: 'Raleway';
+			color: white;
 			@include maincolor-gradient();
-			@include flexbox();
-			@include justify-content(center);
-			.top {
-				width: 95%;
-				height: 2rem;
-				background-color: $main-bg;
-				position: absolute;
-				bottom: 0;
-			}
-			.bottom {
-				width: 95%;
-				height: 2rem;
-				background-color: $main-bg;
-				position: absolute;
-				top: 0;
-			}
+			text-align: center;
+			padding: 0.5rem 1.6rem;
+			width: 100%;
+			@include box-sizing(border-box);
 		}		
 		.indicator {
 			margin-top: 2rem;
@@ -228,9 +215,10 @@
 			.newroom {
 				@include flexbox();
 				@include flex-wrap(no-wrap);
+				@include align-items(flex-start);
 				overflow-x: scroll;
 				width: 100%;		
-				height: calc(72vw + 4rem);
+				height: 50vh;
 				margin-top: 2rem;
 				.new-product {
 					@include flexbox();
@@ -239,13 +227,9 @@
 					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
 					@include flex(0 0 auto);
 					width: 38vw;
-					height: 72vw;
 					background-color: white;
 					border: 0.5px solid #c6c6c6;
 					margin-left: 1rem;
-					&:nth-of-type(1){
-						height: 69vw;
-					}
 					.new-product-image {
 						width: 90%;
 						margin-top: 5%;
@@ -275,6 +259,7 @@
 						font-family: 'NanumSquare';
 						font-size: 0.8rem;
 						margin-top: 1rem;
+						margin-bottom: 1.4rem;
 						border: 1px solid $sub-purple2;
 						padding: 0.3rem 1.2rem;
 						&:hover {
@@ -288,9 +273,10 @@
 			.saleroom {
 				@include flexbox();
 				@include flex-wrap(no-wrap);
+				@include align-items(flex-start);
 				overflow-x: scroll;
 				width: 100%;		
-				height: calc(84vw + 4rem);
+				height: 58vh;
 				margin-top: 2rem;
 				.sale-product {
 					@include flexbox();
@@ -298,15 +284,11 @@
 					@include align-items(center);
 					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
 					@include flex(0 0 auto);
-					width: 38vw;
-					height: 84vw;
+					width: 38vw;					
 					background-color: white;
 					border: 0.5px solid #c6c6c6;
 					margin-left: 1rem;
-					position: relative;
-					&:nth-of-type(2){
-						height: 88vw;
-					}
+					position: relative;					
 					.sale-product-image {
 						width: 80%;
 						margin-top: 5%;
@@ -362,6 +344,7 @@
 					.sale-product-btn {
 						@include transition(all 0.3s ease);
 						margin-top: 0.7rem;
+						margin-bottom: 1.4rem;
 						text-align: center;
 						color: $sub-purple2;
 						font-size: 0.8rem;
@@ -375,4 +358,56 @@
 			}
 		}
 	}
+}
+//tablet
+@media screen and (min-width: 768px){
+	.wrapper {
+		margin-top: -5rem;
+		.slider {
+			.slider-nav {				
+				.navigation {
+					height: 0.3rem;
+				}
+			}
+		}
+		.section{
+			margin-top: 6rem;
+			&.one {
+				.lookmyroom {
+					height: calc(30vw + 4rem + 4rem);
+					@include justify-content(space-between);
+					.card {
+						width: 30vw;
+						height: calc(30vw + 4rem);
+						&:last-of-type {
+							margin-right: 1rem;
+						}
+						.card-profile {
+							height: 4rem;
+						}
+					}
+				}
+			}
+			&.two {
+				.newroom {
+					height: 40vh;
+					.new-product {
+						width: 26vw;						
+					}
+				}
+			}
+			&.three {
+				.saleroom {
+					height: 45vh;
+					.sale-product {
+						width: 26vw;
+					}
+				}
+			}
+		}
+	}
+}
+//PC
+@media screen and (min-width: 1280px){
+
 }
