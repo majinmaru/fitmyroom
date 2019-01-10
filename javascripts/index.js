@@ -8,7 +8,61 @@ $(document).ready(function(){
 	var autorun;
 	var sliderDuration = 300;
 	let nextSliderIndex;
-
+	var windowWidth = $(window).width();
+	function setImages(){
+		if(windowWidth >= 1280){
+			slides.eq(0).find("img").attr('src', 'images/PC/pc-slide-1.jpg');
+			slides.eq(1).find("img").attr('src', 'images/PC/pc-slide-2.jpg');
+			slides.eq(2).find("img").attr('src', 'images/PC/pc-slide-3.jpg');
+			slides.eq(3).find("img").attr('src', 'images/PC/pc-slide-4.jpg');
+		} else if (windowWidth < 1280) {
+			slides.eq(0).find("img").attr('src', 'images/index/mobile-slide-1.jpg');
+			slides.eq(1).find("img").attr('src', 'images/index/mobile-slide-2.jpg');
+			slides.eq(2).find("img").attr('src', 'images/index/mobile-slide-3.jpg');
+			slides.eq(3).find("img").attr('src', 'images/index/mobile-slide-4.jpg');
+		}
+	}
+	setImages();
+	/*
+	//enable scrollY
+	var i=0;
+	$('.newroom').on('mousewheel', function(e){
+    	if(e.originalEvent.wheelDelta /120 < 0) {
+ 	    	i+=5;
+    		$('.newroom').scrollLeft(i);
+   			var maxWidth= $('.newroom').width();
+   			if (i>maxWidth) {
+		    	i=maxWidth;
+		    }
+    	} else {
+    		i-=5;
+    		$('.newroom').scrollLeft(i);
+    		if(i<0){
+    			i=0;
+     		}
+    	}
+    });
+   
+	*/
+	//enable scrollY
+    $(".newroom").on('mousewheel',function(e){    	
+		var wheelDelta = e.originalEvent.wheelDelta;
+		if(wheelDelta > 0){			
+			$(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+		}else{		
+			$(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+		}
+		e.preventDefault();
+	});
+	$(".saleroom").on('mousewheel',function(e){    	
+		var wheelDelta = e.originalEvent.wheelDelta;
+		if(wheelDelta > 0){			
+			$(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+		}else{		
+			$(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+		}
+		e.preventDefault();
+	});
 	function resetSize(){
 		slides.width(slider.width());
 		slideList.width(slides.width()*slides.length);
@@ -79,5 +133,7 @@ $(document).ready(function(){
 	*/
 	$(window).on('resize', function() {
         resetSize();
+        setImages();
     });
+    
 });

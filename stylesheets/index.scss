@@ -1,7 +1,12 @@
 @import 'base/color.scss';
 @import 'base/font.scss';
 @import 'base/mixin.scss';
-
+.float-left {
+	float: none;
+}
+.float-right {
+	float: none;
+}
 .wrapper {
 	width: 100%;
 	position: relative;
@@ -75,7 +80,7 @@
 			color: white;
 			@include maincolor-gradient();
 			text-align: center;
-			padding: 0.5rem 1.6rem;
+			padding: 0.5rem 2.6rem;
 			width: 100%;
 			@include box-sizing(border-box);
 		}		
@@ -130,8 +135,93 @@
 			width: 65%;
 			text-align: center;
 			line-height: 1.3rem;
+			word-break: keep-all;
+		}
+		.pc {
+			display: none;
+			width: 36%;
+			overflow: hidden;
+			margin-top: 4rem;
+			margin-right: 6%;
+			.pc-wrapper {
+				width: 8%;
+				@include maincolor-gradient();
+				&.left {
+					position: relative;
+					&:after {
+						content: '';
+						width: calc(100% - 0.2rem);
+						height: calc(100% - 0.6rem);
+						background-color: $main-bg;
+						display: block;
+						position: absolute;
+						right: -0.1rem;
+						bottom: 0.3rem;
+					}
+				}
+				&.right {
+					position: relative;
+					&:after {
+						content: '';
+						width: calc(100% - 0.2rem);
+						height: calc(100% - 0.6rem);
+						background-color: $main-bg;
+						display: block;
+						position: absolute;
+						left: -0.1rem;
+						bottom: 0.3rem;
+					}
+				}				
+			}
+			.pc-content {
+				width: 84%;
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include box-sizing(border-box);
+				padding: 5% 10%;
+				.pc-content-text {
+					width: 100%;						
+					font-family: 'NanumSquare';
+					color: $gray;
+					font-size: 1rem;
+					line-height: 1.8rem;
+					font-weight: 700;
+				}
+				.pc-content-more {
+					width: 100%;
+					margin-top: 1.5rem;
+					&:hover {
+						.pc-content-more-arrow {
+							img {
+								left: -0.1rem;
+							}
+						}
+					}
+					p {
+						font-family: 'NanumSquare';
+						color: $sub-purple2;
+						font-size: 1.5rem;
+						font-weight: 900;
+						cursor: pointer;								
+					}
+					.pc-content-more-arrow {
+						width: 90%;
+						overflow: hidden;
+						height: 2.3rem;
+						position: relative;								
+						img {
+							@include transition(all 0.3s ease);
+							position: absolute;
+							width: 100%;
+							left: -1rem;
+						}
+					}
+				}				
+			}
 		}
 		.more-btn {
+			clear: both;
 			@include transition(all 0.3s ease);
 			@include text-decoration(none);
 			padding: 0.7rem 1.4rem;
@@ -147,211 +237,264 @@
 			}
 		}
 		&.one {
-			.lookmyroom {
+			.lookmyroom-wrapper {
 				@include flexbox();
-				@include flex-wrap(no-wrap);
-				overflow-x: scroll;
-				width: 100%;		
-				height: calc(42vw + 3.5rem + 4rem);
-				margin-top: 2rem;				
-				.card {
+				width: 100%;
+				.lookmyroom {
 					@include flexbox();
-					@include flex-direction(column);
-					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
-					@include flex(0 0 auto);
-					width: 42vw;
-					height: calc(42vw + 3.5rem);
-					background-color: white;
-					border: 0.5px solid #c6c6c6;
-					margin-left: 1rem;
-					.card-image {
-						width: 100%;
-						position: relative;
-						img {
-							width: 100%;
+					@include flex-wrap(no-wrap);
+					overflow-x: scroll;
+					width: 100%;		
+					height: calc(42vw + 3.5rem + 4rem);
+					margin-top: 2rem;
+					-webkit-overflow-scrolling: touch;				
+					.card {
+						@include flexbox();
+						@include flex-direction(column);
+						@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
+						@include flex(0 0 auto);
+						width: 42vw;
+						height: calc(42vw + 3.5rem);
+						background-color: white;
+						border: 0.5px solid #c6c6c6;
+						margin-left: 1rem;
+						&:hover {
+							.card-image {
+								img {
+									@include transform(scale(1.1));
+									opacity: 0.7;
+								}
+							}
 						}
-						.medal {
-							width: 20%;
-							position: absolute;
-							top: 7%;
-							left: 7%;
+						.card-image {
+							width: 100%;
+							position: relative;
+							overflow: hidden;
 							img {
+								@include transition(all 0.3s ease);
 								width: 100%;
 							}
+							.medal {
+								width: 20%;
+								position: absolute;
+								top: 7%;
+								left: 7%;
+								img {
+									width: 100%;
+								}
+							}
 						}
-					}
-					.card-profile {
-						height: 3.5rem;
-						overflow: hidden;
-						@include flexbox();
-						.user {
+						.card-profile {
+							height: 3.5rem;
+							overflow: hidden;
 							@include flexbox();
-							@include justify-content(center);
-							@include align-items(center);
-							width: 30%;
-							img {
-								width: 80%;
+							.user {
+								@include flexbox();
+								@include justify-content(center);
+								@include align-items(center);
+								width: 30%;
+								img {
+									width: 80%;
+								}
+							}
+							.user-info {
+								width: 70%;
+								display: inline-block;
+								font-family: 'NanumSquare';
+								color: $gray;
+								margin: auto 0;
+								.user-id {
+									font-size: 0.9rem;
+									cursor: pointer;
+								}
+								.user-level {
+									font-size: 0.5rem;
+									margin-top: 0.3rem;
+								}
 							}
 						}
-						.user-info {
-							width: 70%;
-							display: inline-block;
-							font-family: 'NanumSquare';
-							color: $gray;
-							margin: auto 0;
-							.user-id {
-								font-size: 0.9rem;
-							}
-							.user-level {
-								font-size: 0.5rem;
-								margin-top: 0.3rem;
-							}
-						}
-					}
-				}								
+					}								
+				}
 			}
 		}
 		&.two {
-			.newroom {
+			.newroom-wrapper {
 				@include flexbox();
-				@include flex-wrap(no-wrap);
-				@include align-items(flex-start);
-				overflow-x: scroll;
-				width: 100%;		
-				height: 50vh;
-				margin-top: 2rem;
-				.new-product {
+				width: 100%;
+				.newroom {
 					@include flexbox();
-					@include flex-direction(column);
-					@include align-items(center);
-					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
-					@include flex(0 0 auto);
-					width: 38vw;
-					background-color: white;
-					border: 0.5px solid #c6c6c6;
-					margin-left: 1rem;
-					.new-product-image {
-						width: 90%;
-						margin-top: 5%;
-						img {
-							width: 100%;
+					@include flex-wrap(no-wrap);
+					@include align-items(flex-start);
+					overflow-x: scroll;
+					width: 100%;		
+					height: 50vh;
+					margin-top: 2rem;
+					.new-product {
+						@include flexbox();
+						@include flex-direction(column);
+						@include align-items(center);
+						@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
+						@include flex(0 0 auto);
+						width: 38vw;
+						background-color: white;
+						border: 0.5px solid #c6c6c6;
+						margin-left: 1rem;
+						.new-product-image {
+							width: 90%;
+							margin-top: 5%;
+							overflow: hidden;
+							cursor: pointer;
+							&:hover {
+								img {
+									@include transform(scale(1.1));
+									opacity: 0.7;
+								}
+							}
+							img {
+								@include transition(all 0.3s ease);
+								width: 100%;
+							}
 						}
-					}
-					.new-product-title {
-						text-align: center;
-						color: $gray;
-						font-family: 'NanumSquare';
-						font-size: 0.8rem;
-						font-weight: 800;
-						margin-top: 0.5rem;
-						width: 90%;
-					}
-					.new-product-price {
-						color: $sub-purple2;
-						font-family: 'NanumSquare';
-						font-size: 0.8rem;
-						font-weight: 800;
-						margin-top: 0.5rem;
-					}
-					.new-product-btn {
-						@include transition(all 0.3s ease);
-						color: $sub-purple2;
-						font-family: 'NanumSquare';
-						font-size: 0.8rem;
-						margin-top: 1rem;
-						margin-bottom: 1.4rem;
-						border: 1px solid $sub-purple2;
-						padding: 0.3rem 1.2rem;
-						&:hover {
-							letter-spacing: 0.2rem;
+						.new-product-title {
+							text-align: center;
+							color: $gray;
+							font-family: 'NanumSquare';
+							font-size: 0.8rem;
+							font-weight: 800;
+							margin-top: 0.5rem;
+							width: 90%;
+							cursor: pointer;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+						.new-product-price {
+							color: $sub-purple2;
+							font-family: 'NanumSquare';
+							font-size: 0.8rem;
+							font-weight: 800;
+							margin-top: 0.5rem;
+						}
+						.new-product-btn {
+							@include transition(all 0.3s ease);
+							color: $sub-purple2;
+							font-family: 'NanumSquare';
+							font-size: 0.8rem;
+							margin-top: 1rem;
+							margin-bottom: 1.4rem;
+							border: 1px solid $sub-purple2;
+							padding: 0.3rem 1.2rem;
+							cursor: pointer;
+							&:hover {
+								letter-spacing: 0.2rem;
+							}
 						}
 					}
 				}
 			}
 		}
 		&.three {
-			.saleroom {
-				@include flexbox();
-				@include flex-wrap(no-wrap);
-				@include align-items(flex-start);
-				overflow-x: scroll;
-				width: 100%;		
-				height: 58vh;
-				margin-top: 2rem;
-				.sale-product {
+			.saleroom-wrapper {
+				.saleroom {
 					@include flexbox();
-					@include flex-direction(column);
-					@include align-items(center);
-					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
-					@include flex(0 0 auto);
-					width: 38vw;					
-					background-color: white;
-					border: 0.5px solid #c6c6c6;
-					margin-left: 1rem;
-					position: relative;					
-					.sale-product-image {
-						width: 80%;
-						margin-top: 5%;
-						img {
-							width: 100%;
+					@include flex-wrap(no-wrap);
+					@include align-items(flex-start);
+					overflow-x: scroll;
+					width: 100%;		
+					height: 58vh;
+					margin-top: 2rem;
+					.sale-product {
+						@include flexbox();
+						@include flex-direction(column);
+						@include align-items(center);
+						@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
+						@include flex(0 0 auto);
+						width: 38vw;					
+						background-color: white;
+						border: 0.5px solid #c6c6c6;
+						margin-left: 1rem;
+						position: relative;				
+						.sale-product-image {
+							width: 80%;
+							margin-top: 5%;
+							cursor: pointer;
+							&:hover {
+								img {
+									@include transform(scale(1.1));
+									opacity: 0.7;
+								}
+							}
+							img {
+								@include transition(all 0.3s ease);
+								width: 100%;
+							}
+							.sale-sticker {
+								position: absolute;
+								top: 0;
+								left: 0;
+								color: white;
+								font-family: 'BMDOHYEON';
+								font-size: 0.8rem;
+								background-color: #e52c58;
+								padding: 0.2rem;
+							}
 						}
-						.sale-sticker {
-							position: absolute;
-							top: 0;
-							left: 0;
-							color: white;
-							font-family: 'BMDOHYEON';
+						.sale-product-title {
+							color: $gray;
+							font-weight: 800;
 							font-size: 0.8rem;
-							background-color: #e52c58;
-							padding: 0.2rem;
+							margin-top: 0.5rem;
+							text-align: center;
+							cursor: pointer;
+							&:hover {
+								text-decoration: underline;
+							}
+							&:after {
+								content: '';
+								display: block;
+								width: 100%;
+								height: 0.1rem;
+								margin-top: 0.3rem;
+								background-color: $main-purple;
+							}
 						}
-					}
-					.sale-product-title {
-						color: $gray;
-						font-weight: 800;
-						font-size: 0.8rem;
-						margin-top: 0.5rem;
-						text-align: center;
-						&:after {
-							content: '';
-							display: block;
-							width: 100%;
-							height: 0.1rem;
-							margin-top: 0.3rem;
-							background-color: $main-purple;
+						.sale-product-brand {
+							color: $gray;
+							font-size: 0.7rem;
+							margin-top: 0.5rem;
+							line-height: 1rem;
+							text-align: center;
+							cursor: pointer;
+							&:hover {
+								text-decoration: underline;
+							}
 						}
-					}
-					.sale-product-brand {
-						color: $gray;
-						font-size: 0.7rem;
-						margin-top: 0.5rem;
-						line-height: 1rem;
-						text-align: center;
-					}
-					.sale-product-prev-price {
-						@include text-decoration(line-through);
-						color: $gray;
-						font-size: 0.7rem;
-						margin-top: 0.7rem;
-						text-align: center;
-					}
-					.sale-product-price {
-						color: $sub-purple2;
-						font-size: 1rem;
-						font-weight: 800;
-						text-align: center;						
-					}
-					.sale-product-btn {
-						@include transition(all 0.3s ease);
-						margin-top: 0.7rem;
-						margin-bottom: 1.4rem;
-						text-align: center;
-						color: $sub-purple2;
-						font-size: 0.8rem;
-						border: 1px solid $sub-purple2;
-						padding: 0.3rem 1.2rem;
-						&:hover {
-							letter-spacing: 0.2rem;
+						.sale-product-prev-price {
+							@include text-decoration(line-through);
+							color: $gray;
+							font-size: 0.7rem;
+							margin-top: 0.7rem;
+							text-align: center;
+						}
+						.sale-product-price {
+							color: $sub-purple2;
+							font-size: 1rem;
+							font-weight: 800;
+							text-align: center;						
+						}
+						.sale-product-btn {
+							@include transition(all 0.3s ease);
+							margin-top: 0.7rem;
+							margin-bottom: 1.4rem;
+							text-align: center;
+							color: $sub-purple2;
+							font-size: 0.8rem;
+							border: 1px solid $sub-purple2;
+							padding: 0.3rem 1.2rem;
+							cursor: pointer;
+							&:hover {
+								letter-spacing: 0.2rem;
+							}
 						}
 					}
 				}
@@ -373,34 +516,40 @@
 		.section{
 			margin-top: 6rem;
 			&.one {
-				.lookmyroom {
-					height: calc(30vw + 4rem + 4rem);
-					@include justify-content(space-between);
-					.card {
-						width: 30vw;
-						height: calc(30vw + 4rem);
-						&:last-of-type {
-							margin-right: 1rem;
-						}
-						.card-profile {
-							height: 4rem;
+				.lookmyroom-wrapper {
+					.lookmyroom {
+						height: calc(30vw + 4rem + 4rem);
+						@include justify-content(space-between);
+						.card {
+							width: 30vw;
+							height: calc(30vw + 4rem);
+							&:last-of-type {
+								margin-right: 1rem;
+							}
+							.card-profile {
+								height: 4rem;
+							}
 						}
 					}
 				}
 			}
 			&.two {
-				.newroom {
-					height: 40vh;
-					.new-product {
-						width: 26vw;						
+				.newroom-wrapper {
+					.newroom {
+						height: 40vh;
+						.new-product {
+							width: 26vw;						
+						}
 					}
 				}
 			}
 			&.three {
-				.saleroom {
-					height: 45vh;
-					.sale-product {
-						width: 26vw;
+				.saleroom-wrapper {
+					.saleroom {
+						height: 45vh;
+						.sale-product {
+							width: 26vw;
+						}
 					}
 				}
 			}
@@ -409,5 +558,138 @@
 }
 //PC
 @media screen and (min-width: 1280px){
-
+	.float-left {
+		float: left;
+	}
+	.float-right {
+		float: right;
+	}
+	.wrapper {
+		margin-top: -6rem;
+		.slider {
+			height: calc(100vw * 0.4);
+			.slider-arrow {
+				width: 3.5%;
+			}
+			.slider-nav {
+				width: 20%;
+				margin-left: 40%;
+			}
+		}
+		.section {
+			@include box-sizing(border-box);
+			padding: 0 12%;
+			margin-top: 8rem;
+			.box-title {
+				width: auto;
+			}
+			.more-btn {
+				margin-top: 3rem;
+			}
+			&.one {
+				.lookmyroom-wrapper {
+					.pc {
+						@include flexbox();
+						height: calc(13vw + 4rem);
+					}
+					.lookmyroom {
+						width: 58%;
+						height: calc(13vw + 4rem + 2rem);
+						margin-top: 4rem;
+						overflow-x: auto;
+						.card {
+							width: 13vw;
+							height: calc(13vw + 4rem);
+						}
+					}
+				}
+			}
+			&.two {
+				.newroom-wrapper {
+					.newroom {
+						width: 58%;
+						height: 44vh;
+						margin-top: 4rem;
+						overflow-x: scroll;						
+						&::-webkit-scrollbar {
+							height: 3px;
+						}
+						&::-webkit-scrollbar-track {
+							border-radius: 3px;
+							-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+							background-color: #F5F5F5;
+						}
+						&::-webkit-scrollbar-thumb {
+							border-radius: 3px;
+							background-color: $sub-purple2;
+						}
+						.new-product {
+							width: 11vw;
+						}					
+					}
+					.pc {
+						@include flexbox();
+						height: 44vh;
+						margin-left: 6%;
+						margin-right: 0;							
+						.pc-content{
+							.pc-content-text {
+								text-align: right;
+							}
+							.pc-content-more {									
+								&:hover {
+									.pc-content-more-arrow {
+										img {
+											right: -0.1rem;
+										}
+									}
+								}
+								p {
+									text-align: right;								
+								}
+								.pc-content-more-arrow {
+									margin-left: 10%;
+									@include transform(rotateY(180deg));																	
+									img {
+										@include transition(all 0.3s ease);
+										position: absolute;
+										width: 100%;
+										right: -1rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.three {
+				.saleroom-wrapper {
+					.pc {
+						@include flexbox();
+						height: 51vh;
+					}
+					.saleroom {
+						width: 58%;
+						height: 51vh;
+						margin-top: 4rem;
+						&::-webkit-scrollbar {
+							height: 3px;
+						}
+						&::-webkit-scrollbar-track {
+							border-radius: 3px;
+							-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+							background-color: #F5F5F5;
+						}
+						&::-webkit-scrollbar-thumb {
+							border-radius: 3px;
+							background-color: $sub-purple2;
+						}
+						.sale-product {
+							width: 11vw;
+						}
+					}
+				}
+			}
+		}
+	}
 }

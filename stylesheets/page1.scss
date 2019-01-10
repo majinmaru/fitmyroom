@@ -150,11 +150,11 @@
 							&:before {
 								content: '';
 								width: 2rem;
-								height: 14rem;
+								height: 20rem;
 								@include transform(rotate(-45deg));
 								background-color: $main-purple;
 								display: block;
-								margin-top: -6rem;
+								margin-top: -9rem;
 							}
 						}
 						.user {
