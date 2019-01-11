@@ -395,6 +395,8 @@
 		}
 		&.three {
 			.saleroom-wrapper {
+				@include flexbox();
+				width: 100%;
 				.saleroom {
 					@include flexbox();
 					@include flex-wrap(no-wrap);
