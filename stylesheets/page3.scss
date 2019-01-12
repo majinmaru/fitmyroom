@@ -28,8 +28,9 @@
 			color: white;
 			font-family: 'Raleway';
 			font-size: 1rem;
-			line-height: 2.4rem;
 			background-color: $main-purple;
+			padding: 0.7rem 2.6rem;
+			@include box-sizing(border-box);
 		}
 		.title {
 			margin-top: 2.5rem;
@@ -54,6 +55,7 @@
 			width: 65%;
 			text-align: center;
 			line-height: 1.3rem;
+			word-break: keep-all;
 		}
 		.more-btn {
 			@include transition(all 0.3s ease);
@@ -102,6 +104,7 @@
 						height: 30vw;
 						overflow: hidden;
 						position: relative;
+						cursor: pointer;
 						img {
 							@include transition(all 0.3s ease);
 							position: absolute;
@@ -148,6 +151,7 @@
 						            -webkit-box-orient: vertical;
 						            height: 0.85rem;
 						            word-break: keep-all;
+						            cursor: pointer;
 						            &:hover {
 						            	@include text-decoration(underline);
 						            }
@@ -157,6 +161,7 @@
 									color: $gray;
 									font-family: 'NanumSquare';									
 									margin-top: 0.8rem;
+									cursor: pointer;
 									&:hover {
 						            	@include text-decoration(underline);
 						            }
@@ -259,6 +264,9 @@
 @media screen and (min-width: 768px){
 	.wrapper {
 		margin-top: -5rem;
+		.ad {
+			height: 100vw;
+		}
 		.section {
 			&.one {
 				.sale-product-list {
@@ -294,5 +302,48 @@
 }
 //PC
 @media screen and (min-width: 1280px){
-
+	.wrapper {
+		margin-top: -6rem;
+		.ad {
+			height: calc(100vw * 0.4);
+		}
+		.section {
+			@include box-sizing(border-box);
+			padding: 0 12%;
+			margin-top: 8rem;
+			.banner {
+				width: auto;
+			}
+			.sub-title {
+				font-size: 0.9rem;
+			}
+			&.one {
+				.sale-product-list {
+					@include justify-content(center);
+					width: 100%;
+					.sale-product {
+						width: 13vw;
+						border: 0.5px solid #c6c6c6;
+						&:hover {
+							.sale-product-image {
+								img {
+									@include transform(translate(-50%, -50%) scale(1));
+								}
+							}
+						}
+						.sale-product-image {
+							width: 13vw;
+							height: 14.5vw;
+							img {
+								@include transform(translate(-50%, -50%) scale(0.9));
+							}
+						}
+						.sale-product-content {
+							width: 13vw;
+						}
+					}
+				}
+			}
+		}
+	}
 }

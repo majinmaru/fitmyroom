@@ -28,8 +28,9 @@
 			color: white;
 			font-family: 'Raleway';
 			font-size: 1rem;
-			line-height: 2.4rem;
 			background-color: $main-purple;
+			padding: 0.7rem 2.6rem;
+			@include box-sizing(border-box);
 		}
 		.title {
 			margin-top: 2.5rem;
@@ -54,6 +55,7 @@
 			width: 65%;
 			text-align: center;
 			line-height: 1.3rem;
+			word-break: keep-all;
 		}
 		.new-product-more-btn {
 			font-family: 'BMDOHYEON';
@@ -94,6 +96,7 @@
 						height: 30vw;
 						overflow: hidden;
 						position: relative;
+						cursor: pointer;
 						img {
 							@include transition(all 0.3s ease);
 							position: absolute;
@@ -130,6 +133,7 @@
 						            -webkit-box-orient: vertical;
 						            height: 0.85rem;
 						            word-break: keep-all;
+						            cursor: pointer;
 						            &:hover {
 						            	@include text-decoration(underline);
 						            }
@@ -139,6 +143,7 @@
 									color: $gray;
 									font-family: 'NanumSquare';									
 									margin-top: 0.8rem;
+									cursor: pointer;
 									&:hover {
 						            	@include text-decoration(underline);
 						            }
@@ -231,6 +236,9 @@
 @media screen and (min-width: 768px){
 	.wrapper {
 		margin-top: -5rem;
+		.ad {
+			height: 100vw;
+		}
 		.section {
 			&.one, &.two, &.three {
 				.new-product-list {
@@ -241,6 +249,7 @@
 						width: 31.5vw;
 						margin-top: 3rem;
 						margin-left: 1.4vw;
+						border: 0.5px solid #c6c6c6;
 						&:nth-of-type(1) {
 							margin-top: 3rem;
 						}
@@ -266,5 +275,38 @@
 }
 //PC
 @media screen and (min-width: 1280px){
-
+	.wrapper {
+		margin-top: -6rem;
+		.ad {
+			height: calc(100vw * 0.4);
+		}
+		.section {
+			@include box-sizing(border-box);
+			padding: 0 12%;
+			margin-top: 8rem;
+			.banner {
+				width: auto;
+			}
+			.sub-title {
+				font-size: 0.9rem;
+			}
+			&.one, &.two, &.three {
+				.new-product-list {
+					@include justify-content(center);
+					width: 100%;
+					.new-product {
+						width: 13vw;
+						border: 0.5px solid #c6c6c6;
+						.new-product-image {
+							width: 13vw;
+							height: 14.5vw;
+						}
+						.new-product-content {
+							width: 13vw;
+						}
+					}
+				}
+			}
+		}
+	}
 }

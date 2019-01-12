@@ -28,8 +28,9 @@
 			color: white;
 			font-family: 'Raleway';
 			font-size: 1rem;
-			line-height: 2.4rem;
 			background-color: $main-purple;
+			padding: 0.7rem 2.6rem;
+			@include box-sizing(border-box);
 		}
 		.title {
 			margin-top: 2.5rem;
@@ -54,6 +55,7 @@
 			width: 65%;
 			text-align: center;
 			line-height: 1.3rem;
+			word-break: keep-all;
 		}
 		.upload-btn {
 			@include text-decoration(none);
@@ -111,6 +113,9 @@
 				@include flex-direction(column);
 				@include align-items(center);
 				.card {
+					&.pc-card {
+						display: none;
+					}
 					@include flexbox();
 					@include flex-direction(column);
 					@include box-shadow(0px 7px 25px 0px rgba(97,97,97,0.5));
@@ -131,6 +136,7 @@
 					}
 					.card-image {
 						width: 100%;
+						height: 73.3vw;
 						position: relative;
 						overflow: hidden;
 						.card-img {
@@ -184,6 +190,7 @@
 									margin-top: 0.4rem;
 									color: white;
 									font-size: 0.9rem;
+									cursor: pointer;
 								}
 								.user-lv {
 									color: white;
@@ -312,6 +319,9 @@
 @media screen and (min-width: 768px){
 	.wrapper {
 		margin-top: -5rem;
+		.ad {
+			height: 100vw;
+		}
 		.section {
 			&.one, &.two {
 				.card-wrapper {
@@ -325,6 +335,9 @@
 						&:nth-of-type(1) {
 							margin-top: 3rem;
 						}
+						.card-image {
+							height: 38.14vw;
+						}
 					}
 				}
 			}
@@ -333,5 +346,71 @@
 }
 //PC
 @media screen and (min-width: 1280px){
+	.wrapper {
+		margin-top: -6rem;
+		.ad {
+			height: calc(100vw * 0.4);
+		}
+		.section {
+			@include box-sizing(border-box);
+			padding: 0 12%;
+			margin-top: 8rem;
+			.banner {
+				width: auto;
+			}
+			.sub-title {
+				font-size: 0.9rem;
+			}
+			&.one {
+				.card-wrapper {
+					@include box-sizing(border-box);
+					@include justify-content(center);					
+					.card {
+						width: 25%;
+						margin-right: 2%;
+						margin-left: 2%;
+						.card-image {
+							height: calc( 62vw * 0.25 );
+						}
+					}
 
+				}
+			}
+			&.two {
+				.card-wrapper {
+					.card {
+						&.pc-card {
+							@include flexbox();
+						}
+						width: 23%;
+						margin-right: 0;
+						.card-image {
+							height: calc( 57vw * 0.25 );
+						}
+						.card-content {
+							.card-header {
+								margin-top: 1.5rem;
+								.card-title {
+									font-size: 0.9rem;
+									height: 1rem;
+								}
+								.card-more {
+									height: 1.3rem;
+									a {
+										font-size: 0.6rem;
+									}
+								}
+							}
+							.card-desc {
+								margin-top: 1rem;
+							}
+							.pick-and-reply {
+								margin-top: 1.6rem;
+							}
+						}		
+					}
+				}
+			}
+		}
+	}
 }

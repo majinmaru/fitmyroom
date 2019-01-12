@@ -509,6 +509,8 @@
 	.wrapper {
 		margin-top: -5rem;
 		.slider {
+			width: 100vw;
+			height: 100vw;
 			.slider-nav {				
 				.navigation {
 					height: 0.3rem;
@@ -584,6 +586,9 @@
 			margin-top: 8rem;
 			.box-title {
 				width: auto;
+			}
+			.sub-title {
+				font-size: 0.9rem;
 			}
 			.more-btn {
 				margin-top: 3rem;

@@ -15,7 +15,12 @@ $(document).ready(function(){
 			slides.eq(1).find("img").attr('src', 'images/PC/pc-slide-2.jpg');
 			slides.eq(2).find("img").attr('src', 'images/PC/pc-slide-3.jpg');
 			slides.eq(3).find("img").attr('src', 'images/PC/pc-slide-4.jpg');
-		} else if (windowWidth < 1280) {
+		} else if (windowWidth >= 768) {
+			slides.eq(0).find("img").attr('src', 'images/tablet/tablet-slide-1.jpg');
+			slides.eq(1).find("img").attr('src', 'images/tablet/tablet-slide-2.jpg');
+			slides.eq(2).find("img").attr('src', 'images/tablet/tablet-slide-3.jpg');
+			slides.eq(3).find("img").attr('src', 'images/tablet/tablet-slide-4.jpg');
+		} else {
 			slides.eq(0).find("img").attr('src', 'images/index/mobile-slide-1.jpg');
 			slides.eq(1).find("img").attr('src', 'images/index/mobile-slide-2.jpg');
 			slides.eq(2).find("img").attr('src', 'images/index/mobile-slide-3.jpg');
