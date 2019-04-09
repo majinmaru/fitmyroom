@@ -1,0 +1,17 @@
+@import 'mixin.scss';
+
+@-webkit-keyframes to-left {
+  0%   { -webkit-transform:translate(20px,0); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,0); opacity: 1; }
+}
+@-moz-keyframes to-left {
+  0%   { -moz-transform:translate(20px,0); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,0); opacity: 1; }
+}
+@keyframes to-left {
+  0%   { transform:translate(20px,0); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,0); opacity: 1; }
+}
