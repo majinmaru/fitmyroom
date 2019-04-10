@@ -90,3 +90,10 @@
           backface-visibility: $val;
 }
 //custom//
+@mixin bg(){
+  background: rgb(77,6,190);
+  background: -moz-linear-gradient(45deg, rgba(77,6,190,1) 0%, rgba(142,31,197,1) 50%, rgba(77,6,190,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(77,6,190,1) 0%, rgba(142,31,197,1) 50%, rgba(77,6,190,1) 100%);
+  background: linear-gradient(45deg, rgba(77,6,190,1) 0%, rgba(142,31,197,1) 50%, rgba(77,6,190,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d06be",endColorstr="#4d06be",GradientType=1);
+}

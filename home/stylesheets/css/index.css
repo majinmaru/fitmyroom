@@ -1,5 +1,39 @@
-@import url("https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Gothic:400,700,800");
-@font-face { font-family: 'impactregular'; src: url("../../font/impact_0.ttf") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'impactregular'; src: url("../../../font/impact_0.ttf") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'BM DoHyeon'; src: url("../../../font/BMDoHyeon.eot"); src: url("../../../font/BMDoHyeon.eot?#iefix") format("embedded-opentype"), url("../../../font/BMDoHyeon.woff2") format("woff2"), url("../../../font/BMDoHyeon.woff") format("woff"), url("../../../font/BMDoHyeon.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+/*
+@font-face { 
+	font-family: 'NanumBarunGothic'; 
+	font-style: normal; 
+	font-weight: 400; 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), 
+		url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), 
+		url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); 
+} 
+@font-face { 
+	font-family: 'NanumBarunGothic'; 
+	font-style: normal; 
+	font-weight: 700; 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), 
+		url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), 
+		url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') 
+} 
+
+@font-face { 
+	font-family: 'NanumBarunGothic'; 
+	font-style: normal; 
+	font-weight: 300; 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); 
+	src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), 
+	url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), 
+	url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); 
+}
+*/
+@font-face { font-family: 'NanumBarunGothic'; src: url("../../../font/NanumBarunGothicLight.eot"); src: url("../../../font/NanumBarunGothicLight.eot?#iefix") format("embedded-opentype"), url("../../../font/NanumBarunGothicLight.woff2") format("woff2"), url("../../../font/NanumBarunGothicLight.woff") format("woff"), url("../../../font/NanumBarunGothicLight.ttf") format("truetype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'NanumBarunGothic'; src: url("../../../font/NanumBarunGothic.eot"); src: url("../../../font/NanumBarunGothic.eot?#iefix") format("embedded-opentype"), url("../../../font/NanumBarunGothic.woff2") format("woff2"), url("../../../font/NanumBarunGothic.woff") format("woff"), url("../../../font/NanumBarunGothic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'NanumBarunGothic'; src: url("../../../font/NanumBarunGothicBold.eot"); src: url("../../../font/NanumBarunGothicBold.eot?#iefix") format("embedded-opentype"), url("../../../font/NanumBarunGothicBold.woff2") format("woff2"), url("../../../font/NanumBarunGothicBold.woff") format("woff"), url("../../../font/NanumBarunGothicBold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'NanumBarunGothic'; src: url("../../../font/NanumBarunGothicUltraLight.eot"); src: url("../../../font/NanumBarunGothicUltraLight.eot?#iefix") format("embedded-opentype"), url("../../../font/NanumBarunGothicUltraLight.woff2") format("woff2"), url("../../../font/NanumBarunGothicUltraLight.woff") format("woff"), url("../../../font/NanumBarunGothicUltraLight.ttf") format("truetype"); font-weight: 200; font-style: normal; }
 @-webkit-keyframes to-left { 0% { -webkit-transform: translate(20px, 0); opacity: 0; }
   50% { opacity: 1; }
   100% { -webkit-transform: translate(0, 0); opacity: 1; } }
@@ -9,12 +43,138 @@
 @keyframes to-left { 0% { transform: translate(20px, 0); opacity: 0; }
   50% { opacity: 1; }
   100% { transform: translate(0, 0); opacity: 1; } }
+@-webkit-keyframes navi-line { 0% { width: 0; }
+  100% { width: 100%; } }
+@-moz-keyframes navi-line { 0% { width: 0; }
+  100% { width: 100%; } }
+@keyframes navi-line { 0% { width: 0; }
+  100% { width: 100%; } }
+@-webkit-keyframes bg-move { 0% { background-position: 0% 0%; }
+  100% { background-position: 50% 80%; } }
+@-moz-keyframes bg-move { 0% { background-position: 0% 0%; }
+  100% { background-position: 50% 80%; } }
+@keyframes bg-move { 0% { background-position: 0% 0%; }
+  100% { background-position: 50% 80%; } }
+@-webkit-keyframes img-scale { 0% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(1.05); } }
+@-moz-keyframes img-scale { 0% { -moz-transform: scale(1); }
+  100% { -moz-transform: scale(1.05); } }
+@keyframes img-scale { 0% { transform: scale(1); }
+  100% { transform: scale(1.05); } }
 html { font-size: 14px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
 body { width: 100%; overflow-x: hidden; }
 
-.main { width: 100%; height: 36vw; position: relative; overflow: hidden; }
-.main .main-slide-wrapper { width: 100%; height: 100%; overflow: hidden; }
-.main .main-slide-wrapper img { width: 100%; }
+.main { width: 100%; height: 34vw; position: relative; overflow: hidden; }
+.main .main-slide-wrapper { width: 100%; height: 100%; overflow: hidden; position: relative; }
+.main .main-slide-wrapper .main-slide { width: 100%; height: 100%; position: relative; display: none; }
+.main .main-slide-wrapper .main-slide img { width: 100%; }
+.main .main-slide-wrapper .main-slide.first { background: #4d06be; background: -moz-linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); background: -webkit-linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); background: linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d06be",endColorstr="#4d06be",GradientType=1); background-size: 200%; -webkit-animation: bg-move 5s linear; animation: bg-move 5s linear; }
+.main .main-slide-wrapper .main-slide.second { background-image: url("../../images/main-slide-02.jpg"); background-size: 100%; -webkit-animation: bg-move 5s linear; animation: bg-move 5s linear; }
+.main .main-slide-wrapper .main-slide.third img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; }
+.main .main-slide-wrapper .main-slide.active { display: block; }
+.main .main-slide-wrapper .main-slide .main-slide__content { position: absolute; top: 0; left: 0; width: 22.5%; height: 100%; margin-left: 20%; }
+.main .main-slide-wrapper .main-slide .main-slide__content .content-subtitle { font-family: 'NanumBarunGothic'; font-weight: normal; color: white; font-size: 1rem; line-height: 1; width: 100%; text-align: center; margin-top: 50%; }
+.main .main-slide-wrapper .main-slide .main-slide__content .content-title { font-family: 'BM DoHyeon'; color: white; font-size: 2rem; line-height: 1.25; width: 80%; margin-left: 10%; text-align: center; margin-top: 7%; word-break: keep-all; }
+.main .main-slide-wrapper .main-slide .main-slide__content .content-btn { width: 45%; margin-left: 27.5%; background-color: white; color: #8002c4; font-size: 1rem; padding-top: 1rem; padding-bottom: 1rem; text-align: center; cursor: pointer; margin-top: 20%; font-family: 'NanumBarunGothic'; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.main .main-slide-wrapper .main-slide .main-slide__content .content-btn:hover { background-color: #8002c4; color: white; }
+.main .main-navigation { width: calc(90% / 12); height: 100%; position: absolute; top: 0; left: 5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-top: 10%; }
+.main .main-navigation .navigation { width: 100%; height: 2rem; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 2rem; cursor: pointer; }
+.main .main-navigation .navigation.active .navigation-line { width: 4rem; }
+.main .main-navigation .navigation.active .navigation-line:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #262626; display: inline-block; -webkit-transform-origin: left; -ms-transform-origin: left; transform-origin: left; -webkit-animation: navi-line 5s linear; animation: navi-line 5s linear; }
+.main .main-navigation .navigation.active .navigation-num { display: inline-block; }
+.main .main-navigation .navigation .navigation-line { position: relative; width: 2rem; height: 2px; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; background-color: white; margin-right: 1rem; display: inline-block; margin-top: calc((2rem - 2px) / 2); }
+.main .main-navigation .navigation .navigation-num { position: relative; font-family: 'NanumBarunGothic'; font-size: 1rem; color: white; line-height: 2rem; display: none; }
+
+.winner { width: 100%; position: relative; margin-top: 7rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5%; }
+.winner .winner-content { width: 100%; position: relative; }
+.winner .winner-content .winner-content__title { width: 100%; position: relative; }
+.winner .winner-content .winner-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
+.winner .winner-content .winner-content__box { margin-top: 3rem; position: relative; width: calc((100% / 6) * 5); height: 30vw; margin-left: calc(100% / 12); background-color: #8002c4; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.winner .winner-content .winner-content__box .box-text { width: 42%; height: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8%; }
+.winner .winner-content .winner-content__box .box-text .title-h2 { font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1; letter-spacing: 0.2rem; color: white; text-align: center; width: 100%; }
+.winner .winner-content .winner-content__box .box-text .text-desc { font-family: 'NanumBarunGothic'; font-weight: normal; font-size: 0.9rem; line-height: 1.5; color: white; width: 70%; margin-left: 15%; word-break: keep-all; text-align: center; margin-top: 2rem; letter-spacing: 0.1rem; }
+.winner .winner-content .winner-content__box .box-text .text-name-list { width: 100%; position: relative; margin-top: 4rem; }
+.winner .winner-content .winner-content__box .box-text .text-name-list span { width: 3rem; height: 3px; background-color: white; display: inline-block; margin-left: calc((100% - 3rem) / 2); margin-bottom: 1rem; }
+.winner .winner-content .winner-content__box .box-text .text-name-list .namelist-name { font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1rem; margin-top: 1rem; color: white; width: 100%; text-align: center; }
+.winner .winner-content .winner-content__box .box-img { width: 58%; height: 100%; position: relative; display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 2%; }
+.winner .winner-content .winner-content__box .box-img .img-slide { width: 100%; height: 100%; position: relative; display: none; }
+.winner .winner-content .winner-content__box .box-img .img-slide.current { display: block; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__img { width: 100%; height: 100%; position: relative; overflow: hidden; background-color: white; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__img img { height: 100%; -webkit-transition: all 1s linear; -o-transition: all 1s linear; transition: all 1s linear; position: relative; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__img img.active { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; filter: gray; -webkit-filter: grayscale(100%); -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); opacity: 0.7; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info { width: 100%; height: 100%; position: absolute; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 15% 30%; opacity: 0; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-title { font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: #262626; text-align: center; width: 100%; word-break: keep-all; cursor: pointer; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-title:hover { text-decoration: underline; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-user { font-family: 'NanumBarunGothic'; margin-top: 2rem; font-size: 0.9rem; color: #262626; text-align: center; width: 100%; font-weight: 300; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec { margin-top: 3rem; width: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-top: 2px solid #262626; padding: 0 10%; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec .spec { width: 50%; background-color: transparent; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec .spec .icon-box { width: 3.5rem; height: 3.5rem; border-radius: 50%; background-color: transparent; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; margin-left: calc((100% - 3.5rem) / 2); margin-top: 1.5rem; cursor: pointer; position: relative; }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec .spec .icon-box:hover { background-color: rgba(255, 255, 255, 0.3); }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec .spec .icon-box img { height: 2rem; position: absolute; top: 55%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info .info-spec .spec .num { font-family: 'NanumBarunGothic'; font-size: 1rem; font-weight: normal; color: #8002c4; margin-top: 0.5rem; width: 100%; text-align: center; cursor: pointer; margin-bottom: 1.5rem; }
+.winner .winner-content .winner-content-arrow { position: absolute; bottom: 0; right: calc(100% / 12); width: 10rem; height: 5rem; display: -webkit-box; display: -ms-flexbox; display: flex; z-index: 2; }
+.winner .winner-content .winner-content-arrow .arrow { width: 50%; height: 100%; background-color: #8002c4; cursor: pointer; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.winner .winner-content .winner-content-arrow .arrow:hover { background-color: #a537ed; }
+.winner .winner-content .winner-content-arrow .arrow img { width: 100%; height: 100%; }
+.winner .winner-content .winner-content-arrow .arrow.prev img { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+
+.winner-cheer { width: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 3rem; }
+.winner-cheer .cheer-box { width: 50%; height: 15vw; position: relative; overflow: hidden; }
+.winner-cheer .cheer-box img { width: 100%; }
+
+.room-pick { width: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 7rem; }
+.room-pick .room-pick-title { width: 35%; height: 26vw; background-color: #8002c4; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 5%; padding-top: 5%; padding-bottom: 5%; }
+.room-pick .room-pick-title .room-pick-title__title { font-size: 1.6rem; color: white; letter-spacing: 0.2rem; width: 50%; text-align: center; font-family: 'BM DoHyeon'; position: relative; margin-left: 25%; }
+.room-pick .room-pick-title .room-pick-title__desc { width: 50%; text-align: center; margin-left: 25%; font-size: 0.9rem; color: white; line-height: 1.5; margin-top: 4rem; font-family: 'NanumBarunGothic'; }
+.room-pick .room-pick-title .room-pick-title__btn { width: 44%; margin-top: 4rem; text-align: center; margin-left: 28%; padding-top: 1rem; padding-bottom: 1rem; font-size: 1rem; background-color: white; color: #8002c4; cursor: pointer; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; font-family: 'NanumBarunGothic'; }
+.room-pick .room-pick-wrapper { width: 65%; height: 26vw; overflow-x: scroll; display: inline-block; }
+.room-pick .room-pick-wrapper .card-list { width: 100vw; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+.room-pick .room-pick-wrapper .card-list .card { margin-left: 2%; margin-top: 1vw; width: 30vw; height: 24vw; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #cacaca; padding: 2%; }
+.room-pick .room-pick-wrapper .card-list .card .card-img { width: 100%; height: 70%; overflow: hidden; position: relative; }
+.room-pick .room-pick-wrapper .card-list .card .card-img img { width: 100%; }
+.room-pick .room-pick-wrapper .card-list .card .card-text { width: 100%; height: 25%; margin-top: 5%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content { width: 80%; height: 100%; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content .content-title { width: 100%; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content .content-title .title-text { font-family: 'NanumBarunGothic'; color: #262626; font-weight: bold; word-break: keep-all; cursor: pointer; font-size: 1.2rem; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content .content-title .title-text:hover { text-decoration: underline; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content .content-user { margin-top: 1rem; font-size: 0.9rem; color: #8c8c8c; font-family: 'NanumBarunGothic'; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon { width: 20%; height: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon .icon-tab { width: 50%; height: 100%; position: relative; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon .icon-tab .icon-tab__img { width: 3.5rem; height: 2rem; border-radius: 50%; background-color: transparent; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; margin-left: calc((100% - 3.5rem) / 2); cursor: pointer; position: relative; }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon .icon-tab .icon-tab__img:hover { background-color: rgba(255, 255, 255, 0.3); }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon .icon-tab .icon-tab__img img { height: 2rem; position: absolute; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.room-pick .room-pick-wrapper .card-list .card .card-text .card-text__icon .icon-tab .icon-tab__num { font-family: 'NanumBarunGothic'; font-size: 1rem; font-weight: normal; color: #8002c4; margin-top: 0.5rem; width: 100%; text-align: center; cursor: pointer; margin-bottom: 1.5rem; }
+
+.designer-brand { width: 100%; position: relative; margin-top: 7rem; }
+.designer-brand .designer-brand-content { width: 100%; position: relative; }
+.designer-brand .designer-brand-content .brand-content__title { width: 100%; position: relative; }
+.designer-brand .designer-brand-content .brand-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
+.designer-brand .designer-brand-content .brand-content__cont { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; margin-top: 3rem; padding: 0 20%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long { width: 25%; height: 33vw; margin-right: 3%; position: relative; overflow: hidden; cursor: pointer; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long img { height: 100%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text { position: absolute; bottom: 8%; left: 10%; width: 80%; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; word-break: keep-all; cursor: pointer; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__desc { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper { width: 72%; position: relative; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box { width: 100%; height: 16vw; position: relative; overflow: hidden; cursor: pointer; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box img { width: 100%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box:hover img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text { position: absolute; width: 25%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-left: 65%; top: 0; left: 0; padding-top: 7%; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-desc { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big { height: 21vw; margin-top: 1rem; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big .cont-box__text { margin-left: 5%; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big .cont-box__text .cont-box__text-title { text-align: left; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big .cont-box__text .cont-box__text-brand { text-align: left; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big .cont-box__text .cont-box__text-desc { text-align: left; }
+
+.fixed { width: 100%; height: 40vw; position: relative; margin-top: 7rem; background-image: url("../../images/fixed-01.jpg"); background-attachment: fixed; background-size: 100%; }
+.fixed .fixed-text { width: 30%; height: 40%; background-color: rgba(0, 0, 0, 0.7); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5%; margin-left: 10%; position: absolute; top: 30%; }
+.fixed .fixed-text .fixed-text__title { width: 100%; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; }
+.fixed .fixed-text .fixed-text__desc { width: 70%; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
 
 /*# sourceMappingURL=index.css.map */

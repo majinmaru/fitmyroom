@@ -15,15 +15,741 @@ body {
 }
 .main {
 	width: 100%;
-	height: 36vw;
+	height: 34vw;
 	position: relative;
 	overflow: hidden;
 	.main-slide-wrapper {
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		position: relative;
+		.main-slide {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: none;
+			img {
+				width: 100%;
+			}
+			&.first {
+				@include bg();
+				background-size: 200%;
+				@include animation(bg-move 5s linear);
+			}
+			&.second {
+				background-image: url('../../images/main-slide-02.jpg');
+				background-size: 100%;
+				@include animation(bg-move 5s linear);
+			}
+			&.third {
+				img {
+					@include animation(img-scale 5s linear);
+				}
+			}
+			&.active {
+				display: block;
+			}
+			.main-slide__content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 22.5%;
+				height: 100%;
+				margin-left: 20%;
+				.content-subtitle {
+					font-family: 'NanumBarunGothic';
+					font-weight: normal;
+					color: white;
+					font-size: 1rem;
+					line-height: 1;
+					width: 100%;
+					text-align: center;
+					margin-top: 50%;
+				}
+				.content-title {
+					font-family: 'BM DoHyeon';
+					color: white;
+					font-size: 2rem;
+					line-height: 1.25;
+					width: 80%;
+					margin-left: 10%;
+					text-align: center;
+					margin-top: 7%;
+					word-break: keep-all;
+				}
+				.content-btn {
+					width: 45%;
+					margin-left: 27.5%;
+					background-color: white;
+					color: $purple;
+					font-size: 1rem;
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+					text-align: center;
+					cursor: pointer;
+					margin-top: 20%;
+					font-family: 'NanumBarunGothic';
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $purple;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.main-navigation {
+		width: calc(90% / 12);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 5%;
+		@include box-sizing(border-box);
+		padding-top: 10%;
+		.navigation {
+			width: 100%;
+			height: 2rem;
+			position: relative;
+			@include flexbox();
+			margin-top: 2rem;
+			cursor: pointer;
+			&.active {
+				.navigation-line {
+					width: 4rem;
+					&:after {
+						content: '';
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-color: $gray1;
+						display: inline-block;
+						@include transform-origin(left);
+						@include animation(navi-line 5s linear);
+					}
+				}
+				.navigation-num {
+					display: inline-block;
+				}
+			}
+			.navigation-line {
+				position: relative;
+				width: 2rem;
+				height: 2px;
+				@include transition(all 0.5s ease);
+				background-color: white;
+				margin-right: 1rem;
+				display: inline-block;
+				margin-top: calc((2rem - 2px) / 2);
+			}
+			.navigation-num {
+				position: relative;
+				font-family: 'NanumBarunGothic';
+				font-size: 1rem;
+				color: white;
+				line-height: 2rem;
+				display: none;
+			}
+		}
+	}
+}
+.winner {
+	width: 100%;
+	position: relative;
+	margin-top: 7rem;
+	@include box-sizing(border-box);
+	padding: 0 5%;
+	.winner-content {
+		width: 100%;
+		position: relative;
+		.winner-content__title {
+			width: 100%;
+			position: relative;
+			.title-h1 {
+				font-size: 1.6rem;
+				color: $gray1;
+				letter-spacing: 0.2rem;
+				width: 100%;
+				text-align: center;
+				font-family: 'BM DoHyeon';
+				position: relative;
+			}
+		}
+		.winner-content__box {
+			margin-top: 3rem;
+			position: relative;
+			width: calc((100% / 6) * 5);
+			height: 30vw;
+			margin-left: calc(100% / 12);
+			background-color: $purple;
+			@include flexbox();
+			.box-text {
+				width: 42%;
+				height: 100%;
+				position: relative;
+				@include flexbox();
+				@include flex-direction(column);
+				@include box-sizing(border-box);
+				padding: 8%;
+				.title-h2 {
+					font-family: 'NanumBarunGothic';
+					font-weight: bold;
+					font-size: 1.2rem;
+					line-height: 1;
+					letter-spacing: 0.2rem;
+					color: white;
+					text-align: center;
+					width: 100%;
+				}
+				.text-desc {
+					font-family: 'NanumBarunGothic';
+					font-weight: normal;
+					font-size: 0.9rem;
+					line-height: 1.5;
+					color: white;
+					width: 70%;
+					margin-left: 15%;
+					word-break: keep-all;
+					text-align: center;
+					margin-top: 2rem;
+					letter-spacing: 0.1rem;
+				}
+				.text-name-list {
+					width: 100%;
+					position: relative;
+					margin-top: 4rem;
+					span {
+						width: 3rem;
+						height: 3px;
+						background-color: white;
+						display: inline-block;
+						margin-left: calc((100% - 3rem) / 2);
+						margin-bottom: 1rem;
+					}
+					.namelist-name {
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						font-size: 1rem;
+						margin-top: 1rem;
+						color: white;
+						width: 100%;
+						text-align: center;
+					}
+				}
+			}
+			.box-img {
+				width: 58%;
+				height: 100%;
+				position: relative;
+				display: inline-block;
+				@include box-sizing(border-box);
+				padding: 2%;
+				.img-slide {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					display: none;
+					&.current {
+						display: block;
+					}
+					.img-slide__img {
+						width: 100%;
+						height: 100%;
+						position: relative;
+						overflow: hidden;
+						background-color: white;
+						img {
+							height: 100%;
+							@include transition(all 1s linear);
+							position: relative;
+							&.active {
+								@include animation(img-scale 5s linear);
+								filter: gray;
+								-webkit-filter: grayscale(100%);
+								@include transform(scale(1.05));
+								opacity: 0.7;						
+							}
+						}
+					}
+					.img-slide__info {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						@include box-sizing(border-box);
+						padding: 15% 30%;
+						opacity: 0;
+						@include transition(all 0.3s ease);
+						.info-title {
+							font-family: 'NanumBarunGothic';
+							font-weight: bold;
+							font-size: 1.2rem;
+							line-height: 1.2;
+							letter-spacing: 0.2rem;
+							color: $gray1;
+							text-align: center;
+							width: 100%;
+							word-break: keep-all;
+							cursor: pointer;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+						.info-user {
+							font-family: 'NanumBarunGothic';
+							margin-top: 2rem;
+							font-size: 0.9rem;
+							color: $gray1;
+							text-align: center;
+							width: 100%;
+							font-weight: 300;
+						}
+						.info-spec {
+							margin-top: 3rem;
+							width: 100%;
+							position: relative;
+							@include flexbox();
+							@include box-sizing(border-box);
+							border-top: 2px solid $gray1;
+							padding: 0 10%;
+							.spec {
+								width: 50%;
+								background-color: transparent;
+								.icon-box {
+									width: 3.5rem;
+									height: 3.5rem;
+									border-radius: 50%;
+									background-color: transparent;
+									@include transition(all 0.5s ease);
+									margin-left: calc((100% - 3.5rem) / 2);
+									margin-top: 1.5rem;
+									cursor: pointer;
+									position: relative;
+									&:hover {
+										background-color: $white-300;
+									}
+									img {
+										height: 2rem;
+										position: absolute;
+										top: 55%;
+										left: 50%;
+										@include transform(translate(-50%, -50%));
+									}
+								}
+								.num {
+									font-family: 'NanumBarunGothic';
+									font-size: 1rem;
+									font-weight: normal;
+									color: $purple;
+									margin-top: 0.5rem;
+									width: 100%;
+									text-align: center;
+									cursor: pointer;
+									margin-bottom: 1.5rem;
+								}
+								&.pick {}
+								&.reply {}
+							}
+						}
+					}
+				}
+			}
+		}
+		.winner-content-arrow {
+			position: absolute;
+			bottom: 0;
+			right: calc(100% / 12);
+			width: 10rem;
+			height: 5rem;
+			@include flexbox();
+			z-index: 2;
+			.arrow {
+				width: 50%;
+				height: 100%;
+				background-color: $purple;
+				cursor: pointer;
+				@include transition(all 0.5s ease);
+				&:hover {
+					background-color: $purple-800;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				&.prev {
+					img {
+						@include transform(rotate(180deg));
+					}
+				}
+				&.next {
+				}
+			}
+		}
+	}
+}
+.winner-cheer {
+	width: 100%;
+	position: relative;
+	@include flexbox();
+	margin-top: 3rem;
+	.cheer-box {
+		width: 50%;
+		height: 15vw;
+		position: relative;
+		overflow: hidden;
 		img {
 			width: 100%;
+		}
+	}
+}
+.room-pick {
+	width: 100%;
+	position: relative;
+	@include flexbox();
+	margin-top: 7rem;
+	.room-pick-title {
+		width: 35%;
+		height: 26vw;
+		background-color: $purple;
+		position: relative;
+		@include box-sizing(border-box);
+		padding-left: 5%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		.room-pick-title__title {
+			font-size: 1.6rem;
+			color: white;
+			letter-spacing: 0.2rem;
+			width: 50%;
+			text-align: center;
+			font-family: 'BM DoHyeon';
+			position: relative;
+			margin-left: 25%;
+		}
+		.room-pick-title__desc {
+			width: 50%;
+			text-align: center;
+			margin-left: 25%;
+			font-size: 0.9rem;
+			color: white;
+			line-height: 1.5;
+			margin-top: 4rem;
+			font-family: 'NanumBarunGothic';
+		}
+		.room-pick-title__btn {
+			width: 44%;
+			margin-top: 4rem;
+			text-align: center;
+			margin-left: 28%;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			font-size: 1rem;
+			background-color: white;
+			color: $purple;
+			cursor: pointer;
+			@include transition(all 0.5s ease);
+			font-family: 'NanumBarunGothic';
+		}
+	}
+	.room-pick-wrapper {
+		width: 65%;
+		height: 26vw;
+		overflow-x: scroll;
+		display: inline-block;
+		.card-list {
+			width: 100vw;
+			height: 100%;
+			@include flexbox();
+			@include flex-wrap(nowrap);
+			.card {
+				margin-left: 2%;
+				margin-top: 1vw;
+				width: 30vw;
+				height: 24vw;
+				@include box-sizing(border-box);
+				border: 1px solid $gray4;
+				padding: 2%;
+				.card-img {
+					width: 100%;
+					height: 70%;
+					overflow: hidden;
+					position: relative;
+					img {
+						width: 100%;
+					}
+				}
+				.card-text {
+					width: 100%;
+					height: 25%;
+					margin-top: 5%;
+					position: relative;
+					@include flexbox();
+					.card-text__content {
+						width: 80%;
+						height: 100%;
+						.content-title {
+							width: 100%;
+							.title-text {
+								font-family: 'NanumBarunGothic';
+								color: $gray1;
+								font-weight: bold;
+								word-break: keep-all;
+								cursor: pointer;
+								font-size: 1.2rem;
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+						.content-user {
+							margin-top: 1rem;
+							font-size: 0.9rem;
+							color: $gray3;
+							font-family: 'NanumBarunGothic';
+						}
+					}
+					.card-text__icon {
+						width: 20%;
+						height: 100%;
+						position: relative;
+						@include flexbox();
+						.icon-tab {
+							width: 50%;
+							height: 100%;
+							position: relative;
+							.icon-tab__img {
+								width: 3.5rem;
+								height: 2rem;
+								border-radius: 50%;
+								background-color: transparent;
+								@include transition(all 0.5s ease);
+								margin-left: calc((100% - 3.5rem) / 2);
+								cursor: pointer;
+								position: relative;
+								&:hover {
+									background-color: $white-300;
+								}
+								img {
+									height: 2rem;
+									position: absolute;
+									left: 50%;
+									@include transform(translateX(-50%));
+								}
+							}
+							.icon-tab__num {
+								font-family: 'NanumBarunGothic';
+								font-size: 1rem;
+								font-weight: normal;
+								color: $purple;
+								margin-top: 0.5rem;
+								width: 100%;
+								text-align: center;
+								cursor: pointer;
+								margin-bottom: 1.5rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.designer-brand {
+	width: 100%;
+	position: relative;
+	margin-top: 7rem;
+	.designer-brand-content {
+		width: 100%;
+		position: relative;
+		.brand-content__title {
+			width: 100%;
+			position: relative;
+			.title-h1 {
+				font-size: 1.6rem;
+				color: $gray1;
+				letter-spacing: 0.2rem;
+				width: 100%;
+				text-align: center;
+				font-family: 'BM DoHyeon';
+				position: relative;
+			}
+		}
+		.brand-content__cont {
+			width: 100%;
+			@include box-sizing(border-box);
+			position: relative;
+			margin-top: 3rem;
+			padding: 0 20%;
+			@include flexbox();
+			.cont-box-long {
+				width: 25%;
+				height: 33vw;
+				margin-right: 3%;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				img {
+					height: 100%;
+					position: relative;
+					@include transition(all 0.5s ease);
+				}
+				&:hover {
+					img {
+						@include animation(img-scale 5s linear);
+						@include transform(scale(1.05));
+					}
+				}
+				.cont-box-long__text {
+					position: absolute;
+					bottom: 8%;
+					left: 10%;
+					width: 80%;
+					.long-text__title {
+						width: 100%;
+						text-align: center;
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						font-size: 1.2rem;
+						line-height: 1.2;
+						letter-spacing: 0.2rem;
+						color: white;
+						word-break: keep-all;
+						cursor: pointer;
+					}
+					.long-text__brand {
+						width: 100%;
+						text-align: center;
+						font-family: 'NanumBarunGothic';
+						font-size: 0.9rem;
+						margin-top: 1rem;
+						color: white;
+					}
+					.long-text__desc {
+						width: 100%;
+						text-align: center;
+						font-family: 'NanumBarunGothic';
+						font-size: 1rem;
+						line-height: 1.5;
+						color: white;
+						margin-top: 2rem;
+						word-break: keep-all;
+					}
+				}
+			}
+			.cont-box-wrapper {
+				width: 72%;
+				position: relative;
+				.cont-box {
+					width: 100%;
+					height: 16vw;
+					position: relative;
+					overflow: hidden;
+					cursor: pointer;
+					img {
+						width: 100%;
+						@include transition(all 0.5s ease);
+					}
+					&:hover {
+						img {
+							@include animation(img-scale 5s linear);
+							@include transform(scale(1.05));
+						}
+					}
+					.cont-box__text {
+						position: absolute;
+						width: 25%;
+						height: 100%;
+						@include box-sizing(border-box);
+						margin-left: 65%;
+						top: 0;
+						left: 0;
+						padding-top: 7%;
+						.cont-box__text-title {
+							width: 100%;
+							text-align: center;
+							font-family: 'NanumBarunGothic';
+							font-weight: bold;
+							font-size: 1.2rem;
+							line-height: 1.2;
+							letter-spacing: 0.2rem;
+							color: white;
+						}
+						.cont-box__text-brand {
+							width: 100%;
+							text-align: center;
+							font-family: 'NanumBarunGothic';
+							font-size: 0.9rem;
+							margin-top: 1rem;
+							color: white;
+						}
+						.cont-box__text-desc {
+							width: 100%;
+							text-align: center;
+							font-family: 'NanumBarunGothic';
+							font-size: 1rem;
+							line-height: 1.5;
+							color: white;
+							margin-top: 2rem;
+							word-break: keep-all;
+						}
+					}
+					&.big {
+						height: 21vw;
+						margin-top: 1rem;
+						.cont-box__text {
+							margin-left: 5%;
+							.cont-box__text-title {
+								text-align: left;
+							}
+							.cont-box__text-brand {
+								text-align: left;
+							}
+							.cont-box__text-desc {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.fixed {
+	width: 100%;
+	height: 40vw;
+	position: relative;
+	margin-top: 7rem;
+	background-image: url('../../images/fixed-01.jpg');
+	background-attachment: fixed;
+	background-size: 100%;
+	.fixed-text {
+		width: 30%;
+		height: 40%;
+		background-color: $black-700;
+		@include box-sizing(border-box);
+		padding: 5%;
+		margin-left: 10%;
+		position: absolute;
+		top: 30%;
+		.fixed-text__title {
+			width: 100%;
+			font-family: 'NanumBarunGothic';
+			font-weight: bold;
+			font-size: 1.2rem;
+			line-height: 1.2;
+			letter-spacing: 0.2rem;
+			color: white;
+		}
+		.fixed-text__desc {
+			width: 70%;
+			font-family: 'NanumBarunGothic';
+			font-size: 1rem;
+			line-height: 1.5;
+			color: white;
+			margin-top: 2rem;
+			word-break: keep-all;
 		}
 	}
 }
