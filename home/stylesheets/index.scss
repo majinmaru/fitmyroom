@@ -392,15 +392,27 @@ body {
 .winner-cheer {
 	width: 100%;
 	position: relative;
-	@include flexbox();
-	margin-top: 3rem;
-	.cheer-box {
-		width: 50%;
-		height: 15vw;
+	margin-top: 5rem;
+	.cheer-box-wrapper {
+		width: 135vw;
 		position: relative;
-		overflow: hidden;
-		img {
-			width: 100%;
+		@include flexbox();
+		@include flex-wrap(nowrap);
+		margin-left: -10%;
+		.cheer-box {
+			width: 20%;
+			margin-right: 5%;
+			height: 10vw;
+			position: relative;
+			overflow: hidden;
+			&:nth-of-type(2n-1) {
+				img {
+					margin-top: 7%;
+				}
+			}
+			img {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -408,7 +420,7 @@ body {
 	width: 100%;
 	position: relative;
 	@include flexbox();
-	margin-top: 7rem;
+	margin-top: 9rem;
 	.room-pick-title {
 		width: 35%;
 		height: 26vw;
@@ -451,6 +463,10 @@ body {
 			cursor: pointer;
 			@include transition(all 0.5s ease);
 			font-family: 'NanumBarunGothic';
+			&:hover {
+				background-color: $purple-800;
+				color: white;
+			}
 		}
 	}
 	.room-pick-wrapper {
@@ -559,7 +575,7 @@ body {
 .designer-brand {
 	width: 100%;
 	position: relative;
-	margin-top: 7rem;
+	margin-top: 9rem;
 	.designer-brand-content {
 		width: 100%;
 		position: relative;
@@ -720,7 +736,7 @@ body {
 	width: 100%;
 	height: 40vw;
 	position: relative;
-	margin-top: 7rem;
+	margin-top: 9rem;
 	background-image: url('../../images/fixed-01.jpg');
 	background-attachment: fixed;
 	background-size: 100%;
@@ -809,7 +825,7 @@ body {
 .sale {
 	width: 100%;
 	position: relative;
-	margin-top: 7rem;
+	margin-top: 9rem;
 	.sale-content {
 		width: 100%;
 		position: relative;

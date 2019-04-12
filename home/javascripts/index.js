@@ -84,4 +84,10 @@ $(document).ready(function(){
 		arrow: true,
 		dots: false
 	});
+
+	$(".fixed").paroller({
+		factor: 0.6,
+		type: 'background',
+		direction: 'vertical'
+	});
 });

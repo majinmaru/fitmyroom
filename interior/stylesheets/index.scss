@@ -13,3 +13,450 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+.main {
+	width: 100%;
+	position: relative;
+	.main-bg {
+		width: 100%;
+		height: 30vw;
+		position: relative;
+		overflow: hidden;
+		img {
+			width: 100%;
+			@include animation(img-scale 5s ease);
+			@include transform(scale(1.05));
+		}
+	}
+	.main-text {
+		width: 21%;
+		height: 20vw;
+		position: absolute;
+		top: 5vw;
+		left: 10%;
+		background-color: white;
+		@include box-sizing(border-box);
+		padding: 3%;
+		.main-text__title {
+			width: 100%;
+			height: 30%;
+			@include flexbox();
+			@include justify-content(center);
+			img {
+				height: 100%;
+			}
+		}
+		.main-text__desc {
+			width: 50%;
+			margin-left: 25%;
+			text-align: center;
+			font-family: 'NanumBarunGothic';
+			font-weight: bold;
+			font-size: 1rem;
+			letter-spacing: 0.2rem;
+			color: $gray1;
+			line-height: 1.5;
+			word-break: keep-all;
+			margin-top: 3rem;
+		}
+		.main-text__btn {
+			text-decoration: none;
+			color: white;
+			font-family: 'NanumBarunGothic';
+			font-size: 1rem;
+			width: 100%;
+			text-align: center;
+			width: 70%;
+			height: 3rem;
+			line-height: 3rem;
+			background-color: $purple;
+			@include transition(all 0.5s ease);
+			margin-left: 15%;
+			display: block;
+			margin-top: 2rem;
+			&:hover {
+				background-color: $purple-800;
+			}
+		}
+	}
+}
+.winner-of-the-month {
+	width: 100%;
+	position: relative;
+	margin-top: 7rem;
+	.title-h1 {
+		font-size: 1.6rem;
+		color: $gray1;
+		letter-spacing: 0.2rem;
+		width: 100%;
+		text-align: center;
+		font-family: 'BM DoHyeon';
+		position: relative;
+	}
+	.winner-wrapper {
+		width: 100%;
+		margin-top: 2rem;
+		@include box-sizing(border-box);
+		padding: 0 10%;
+		@include flexbox();
+		position: relative;
+		.winner-card {
+			width: calc(96% / 3);
+			height: 25vw;
+			margin-left: 2%;
+			@include box-sizing(border-box);
+			padding: 2%;
+			position: relative;
+			@include transition(all 0.5s ease);
+			background-color: white;
+			&:hover {
+				.winner-card__img {
+					img {
+						@include transform(scale(1.05));
+					}
+				}
+				.winner-card-line {
+					&.top {
+						&:after {
+							width: 100%;
+						}
+					}
+					&.left {
+						&:after {
+							height: 100%;
+							@include transform-origin(50% 100%);
+						}
+					}
+					&.bottom {
+						&:after {
+							width: 100%;
+						}
+					}
+					&.right {
+						&:after {
+							height: 100%;
+						}
+					}
+				}
+			}
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			.winner-card__img {
+				width: 100%;
+				height: 15vw;
+				overflow: hidden;
+				img {
+					width: 100%;
+					@include transition(all 3s ease);
+				}
+			}
+			.winner-card__title {
+				width: 70%;
+				margin-left: 15%;
+				color: $gray1;
+				font-family: 'NanumBarunGothic';
+				font-weight: bold;
+				font-size: 1rem;
+				line-height: 1.5;
+				letter-spacing: 0.2rem;
+				text-align: center;
+				word-break: keep-all;
+				margin-top: 1.5rem;
+				@include transition(all 0.5s ease);
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.winner-card__user {
+				font-family: 'NanumBarunGothic';
+				font-size: 1rem;
+				line-height: 1;
+				margin-top: 1.2rem;
+				color: $gray2;
+				@include transition(all 0.5s ease);
+				width: 100%;
+				text-align: center;
+			}
+			.winner-card-line {
+				background-color: transparent;
+				&.top {
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					top: 0;
+					left: 0;
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 0;
+						height: 100%;
+						background-color: $purple;
+						@include transform-origin(left center);
+						@include transition(all 0.5s ease);
+					}
+				}
+				&.left {
+					position: absolute;
+					width: 2px;
+					height: 100%;
+					top: 0;
+					left: 0;
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 0;
+						background-color: $purple;
+						@include transform-origin(center bottom);
+						@include transition(all 0.5s ease);
+					}
+				}
+				&.bottom {
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					bottom: 0;
+					right: 0;
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 0;
+						height: 100%;
+						background-color: $purple;
+						@include transform-origin(right center);
+						@include transition(all 0.5s ease);
+					}
+				}
+				&.right {
+					position: absolute;
+					width: 2px;
+					height: 100%;
+					top: 0;
+					right: 0;
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 0;
+						background-color: $purple;
+						@include transform-origin(center top);
+						@include transition(all 0.5s ease);
+					}
+				}
+			}
+		}
+	}
+}
+.quick-tab-wrapper {
+	width: 100%;
+	position: relative;
+	margin-top: 9rem;
+	@include flexbox();
+	.quick-tab {
+		width: 50%;
+		height: 28vw;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+			img {
+				@include transform(scale(1));
+			}
+		}
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $black-300;
+			opacity: 0;
+			@include transition(all 3s ease);
+		}
+		img {
+			width: 100%;
+			@include transition(all 3s ease);
+			@include transform(scale(1.05));
+		}
+		.quick-tab__text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@include box-sizing(border-box);
+			padding: 22%;
+			z-index: 2;
+			.title-h2 {
+				font-family: 'NanumBarunGothic';
+				font-weight: bold;
+				font-size: 1.2rem;
+				line-height: 1;
+				letter-spacing: 0.2rem;
+				color: white;
+				text-align: center;
+				width: 100%;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.tab-text-desc {
+				font-family: 'NanumBarunGothic';
+				margin-top: 2rem;
+				font-size: 1rem;
+				color: white;
+				width: 60%;
+				margin-left: 20%;
+				word-break: keep-all;
+				text-align: center;
+				line-height: 1.5;
+			}
+		}
+	}
+}
+.latest {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 9rem;
+	.title-h1 {
+		font-size: 1.6rem;
+		color: $gray1;
+		letter-spacing: 0.2rem;
+		width: 100%;
+		text-align: center;
+		font-family: 'BM DoHyeon';
+		position: relative;
+	}
+	.interior-card-wrapper {
+		width: 100%;
+		@include flexbox();
+		@include flex-wrap(wrap);
+		.interior-card {
+			width: calc(94% / 4);
+			height: 18vw;
+			position: relative;
+			display: inline-block;
+			@include box-sizing(border-box);
+			padding: 1%;
+			margin-top: 5rem;
+			border: 1px solid $gray4;
+			margin-left: 2%;
+			&:hover {
+				.interior-card__img {
+					img {
+						@include transform(scale(1.05))
+					}
+				}
+			}
+			&:nth-of-type(4n+1) {
+				margin-left: 0;
+			}
+			.interior-card__img {
+				width: 100%;
+				height: 65%;
+				overflow: hidden;
+				position: relative;
+				img {
+					width: 100%;
+					@include transition(all 3s ease);
+				}
+			}
+			.interior-card__text {
+				width: 100%;
+				height: 30%;
+				margin-top: 5%;
+				position: relative;
+				@include flexbox();
+				.text-content {
+					width: 65%;
+					height: 100%;
+					margin-right: 5%;
+					.content-title {
+						width: 100%;
+						.title-text {
+							font-family: 'NanumBarunGothic';
+							color: $gray1;
+							font-weight: bold;
+							word-break: keep-all;
+							cursor: pointer;
+							font-size: 1rem;
+							line-height: 1.4;
+							height: 2.8rem;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+					.content-user {
+						margin-top: 1rem;
+						font-size: 0.9rem;
+						color: $gray3;
+						font-family: 'NanumBarunGothic';
+					}
+				}
+				.text-icon {
+					width: 30%;
+					height: 100%;
+					position: relative;
+					@include flexbox();
+					.icon-tab {
+						width: 50%;
+						height: 100%;
+						position: relative;
+						.icon-tab__img {
+							width: 3rem;
+							height: 1.6rem;
+							border-radius: 50%;
+							background-color: transparent;
+							@include transition(all 0.5s ease);
+							margin-left: calc((100% - 3rem) / 2);
+							cursor: pointer;
+							position: relative;
+							&:hover {
+								background-color: $white-300;
+							}
+							img {
+								height: 1.6rem;
+								position: absolute;
+								left: 50%;
+								@include transform(translateX(-50%));
+							}
+						}
+						.icon-tab__num {
+							font-family: 'NanumBarunGothic';
+							font-size: 0.9rem;
+							font-weight: normal;
+							color: $purple;
+							margin-top: 0.5rem;
+							width: 100%;
+							text-align: center;
+							cursor: pointer;
+							margin-bottom: 1.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
