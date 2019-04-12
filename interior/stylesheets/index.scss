@@ -13,6 +13,11 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
+.margin {
+	width: 100%;
+	position: relative;
+	height: $header-height;
+}
 .main {
 	width: 100%;
 	position: relative;

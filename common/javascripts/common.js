@@ -49,19 +49,4 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
 	});
-
-	$('html').click(function(e) { 
-		if(!$(e.target).hasClass("bottom")) { 
-			$(this).removeClass('open');
-			$(".bottom").animate({
-				height: '0'
-			}, 500);
-			setTimeout(function(){
-				$(".bottom").removeClass('current');
-				$(".gnb-list__tab").removeClass('active');
-				$(".gnb-content__box").removeClass('current');
-				$(".ad-text").removeClass('appear');
-			}, 500);
-		} 
-	});
 });
