@@ -3,3 +3,117 @@
 @import 'base/mixin.scss';
 @import 'base/variable.scss';
 @import 'base/keyframes.scss';
+.footer {
+	width: 100%;
+	position: relative;
+	margin-top: 7rem;
+	@include box-sizing(border-box);
+	padding: 0 5%;
+	@include flexbox();
+	background-color: $footer-bg;
+	.footer-info {
+		width: 70%;
+		display: inline-block;
+		position: relative;
+		@include box-sizing(border-box);
+		padding-right: 10%;
+		.footer-info__top {
+			width: 100%;
+			height: 9vw;
+			@include flexbox();
+			margin-top: 2rem;
+			.top-logo {
+				width: 15%;
+				height: 100%;
+				margin-right: 5%;
+				img {
+					width: 100%;
+				}
+			}
+			.top-sitemap {
+				width: 80%;
+				height: 100%;
+				@include flexbox();
+				@include box-sizing(border-box);
+				padding-right: 30%;
+				.top-sitemap__tab {
+					width: 25%;
+					height: 100%;
+					&:nth-of-type(1) {
+						a {
+							@include box-sizing(border-box);
+							border-left: 1px solid white;
+						}
+					}
+					a {
+						font-family: 'NanumBarunGothic';
+						font-size: 1rem;
+						line-height: 2rem;
+						display: inline-block;
+						text-decoration: none;
+						color: white;
+						width: 100%;
+						height: 2rem;
+						margin-top: 50%;
+						text-align: right;
+					}
+				}
+			}
+		}
+		.footer-info__bottom {
+			width: 100%;
+			position: relative;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			.bottom-text {
+				width: 100%;
+				position: relative;
+				.text-company {
+					width: 100%;
+					font-size: 1rem;
+					font-family: 'NanumBarunGothic';
+					color: white;
+					line-height: 1;
+					word-break: keep-all;
+				}
+				.text-rights {
+					margin-top: 0.8rem;
+					width: 100%;
+					font-size: 1rem;
+					font-family: 'NanumBarunGothic';
+					color: white;
+					line-height: 1;
+					word-break: keep-all;
+				}
+			}
+			.bottom-tab {
+				width: 100%;
+				margin-top: 3rem;
+				position: relative;
+				@include flexbox();
+				span {
+					color: white;
+					font-family: 'NanumBarunGothic';
+					font-size: 0.9rem;
+					line-height: 1;
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
+	.footer-map {
+		width: 30%;
+		display: inline-block;
+		overflow: hidden;
+		@include box-sizing(border-box);
+		padding: 2rem;
+		overflow: hidden;
+		.footer-map__img {
+			width: 100%;
+			height: 100%;
+			background-image: url('../../images/map.jpg');
+			background-size: cover;
+			background-repeat: no-repeat; 
+		}
+	}
+}

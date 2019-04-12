@@ -69,7 +69,7 @@ body { width: 100%; overflow-x: hidden; }
 .main .main-slide-wrapper { width: 100%; height: 100%; overflow: hidden; position: relative; }
 .main .main-slide-wrapper .main-slide { width: 100%; height: 100%; position: relative; display: none; }
 .main .main-slide-wrapper .main-slide img { width: 100%; }
-.main .main-slide-wrapper .main-slide.first { background: #4d06be; background: -moz-linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); background: -webkit-linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); background: linear-gradient(45deg, #4d06be 0%, #8e1fc5 50%, #4d06be 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d06be",endColorstr="#4d06be",GradientType=1); background-size: 200%; -webkit-animation: bg-move 5s linear; animation: bg-move 5s linear; }
+.main .main-slide-wrapper .main-slide.first { background: #4d06be; background: -moz-linear-gradient(45deg, #4d06be 0%, #ed1bec 50%, #4d06be 100%); background: -webkit-linear-gradient(45deg, #4d06be 0%, #ed1bec 50%, #4d06be 100%); background: linear-gradient(45deg, #4d06be 0%, #ed1bec 50%, #4d06be 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d06be",endColorstr="#4d06be",GradientType=1); background-size: 200%; -webkit-animation: bg-move 5s linear; animation: bg-move 5s linear; }
 .main .main-slide-wrapper .main-slide.second { background-image: url("../../images/main-slide-02.jpg"); background-size: 100%; -webkit-animation: bg-move 5s linear; animation: bg-move 5s linear; }
 .main .main-slide-wrapper .main-slide.third img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; }
 .main .main-slide-wrapper .main-slide.active { display: block; }
@@ -176,5 +176,29 @@ body { width: 100%; overflow-x: hidden; }
 .fixed .fixed-text { width: 30%; height: 40%; background-color: rgba(0, 0, 0, 0.7); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5%; margin-left: 10%; position: absolute; top: 30%; }
 .fixed .fixed-text .fixed-text__title { width: 100%; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; }
 .fixed .fixed-text .fixed-text__desc { width: 70%; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
+
+.slick-prev { left: 4%; width: 4rem; height: 4rem; border-radius: 50%; background-color: #8002c4; z-index: 3; }
+.slick-prev:before { content: ''; font-family: none; width: 1rem; height: 1rem; background-color: transparent; border-bottom: 3px solid white; border-left: 3px solid white; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); display: block; position: absolute; top: 34%; left: 38%; }
+
+.slick-next { right: 4%; width: 4rem; height: 4rem; border-radius: 50%; background-color: #8002c4; z-index: 3; }
+.slick-next:before { content: ''; font-family: none; width: 1rem; height: 1rem; background-color: transparent; border-top: 3px solid white; border-right: 3px solid white; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); display: block; position: absolute; top: 34%; right: 38%; }
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { color: transparent; outline: none; background-color: #a537ed; }
+
+.sale { width: 100%; position: relative; margin-top: 7rem; }
+.sale .sale-content { width: 100%; position: relative; }
+.sale .sale-content .brand-content__title { width: 100%; position: relative; }
+.sale .sale-content .brand-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
+.sale .sale-list { width: 100%; position: relative; margin-top: 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5%; }
+.sale .sale-list .sale-list__item { width: 22vw; height: 16vw; position: relative; overflow: hidden; display: inline-block; margin-left: 0.5%; margin-right: 0.5%; }
+.sale .sale-list .sale-list__item img { height: 100%; position: absolute; top: 0; left: 0; }
+.sale .sale-list .sale-list__item .item-info { width: 45%; height: 100%; position: absolute; top: 0; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 0; }
+.sale .sale-list .sale-list__item .item-info .item-info__hashtag { width: 100%; }
+.sale .sale-list .sale-list__item .item-info .item-info__hashtag span { color: white; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-right: 1rem; font-weight: 300; }
+.sale .sale-list .sale-list__item .item-info .item-info__title { font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; width: 80%; word-break: keep-all; margin-top: 1.2rem; }
+.sale .sale-list .sale-list__item .item-info .item-info__brand { font-family: 'NanumBarunGothic'; font-size: 0.9rem; color: white; margin-top: 1rem; width: 100%; }
+.sale .sale-list .sale-list__item .item-info .item-info__prev-price { font-family: 'NanumBarunGothic'; font-size: 0.8rem; text-decoration: line-through; color: white; width: 100%; font-weight: 300; margin-top: 2rem; }
+.sale .sale-list .sale-list__item .item-info .item-info__sale-price { font-family: 'NanumBarunGothic'; font-weight: bold; color: white; letter-spacing: 0.1rem; margin-top: 0.8rem; font-size: 1.5rem; }
+.sale .sale-list .sale-list__item .item-info .item-info__sale { position: absolute; width: 4rem; height: 4rem; font-size: 1rem; line-height: 4rem; font-family: 'BM DoHyeon'; color: white; background-color: #b5321c; bottom: 0; right: 0; text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

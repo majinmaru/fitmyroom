@@ -75,4 +75,13 @@ $(document).ready(function(){
 		axis:"x",
 	    theme: "minimal-dark"
 	});
+
+	$(".sale-list").slick({
+		centerMode: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: true,
+		arrow: true,
+		dots: false
+	});
 });
