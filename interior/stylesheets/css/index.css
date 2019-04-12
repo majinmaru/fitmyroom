@@ -89,7 +89,7 @@ body { width: 100%; overflow-x: hidden; }
 .winner-of-the-month .winner-wrapper .winner-card:nth-of-type(1) { margin-left: 0; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__img { width: 100%; height: 15vw; overflow: hidden; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__img img { width: 100%; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card__title { width: 70%; margin-left: 15%; color: #262626; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1rem; line-height: 1.5; letter-spacing: 0.2rem; text-align: center; word-break: keep-all; margin-top: 1.5rem; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; cursor: pointer; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card__title { width: 70%; margin-left: 15%; color: #262626; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1rem; line-height: 1.5; letter-spacing: 0.2rem; text-align: center; word-break: keep-all; margin-top: 1.5rem; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; cursor: pointer; text-decoration: none; display: block; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__title:hover { text-decoration: underline; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__user { font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1; margin-top: 1.2rem; color: #565656; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; text-align: center; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card-line { background-color: transparent; }

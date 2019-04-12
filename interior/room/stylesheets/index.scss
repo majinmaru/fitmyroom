@@ -1,0 +1,199 @@
+@import '../../../common/stylesheets/base/color.scss';
+@import '../../../common/stylesheets/base/font.scss';
+@import '../../../common/stylesheets/base/mixin.scss';
+@import '../../../common/stylesheets/base/variable.scss';
+@import '../../../common/stylesheets/base/keyframes.scss';
+html {
+	font-size: $desktop;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.margin {
+	width: 100%;
+	position: relative;
+	height: $header-height;
+}
+.ad {
+	width: 100%;
+	height: 10vw;
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 100%;
+		position: absolute;
+		top: -45%;
+	}
+}
+.page-navigation {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 5rem;
+	a {
+		text-decoration: none;
+		color: $gray1;
+		font-family: 'NanumBarunGothic';
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+	.page-navigation__arrow {
+		width: 0.6rem;
+		height: 0.6rem;
+		border-top: 2px solid $gray1;
+		border-right: 2px solid $gray1;
+		@include transform(rotate(45deg));
+		display: inline-block;
+		margin-right: 1rem;
+	}
+	.current-page {
+		color: $purple;
+		font-family: 'NanumBarunGothic';
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+}
+.main {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 3rem;
+	@include flexbox();
+	.main-img {
+		width: 60%;
+		margin-right: 7%;
+		height: 30vw;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		img {
+			width: 100%;
+		}
+	}
+	.main-content {
+		width: 33%;
+		position: relative;
+		display: inline-block;
+		.content-title-h2 {
+			width: 50%;
+			display: block;
+			font-size: 1.2rem;
+			font-family: 'NanumBarunGothic';
+			font-weight: bold;
+			letter-spacing: 0.2rem;
+			line-height: 1.5;
+			color: $gray1;
+			position: relative;
+			margin-top: 2rem;
+			word-break: keep-all;
+		}
+		.content-user {
+			font-size: 1rem;
+			color: $gray3;
+			font-family: 'NanumBarunGothic';
+			width: 100%;
+			position: relative;
+			margin-top: 2rem;
+		}
+		.content-hashtag {
+			width: 100%;
+			@include flexbox();
+			@include flex-wrap(wrap);
+			position: relative;
+			margin-top: 2rem;
+			.hashtag-tab {
+				font-size: 0.9rem;
+				color: $gray2;
+				font-family: 'NanumBarunGothic';
+				padding: 1rem 2.5rem;
+				background-color: #e4e4e4;
+				cursor: pointer;
+				margin-right: 1rem;
+				border-radius: 2.9rem;
+				margin-top: 0.6rem;
+				@include transition(all 0.5s ease);
+				&:hover {
+					background-color: $purple;
+					color: white;
+				}
+			}
+		}
+		.content-pick-btn {
+			margin-top: 3rem;
+			width: 100%;
+			height: 4rem;
+			text-align: center;
+			@include main-bg();
+			@include flexbox();
+			cursor: pointer;
+			@include transition(all 0.5s ease);
+			background-size: 300%;
+			&:hover {
+				@include animation(bg-move 3s ease infinite);
+			}
+			.pick-btn__num {
+				color: white;
+				font-size: 1rem;
+				font-family: 'NanumBarunGothic';
+				font-weight: bold;
+				margin-right: 0.6rem;
+				display: inline;
+				margin-top: 1.5rem;
+				margin-left: calc((100% - 6rem) / 2);
+			}
+			.pick-btn__icon {
+				width: 2rem;
+				height: 1.6rem;
+				position: relative;
+				display: inline;
+				margin-top: 1.2rem;
+				img {
+					height: 100%;
+				}
+			}
+		}
+		.content-btns {
+			width: 100%;
+			@include flexbox();
+			position: relative;
+			margin-top: 0.6rem;
+			.btns-btn {
+				width: 48%;
+				height: 4rem;
+				margin-left: 2%;
+				border: 1px solid $gray4;
+				@include flexbox();
+				cursor: pointer;
+				&:nth-of-type(1){
+					margin-left: 0;
+				}
+				.btn-text {
+					color: $gray2;
+					font-size: 1rem;
+					font-family: 'NanumBarunGothic';
+					font-weight: bold;
+					margin-right: 0.6rem;
+					display: inline;
+					margin-top: 1.5rem;
+					margin-left: calc((100% - 5rem) / 2);
+				}
+				.btn-icon {
+					width: 2rem;
+					height: 1.6rem;
+					position: relative;
+					display: inline;
+					margin-top: 1.2rem;
+					img {
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
