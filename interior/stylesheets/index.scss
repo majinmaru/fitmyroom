@@ -115,23 +115,23 @@ body {
 					}
 				}
 				.winner-card-line {
-					&.top {
+					&.litop {
 						&:after {
 							width: 100%;
 						}
 					}
-					&.left {
+					&.lileft {
 						&:after {
 							height: 100%;
 							@include transform-origin(50% 100%);
 						}
 					}
-					&.bottom {
+					&.libottom {
 						&:after {
 							width: 100%;
 						}
 					}
-					&.right {
+					&.liright {
 						&:after {
 							height: 100%;
 						}
@@ -180,7 +180,7 @@ body {
 			}
 			.winner-card-line {
 				background-color: transparent;
-				&.top {
+				&.litop {
 					position: absolute;
 					width: 100%;
 					height: 2px;
@@ -199,7 +199,7 @@ body {
 						@include transition(all 0.5s ease);
 					}
 				}
-				&.left {
+				&.lileft {
 					position: absolute;
 					width: 2px;
 					height: 100%;
@@ -218,7 +218,7 @@ body {
 						@include transition(all 0.5s ease);
 					}
 				}
-				&.bottom {
+				&.libottom {
 					position: absolute;
 					width: 100%;
 					height: 2px;
@@ -237,7 +237,7 @@ body {
 						@include transition(all 0.5s ease);
 					}
 				}
-				&.right {
+				&.liright {
 					position: absolute;
 					width: 2px;
 					height: 100%;
@@ -455,6 +455,69 @@ body {
 							margin-bottom: 1.5rem;
 						}
 					}
+				}
+			}
+		}
+	}
+	.interior-card-more {
+		margin-top: 7rem;
+		width: 100%;
+		height: 6rem;
+		position: relative;
+		.more-line {
+			width: 100%;
+			height: 1px;
+			background-color: $purple;
+			position: absolute;
+			top: 50%;
+			left: 0;
+		}
+		.more-btn {
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
+			margin-left: calc((100% - 6rem) / 2);
+			background-color: white;
+			@include box-sizing(border-box);
+			border: 1px solid $purple;
+			cursor: pointer;
+			z-index: 3;
+			position: absolute;
+			top: 0;
+			left: 0;
+			&:hover {
+				.more-btn__plus {
+					@include transform(rotate(180deg));
+				}
+			}
+			.more-btn__text {
+				font-family: 'NanumBarunGothic';
+				font-size: 0.9rem;
+				line-height: 1.5;
+				width: 80%;
+				margin-left: 10%;
+				text-align: center;
+				color: $purple;
+				margin-top: 0.8rem;
+			}
+			.more-btn__plus {
+				width: 1.2rem;
+				height: 1px;
+				background-color: $purple;
+				display: inline-block;
+				position: relative;
+				@include transition(all 0.5s ease);
+				margin-top: 0.4rem;
+				margin-left: calc((100% - 1.2rem) / 2);
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: $purple;
+					@include transform(rotate(90deg));
+					display: inline-block;
 				}
 			}
 		}

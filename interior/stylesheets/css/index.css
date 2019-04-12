@@ -80,10 +80,10 @@ body { width: 100%; overflow-x: hidden; }
 .winner-of-the-month .winner-wrapper { width: 100%; margin-top: 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; }
 .winner-of-the-month .winner-wrapper .winner-card { width: calc(96% / 3); height: 25vw; margin-left: 2%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 2%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; background-color: white; }
 .winner-of-the-month .winner-wrapper .winner-card:hover .winner-card__img img { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
-.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.top:after { width: 100%; }
-.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.left:after { height: 100%; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
-.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.bottom:after { width: 100%; }
-.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.right:after { height: 100%; }
+.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.litop:after { width: 100%; }
+.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.lileft:after { height: 100%; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.libottom:after { width: 100%; }
+.winner-of-the-month .winner-wrapper .winner-card:hover .winner-card-line.liright:after { height: 100%; }
 .winner-of-the-month .winner-wrapper .winner-card:nth-of-type(1) { margin-left: 0; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__img { width: 100%; height: 15vw; overflow: hidden; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__img img { width: 100%; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease; }
@@ -91,14 +91,14 @@ body { width: 100%; overflow-x: hidden; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__title:hover { text-decoration: underline; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card__user { font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1; margin-top: 1.2rem; color: #565656; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; width: 100%; text-align: center; }
 .winner-of-the-month .winner-wrapper .winner-card .winner-card-line { background-color: transparent; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.top { position: absolute; width: 100%; height: 2px; top: 0; left: 0; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.top:after { content: ''; display: block; position: absolute; top: 0; left: 0; width: 0; height: 100%; background-color: #8002c4; -webkit-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.left { position: absolute; width: 2px; height: 100%; top: 0; left: 0; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.left:after { content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 0; background-color: #8002c4; -webkit-transform-origin: center bottom; -ms-transform-origin: center bottom; transform-origin: center bottom; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.bottom { position: absolute; width: 100%; height: 2px; bottom: 0; right: 0; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.bottom:after { content: ''; display: block; position: absolute; top: 0; right: 0; width: 0; height: 100%; background-color: #8002c4; -webkit-transform-origin: right center; -ms-transform-origin: right center; transform-origin: right center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.right { position: absolute; width: 2px; height: 100%; top: 0; right: 0; }
-.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.right:after { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 0; background-color: #8002c4; -webkit-transform-origin: center top; -ms-transform-origin: center top; transform-origin: center top; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.litop { position: absolute; width: 100%; height: 2px; top: 0; left: 0; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.litop:after { content: ''; display: block; position: absolute; top: 0; left: 0; width: 0; height: 100%; background-color: #8002c4; -webkit-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.lileft { position: absolute; width: 2px; height: 100%; top: 0; left: 0; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.lileft:after { content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 0; background-color: #8002c4; -webkit-transform-origin: center bottom; -ms-transform-origin: center bottom; transform-origin: center bottom; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.libottom { position: absolute; width: 100%; height: 2px; bottom: 0; right: 0; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.libottom:after { content: ''; display: block; position: absolute; top: 0; right: 0; width: 0; height: 100%; background-color: #8002c4; -webkit-transform-origin: right center; -ms-transform-origin: right center; transform-origin: right center; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.liright { position: absolute; width: 2px; height: 100%; top: 0; right: 0; }
+.winner-of-the-month .winner-wrapper .winner-card .winner-card-line.liright:after { content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 0; background-color: #8002c4; -webkit-transform-origin: center top; -ms-transform-origin: center top; transform-origin: center top; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 
 .quick-tab-wrapper { width: 100%; position: relative; margin-top: 9rem; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .quick-tab-wrapper .quick-tab { width: 50%; height: 28vw; overflow: hidden; position: relative; display: inline-block; }
@@ -131,5 +131,12 @@ body { width: 100%; overflow-x: hidden; }
 .latest .interior-card-wrapper .interior-card .interior-card__text .text-icon .icon-tab .icon-tab__img:hover { background-color: rgba(255, 255, 255, 0.3); }
 .latest .interior-card-wrapper .interior-card .interior-card__text .text-icon .icon-tab .icon-tab__img img { height: 1.6rem; position: absolute; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .latest .interior-card-wrapper .interior-card .interior-card__text .text-icon .icon-tab .icon-tab__num { font-family: 'NanumBarunGothic'; font-size: 0.9rem; font-weight: normal; color: #8002c4; margin-top: 0.5rem; width: 100%; text-align: center; cursor: pointer; margin-bottom: 1.5rem; }
+.latest .interior-card-more { margin-top: 7rem; width: 100%; height: 6rem; position: relative; }
+.latest .interior-card-more .more-line { width: 100%; height: 1px; background-color: #8002c4; position: absolute; top: 50%; left: 0; }
+.latest .interior-card-more .more-btn { width: 6rem; height: 6rem; border-radius: 50%; margin-left: calc((100% - 6rem) / 2); background-color: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #8002c4; cursor: pointer; z-index: 3; position: absolute; top: 0; left: 0; }
+.latest .interior-card-more .more-btn:hover .more-btn__plus { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+.latest .interior-card-more .more-btn .more-btn__text { font-family: 'NanumBarunGothic'; font-size: 0.9rem; line-height: 1.5; width: 80%; margin-left: 10%; text-align: center; color: #8002c4; margin-top: 0.8rem; }
+.latest .interior-card-more .more-btn .more-btn__plus { width: 1.2rem; height: 1px; background-color: #8002c4; display: inline-block; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; margin-top: 0.4rem; margin-left: calc((100% - 1.2rem) / 2); }
+.latest .interior-card-more .more-btn .more-btn__plus:after { content: ''; position: absolute; top: 0; width: 100%; height: 100%; background-color: #8002c4; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); display: inline-block; }
 
 /*# sourceMappingURL=index.css.map */
