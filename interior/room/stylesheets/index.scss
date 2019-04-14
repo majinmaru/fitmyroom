@@ -118,6 +118,7 @@ body {
 				border-radius: 2.9rem;
 				margin-top: 0.6rem;
 				@include transition(all 0.5s ease);
+				display: inline-block;
 				&:hover {
 					background-color: $purple;
 					color: white;
@@ -146,6 +147,7 @@ body {
 				display: inline;
 				margin-top: 1.5rem;
 				margin-left: calc((100% - 6rem) / 2);
+				display: inline-block;
 			}
 			.pick-btn__icon {
 				width: 2rem;
@@ -153,6 +155,7 @@ body {
 				position: relative;
 				display: inline;
 				margin-top: 1.2rem;
+				display: inline-block;
 				img {
 					height: 100%;
 				}
@@ -179,7 +182,7 @@ body {
 					font-family: 'NanumBarunGothic';
 					font-weight: bold;
 					margin-right: 0.6rem;
-					display: inline;
+					display: inline-block;
 					margin-top: 1.5rem;
 					margin-left: calc((100% - 5rem) / 2);
 				}
@@ -187,7 +190,7 @@ body {
 					width: 2rem;
 					height: 1.6rem;
 					position: relative;
-					display: inline;
+					display: inline-block;
 					margin-top: 1.2rem;
 					img {
 						height: 100%;
@@ -634,8 +637,9 @@ body {
 						width: 100%;
 						margin-top: 1rem;
 						font-family: 'NanumBarunGothic';
-						color: $gray2;
+						color: $gray3;
 						font-size: 1rem;
+						line-height: 1.5;
 					}
 				}
 			}
@@ -653,6 +657,7 @@ body {
 				margin-left: 0.5rem;
 				cursor: pointer;
 				margin-top: 2rem;
+				display: inline-block;
 				&:nth-of-type(1) {
 					margin-left: 0;
 				}
