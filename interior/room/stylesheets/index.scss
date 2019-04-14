@@ -374,6 +374,11 @@ body {
 			@include transition(all 0.5s ease);
 			&:hover {
 				border: 1px solid $purple;
+				.info-item__img {
+					img {
+						@include transform(translateX(-50%) scale(1.05));
+					}
+				}
 			}
 			&:nth-of-type(1) {
 				margin-left: 0;
@@ -396,6 +401,7 @@ body {
 					position: absolute;
 					top: 0;
 					left: 50%;
+					@include transition(all 3s ease);
 					@include transform(translateX(-50%));
 				}
 			}
@@ -497,11 +503,208 @@ body {
 	}
 }
 .reply {
-	.title-h1 {}
+	width: 100%;
+	margin-top: 7rem;
+	position: relative;
+	.title-h1 {
+		font-size: 1.6rem;
+		color: $gray1;
+		letter-spacing: 0.2rem;
+		width: 100%;
+		text-align: center;
+		font-family: 'BM DoHyeon';
+		position: relative;
+	}
 	.reply-write {
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 3% 30%;
+		background-color: $purple;
+		margin-top: 3rem;
+		@include flexbox();
 		.write-user {
-			.user-profile {}
-			.user-name {}
+			width: 25%;
+			display: inline-block;
+			.user-profile {
+				width: 5rem;
+				height: 5rem;
+				border-radius: 5rem;
+				display: inline-block;
+				overflow: hidden;
+				margin-left: calc((100% - 5rem) / 2);
+				img {
+					width: 100%;
+				}
+			}
+			.user-name {
+				font-size: 1rem;
+				font-weight: bold;
+				font-family: 'NanumBarunGothic';
+				width: 100%;
+				text-align: center;
+				color: white;
+				margin-top: 1rem;
+				line-height: 1.2;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.write-form {
+			width: 75%;
+			display: inline-block;
+			textarea {
+				display: inline-block;
+				width: 100%;
+				height: 4.5rem;
+				font-size: 1rem;
+				color: $gray1;
+				line-height: 1.5;
+				font-family: 'NanumBarunGothic';
+			}
+			.write-form__btn {
+				border: none;
+				background-color: white;
+				color: $gray2;
+				width: 7rem;
+				text-align: center;
+				height: 3rem;
+				display: inline-block;
+				font-size: 1rem;
+				line-height: 3rem;
+				margin-left: calc(100% - 7rem);
+				margin-top: 1rem;
+				cursor: pointer;
+				@include transition(all 0.5s ease);
+				&:hover {
+					background-color: $purple-800;
+					color: white;
+				}
+			}
+		}
+	}
+	.reply-list {
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 0 30%;
+		margin-top: 3rem;
+		.reply-list__content {
+			width: 100%;
+			.content-reply {
+				width: 100%;
+				height: 8rem;
+				@include box-sizing(border-box);
+				padding: 2rem;
+				@include flexbox();
+				.user-profile {
+					width: 4rem;
+					height: 4rem;
+					border-radius: 4rem;
+					overflow: hidden;
+					img {
+						width: 100%;
+					}
+				}
+				.user-input {
+					width: calc(100% - 4rem);
+					@include box-sizing(border-box);
+					padding-left: 2rem;
+					.input-userinfo {
+						width: 100%;
+						@include flexbox();
+						margin-top: 0.5rem;					
+						.userinfo-user {
+							font-family: 'NanumBarunGothic';
+							color: $gray2;
+							font-size: 1rem;
+							font-weight: bold;
+							letter-spacing: 0.1rem;
+						}
+						.userinfo-time {
+							font-family: 'NanumBarunGothic';
+							color: $gray4;
+							font-size: 0.8rem;
+							margin-left: 1rem;
+							line-height: 1;
+							margin-top: 0.1rem;
+						}
+					}
+					.input-reply {
+						width: 100%;
+						margin-top: 1rem;
+						font-family: 'NanumBarunGothic';
+						color: $gray2;
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+		.reply-list__navigation {
+			width: 100%;
+			@include flexbox();
+			@include justify-content(center);
+			border-top: 1px solid $gray4;
+			margin-top: 1rem;
+			.navi-tab {
+				width: 2rem;
+				height: 2rem;
+				border-radius: 2rem;
+				margin-left: 0.5rem;
+				cursor: pointer;
+				margin-top: 2rem;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
+				&.navi-arrow {
+					background-color: $purple;
+					@include box-sizing(border-box);
+					border: 1px solid $purple;
+					position: relative;
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $purple-800;
+					}
+					&:after {
+						content: '';
+						width: 0.5rem;
+						height: 0.5rem;
+						border-top: 1px solid white;
+						border-right: 1px solid white;
+					}
+					&.left {
+						&:after {
+							position: absolute;
+							top: 33%;
+							left: 38%;
+							@include transform(rotate(-135deg));
+						}
+					}
+					&.right {
+						&:after {
+							position: absolute;
+							top: 33%;
+							right: 38%;
+							@include transform(rotate(45deg));
+						}
+					}
+				}
+				&.navi-num {
+					@include box-sizing(border-box);
+					border: 1px solid $gray4;
+					color: $gray3;
+					font-family: 'NanumBarunGothic';
+					text-align: center;
+					background-color: white;
+					font-size: 0.8rem;
+					line-height: 2rem;
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $gray4;
+						color: white;
+					}
+				}
+			}
 		}
 	}
 }
