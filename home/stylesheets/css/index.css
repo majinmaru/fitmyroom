@@ -135,9 +135,11 @@ body { width: 100%; overflow-x: hidden; }
 .room-pick .room-pick-title .room-pick-title__btn:hover { background-color: #a537ed; color: white; }
 .room-pick .room-pick-wrapper { width: 65%; height: 26vw; overflow-x: scroll; display: inline-block; }
 .room-pick .room-pick-wrapper .card-list { width: 100vw; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-.room-pick .room-pick-wrapper .card-list .card { margin-left: 2%; margin-top: 1vw; width: 30vw; height: 24vw; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #cacaca; padding: 2%; }
+.room-pick .room-pick-wrapper .card-list .card { margin-left: 2%; margin-top: 1vw; width: 30vw; height: 24vw; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #cacaca; padding: 2%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.room-pick .room-pick-wrapper .card-list .card:hover { border: 1px solid #8002c4; }
+.room-pick .room-pick-wrapper .card-list .card:hover .card-img img { -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
 .room-pick .room-pick-wrapper .card-list .card .card-img { width: 100%; height: 70%; overflow: hidden; position: relative; }
-.room-pick .room-pick-wrapper .card-list .card .card-img img { width: 100%; }
+.room-pick .room-pick-wrapper .card-list .card .card-img img { width: 100%; -webkit-transition: all 3s ease; -o-transition: all 3s ease; transition: all 3s ease; }
 .room-pick .room-pick-wrapper .card-list .card .card-text { width: 100%; height: 25%; margin-top: 5%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content { width: 80%; height: 100%; }
 .room-pick .room-pick-wrapper .card-list .card .card-text .card-text__content .content-title { width: 100%; }
@@ -158,17 +160,19 @@ body { width: 100%; overflow-x: hidden; }
 .designer-brand .designer-brand-content .brand-content__cont { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; margin-top: 3rem; padding: 0 20%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long { width: 25%; height: 33vw; margin-right: 3%; position: relative; overflow: hidden; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long img { height: 100%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover img { -webkit-animation: img-scale 3s linear; animation: img-scale 3s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text { position: absolute; bottom: 8%; left: 10%; width: 80%; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; word-break: keep-all; cursor: pointer; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title:hover { text-decoration: underline; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__desc { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper { width: 72%; position: relative; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box { width: 100%; height: 16vw; position: relative; overflow: hidden; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box img { width: 100%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
-.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box:hover img { -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box:hover img { -webkit-animation: img-scale 3s linear; animation: img-scale 3s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text { position: absolute; width: 25%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-left: 65%; top: 0; left: 0; padding-top: 7%; }
-.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; cursor: pointer; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title:hover { text-decoration: underline; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-desc { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 1rem; line-height: 1.5; color: white; margin-top: 2rem; word-break: keep-all; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big { height: 21vw; margin-top: 1rem; }
