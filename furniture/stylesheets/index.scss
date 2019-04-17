@@ -63,26 +63,6 @@ body {
 			word-break: keep-all;
 			margin-top: 3rem;
 		}
-		.main-text__btn {
-			text-decoration: none;
-			color: $purple;
-			font-family: 'NanumBarunGothic';
-			font-size: 1rem;
-			width: 100%;
-			text-align: center;
-			width: 70%;
-			height: 3rem;
-			line-height: 3rem;
-			background-color: white;
-			@include transition(all 0.5s ease);
-			margin-left: 15%;
-			display: block;
-			margin-top: 2rem;
-			&:hover {
-				background-color: $purple-800;
-				color: white;
-			}
-		}
 	}
 }
 .lnb {
@@ -138,6 +118,7 @@ body {
 				position: relative;
 				margin-top: 1rem;
 				display: inline-block;
+				cursor: pointer;
 				&:after {
 					content: '';
 					width: 0.5rem;
@@ -149,9 +130,313 @@ body {
 					top: 1.1rem;
 					left: 1rem;
 					@include transform(rotate(45deg));
-					cursor: pointer;
 				}
 			}
 		}
+	}
+}
+.title-h1 {
+	font-size: 1.6rem;
+	color: $gray1;
+	letter-spacing: 0.2rem;
+	width: 100%;
+	text-align: center;
+	font-family: 'BM DoHyeon';
+	position: relative;
+}
+.page-tab {
+	width: 100%;
+	position: relative;
+	.all-wrapper {
+		width: 100%;
+		position: relative;
+		.all-search {
+			width: 100%;
+			@include box-sizing(border-box);
+			padding: 0 5%;
+			margin-top: 3rem;
+			.all-search__title {
+				font-family: 'NanumBarunGothic';
+				color: $gray1;
+				letter-spacing: 0.1rem;
+				font-size: 1rem;
+				font-weight: bold;
+				width: 100%;
+				text-align: center;
+			}
+			.all-search__box {
+				width: 40%;
+				height: 2rem;
+				margin-left: 30%;
+				margin-top: 2rem;
+				@include flexbox();
+				.box-input {
+					border: 1px solid $gray3;
+					width: calc(100% - 2rem);
+					height: 100%;
+					background-color: transparent;
+					font-size: 1rem;
+					line-height: 2rem;
+					font-family: 'NanumBarunGothic';
+					color: $gray2;
+					@include box-sizing(border-box);
+					padding-left: 1rem;
+				}
+				.box-search-icon {
+					width: 2rem;
+					height: 100%;
+					display: inline-block;
+					cursor: pointer;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			.all-search__hashtag {
+				width: 50%;
+				margin-left: 25%;
+				margin-top: 2rem;
+				@include flexbox();
+				@include justify-content(center);
+				@include flex-wrap(wrap);
+				text-align: center;
+				.hashtag-tab {
+					font-size: 0.8rem;
+					padding: 0.8rem 2.5rem;
+					border-radius: 2.4rem;
+					background-color: #e4e4e4;
+					color: $gray2;
+					font-family: 'NanumBarunGothic';
+					cursor: pointer;
+					margin-right: 1rem;
+					margin-top: 0.6rem;
+					@include transition(all 0.5s ease);
+					display: inline-block;
+					&:hover {
+						background-color: $purple;
+						color: white;
+					}
+				}
+			}
+		}
+		.all-best {
+			margin-top: 7rem;
+			width: 100%;
+			position: relative;
+			@include box-sizing(border-box);
+			padding: 0 13%;
+			.all-best__item-list {
+				width: 100%;
+				@include flexbox();
+				margin-top: 3rem;
+				.all-best__item {
+					width: 32%;
+					margin-left: 2%;
+					&:nth-of-type(1) {
+						margin-left: 0;
+					}
+					.best-item-img {
+						width: 100%;
+						height: 22vw;
+						overflow: hidden;
+						position: relative;
+						img {
+							width: 100%;
+						}
+					}
+					.best-item-title {
+						width: 100%;
+						height: 1rem;
+						position: relative;
+						margin-top: 1rem;
+						font-size: 1rem;
+						line-height: 1;
+						font-weight: bold;
+						font-family: 'NanumBarunGothic';
+						color: $gray1;
+						cursor: pointer;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					.best-item-brand {
+						font-family: 'NanumBarunGothic';
+						font-size: 0.9rem;
+						margin-top: 0.8rem;
+						color: $gray3;
+						line-height: 1;
+						cursor: pointer;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					.best-item-eval {
+						margin-top: 0.4rem;
+						width: 100%;
+						@include flexbox();
+						position: relative;
+						.best-item-eval__dots {
+							width: 70px;
+							height: 1rem;
+							@include flexbox();
+							.eval-dot {
+								display: inline-block;
+								width: 8px;
+								height: 8px;
+								border-radius: 8px;
+								margin-right: 4px;
+								margin-top: calc((1rem - 8px) / 2);
+								@include box-sizing(border-box);
+								border: 1px solid $purple;
+								&.full {
+									background-color: $purple;
+								}
+								&.empty {
+									background-color: white;
+								}
+							}
+						}
+						.best-item-eval__review {
+							position: relative;
+							width: calc(100% - 70px);
+							font-family: 'NanumBarunGothic';
+							font-size: 0.7rem;
+							line-height: 1rem;
+							height: 1rem;
+							color: $gray3;
+							@include box-sizing(border-box);
+							display: inline-block;
+						}
+					}
+					.best-item-price {
+						width: 100%;
+						position: relative;
+						border-top: 1px solid $gray4;
+						@include box-sizing(border-box);
+						margin-top: 0.6rem;
+						margin-bottom: 0.8rem;
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						color: $gray1;
+						padding-top: 0.8rem;
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.all-new {
+			margin-top: 7rem;
+			width: 100%;
+			position: relative;
+			@include box-sizing(border-box);
+			padding: 0 13%;
+			.all-new__item-list {
+				width: 100%;
+				@include flexbox();
+				margin-top: 3rem;
+				.all-new__item {
+					width: 32%;
+					margin-left: 2%;
+					&:nth-of-type(1) {
+						margin-left: 0;
+					}
+					.new-item-img {
+						width: 100%;
+						height: 22vw;
+						overflow: hidden;
+						position: relative;
+						img {
+							width: 100%;
+						}
+					}
+					.new-item-title {
+						width: 100%;
+						height: 1rem;
+						position: relative;
+						margin-top: 1rem;
+						font-size: 1rem;
+						line-height: 1;
+						font-weight: bold;
+						font-family: 'NanumBarunGothic';
+						color: $gray1;
+						cursor: pointer;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					.new-item-brand {
+						font-family: 'NanumBarunGothic';
+						font-size: 0.9rem;
+						margin-top: 0.8rem;
+						color: $gray3;
+						line-height: 1;
+						cursor: pointer;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					.new-item-eval {
+						margin-top: 0.4rem;
+						width: 100%;
+						@include flexbox();
+						position: relative;
+						.new-item-eval__dots {
+							width: 70px;
+							height: 1rem;
+							@include flexbox();
+							.eval-dot {
+								display: inline-block;
+								width: 8px;
+								height: 8px;
+								border-radius: 8px;
+								margin-right: 4px;
+								margin-top: calc((1rem - 8px) / 2);
+								@include box-sizing(border-box);
+								border: 1px solid $purple;
+								&.full {
+									background-color: $purple;
+								}
+								&.empty {
+									background-color: white;
+								}
+							}
+						}
+						.new-item-eval__review {
+							position: relative;
+							width: calc(100% - 70px);
+							font-family: 'NanumBarunGothic';
+							font-size: 0.7rem;
+							line-height: 1rem;
+							height: 1rem;
+							color: $gray3;
+							@include box-sizing(border-box);
+							display: inline-block;
+						}
+					}
+					.new-item-price {
+						width: 100%;
+						position: relative;
+						border-top: 1px solid $gray4;
+						@include box-sizing(border-box);
+						margin-top: 0.6rem;
+						margin-bottom: 0.8rem;
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						color: $gray1;
+						padding-top: 0.8rem;
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.all-designerbrand {}
+		.all-bedroom {}
+		.all-livingroom {}
 	}
 }
