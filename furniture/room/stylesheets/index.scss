@@ -1,0 +1,715 @@
+@import '../../../common/stylesheets/base/color.scss';
+@import '../../../common/stylesheets/base/font.scss';
+@import '../../../common/stylesheets/base/mixin.scss';
+@import '../../../common/stylesheets/base/variable.scss';
+@import '../../../common/stylesheets/base/keyframes.scss';
+html {
+	font-size: $desktop;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+.margin {
+	width: 100%;
+	position: relative;
+	height: $header-height;
+}
+.ad {
+	width: 100%;
+	height: 10vw;
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 100%;
+		position: absolute;
+		top: -45%;
+	}
+}
+.page-navigation {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 5rem;
+	a {
+		text-decoration: none;
+		color: $gray1;
+		font-family: 'NanumBarunGothic';
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+	.page-navigation__arrow {
+		width: 0.6rem;
+		height: 0.6rem;
+		border-top: 2px solid $gray1;
+		border-right: 2px solid $gray1;
+		@include transform(rotate(45deg));
+		display: inline-block;
+		margin-right: 1rem;
+	}
+	.current-page {
+		color: $purple;
+		font-family: 'NanumBarunGothic';
+		font-size: 1rem;
+		margin-right: 1rem;
+	}
+}
+.main {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 3rem;
+	@include flexbox();
+	.main-img {
+		width: 60%;
+		margin-right: 7%;
+		height: 30vw;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+		img {
+			width: 100%;
+		}
+	}
+	.main-content {
+		width: 33%;
+		position: relative;
+		display: inline-block;
+		.content-title-h2 {
+			width: 50%;
+			display: block;
+			font-size: 1.2rem;
+			font-family: 'NanumBarunGothic';
+			font-weight: bold;
+			letter-spacing: 0.2rem;
+			line-height: 1.5;
+			color: $gray1;
+			position: relative;
+			margin-top: 2rem;
+			word-break: keep-all;
+		}
+		.content-user {
+			font-size: 1rem;
+			color: $gray3;
+			font-family: 'NanumBarunGothic';
+			width: 100%;
+			position: relative;
+			margin-top: 2rem;
+		}
+		.content-hashtag {
+			width: 100%;
+			@include flexbox();
+			@include flex-wrap(wrap);
+			position: relative;
+			margin-top: 2rem;
+			.hashtag-tab {
+				font-size: 0.9rem;
+				color: $gray2;
+				font-family: 'NanumBarunGothic';
+				padding: 1rem 2.5rem;
+				background-color: #e4e4e4;
+				cursor: pointer;
+				margin-right: 1rem;
+				border-radius: 2.9rem;
+				margin-top: 0.6rem;
+				@include transition(all 0.5s ease);
+				display: inline-block;
+				&:hover {
+					background-color: $purple;
+					color: white;
+				}
+			}
+		}
+		.content-pick-btn {
+			margin-top: 3rem;
+			width: 100%;
+			height: 4rem;
+			text-align: center;
+			@include main-bg();
+			@include flexbox();
+			cursor: pointer;
+			@include transition(all 0.5s ease);
+			background-size: 300%;
+			&:hover {
+				@include animation(bg-move 3s ease infinite);
+			}
+			.pick-btn__num {
+				color: white;
+				font-size: 1rem;
+				font-family: 'NanumBarunGothic';
+				font-weight: bold;
+				margin-right: 0.6rem;
+				display: inline;
+				margin-top: 1.5rem;
+				margin-left: calc((100% - 6rem) / 2);
+				display: inline-block;
+			}
+			.pick-btn__icon {
+				width: 2rem;
+				height: 1.6rem;
+				position: relative;
+				display: inline;
+				margin-top: 1.2rem;
+				display: inline-block;
+				img {
+					height: 100%;
+				}
+			}
+		}
+		.content-btns {
+			width: 100%;
+			@include flexbox();
+			position: relative;
+			margin-top: 0.6rem;
+			.btns-btn {
+				width: 48%;
+				height: 4rem;
+				margin-left: 2%;
+				border: 1px solid $gray4;
+				@include flexbox();
+				cursor: pointer;
+				&:nth-of-type(1){
+					margin-left: 0;
+				}
+				.btn-text {
+					color: $gray2;
+					font-size: 1rem;
+					font-family: 'NanumBarunGothic';
+					font-weight: bold;
+					margin-right: 0.6rem;
+					display: inline-block;
+					margin-top: 1.5rem;
+					margin-left: calc((100% - 5rem) / 2);
+				}
+				.btn-icon {
+					width: 2rem;
+					height: 1.6rem;
+					position: relative;
+					display: inline-block;
+					margin-top: 1.2rem;
+					img {
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.contents {
+	width: 100%;
+	position: relative;
+	.content-wrapper {
+		width: 100%;
+		position: relative;
+		margin-top: 7rem;
+		.title-h1 {
+			font-size: 1.6rem;
+			color: $gray1;
+			letter-spacing: 0.2rem;
+			width: 100%;
+			text-align: center;
+			font-family: 'BM DoHyeon';
+			position: relative;
+		}
+		&.purpose {
+			@include box-sizing(border-box);
+			padding: 0 5%;
+			position: relative;
+			.purpose-box {
+				width: 50%;
+				margin-left: 25%;
+				@include flexbox();
+				background-color: $purple;
+				@include box-sizing(border-box);
+				padding: 3% 5%;
+				margin-top: 3rem;
+				.purpose-box__user {
+					width: 6rem;
+					height: 6rem;
+					border-radius: 50%;
+					overflow: hidden;
+					display: inline-block;
+					margin-right: 2rem;
+					img {
+						width: 100%;
+					}
+				}
+				.purpose-box__text {
+					width: calc(100% - 8rem);
+					.box-text__username {
+						color: white;
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						letter-spacing: 0.2rem;
+						font-size: 1.2rem;
+					}
+					.box-text__desc {
+						color: white;
+						font-family: 'NanumBarunGothic';
+						font-size: 1rem;
+						margin-top: 1.2rem;
+						word-break: keep-all;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+		&.bestview {
+			width: 100%;
+			position: relative;
+			.bestview-img {
+				margin-top: 3rem;
+				width: 100%;
+				height: 43vw;
+				overflow: hidden;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		&.details {
+			width: 100%;
+			position: relative;
+			.details-desc {
+				font-size: 1rem;
+				color: $gray3;
+				font-family: 'NanumBarunGothic';
+				width: 40%;
+				text-align: center;
+				margin-left: 30%;
+				word-break: keep-all;
+				margin-top: 2rem;
+			}
+			.details-img {
+				width: 40%;
+				height: 22vw;
+				overflow: hidden;
+				position: relative;
+				margin-top: 3rem;
+				margin-left: 30%;
+				&:nth-of-type(1) {
+					img {
+						position: absolute;
+						width: 500%;
+						left: -60%;
+						bottom: -170%;
+					}
+				}
+				&:nth-of-type(2) {
+					img {
+						position: absolute;
+						width: 500%;
+						left: -230%;
+						bottom: -176%;
+					}
+				}
+			}
+		}
+	}
+	.editor-comment {
+		width: 100%;
+		position: relative;
+		margin-top: 7rem;
+		span {
+			font-family: 'BM DoHyeon';
+			font-size: 3rem;
+			width: 100%;
+			text-align: center;
+			display: block;
+			color: $gray1;
+		}
+		.comment-text {
+			font-family: 'NanumBarunGothic';
+			font-weight: bold;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: $gray2;
+			width: 30%;
+			margin-left: 35%;
+			text-align: center;
+			word-break: keep-all;
+			letter-spacing: 0.1rem;
+		}
+		.comment-by {
+			margin-top: 2rem;
+			color: $gray3;
+			font-size: 1rem;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+.info {
+	width: 100%;
+	position: relative;
+	@include box-sizing(border-box);
+	padding: 0 10%;
+	margin-top: 7rem;
+	.title-h1 {
+		font-size: 1.6rem;
+		color: $gray1;
+		letter-spacing: 0.2rem;
+		width: 100%;
+		text-align: center;
+		font-family: 'BM DoHyeon';
+		position: relative;
+	}
+	.info-item-wrapper {
+		margin-top: 3rem;
+		@include flexbox();
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 0 10%;
+		.info-item {
+			width: 32%;
+			margin-left: 2%;
+			@include box-sizing(border-box);
+			padding-top: 2%;
+			padding-right: 2%;
+			padding-left: 2%;
+			border: 1px solid $gray4;
+			display: inline-block;
+			@include transition(all 0.5s ease);
+			&:hover {
+				border: 1px solid $purple;
+				.info-item__img {
+					img {
+						@include transform(translateX(-50%) scale(1.05));
+					}
+				}
+			}
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			&:nth-of-type(2) {
+				.info-item__img {
+					img {
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+			.info-item__img {
+				width: 100%;
+				height: 13vw;
+				overflow: hidden;
+				position: relative;
+				img {
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					@include transition(all 3s ease);
+					@include transform(translateX(-50%));
+				}
+			}
+			.info-item__text {
+				width: 100%;
+				position: relative;
+				.text-product-title {
+					width: 100%;
+					margin-top: 1rem;
+					font-size: 1rem;
+					line-height: 1;
+					font-weight: bold;
+					font-family: 'NanumBarunGothic';
+					color: $gray1;
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.text-product-brand {
+					font-family: 'NanumBarunGothic';
+					font-size: 0.9rem;
+					margin-top: 0.8rem;
+					color: $gray3;
+					line-height: 1;
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.text-product-eval {
+					margin-top: 0.4rem;
+					width: 100%;
+					@include flexbox();
+					position: relative;
+					.eval-graphic {
+						width: 80px;
+						height: 1.4rem;
+						.circle {
+							display: inline-block;
+							width: 8px;
+							height: 8px;
+							border-radius: 8px;
+							margin-right: 1px;
+							@include box-sizing(border-box);
+							border: 1px solid $purple;
+							&.full {
+								background-color: $purple;
+							}
+							&.half {
+								background-color: white;
+							}
+						}
+					}
+					.eval-review {
+						position: relative;
+						width: calc(100% - 80px);
+						height: 0.8rem;
+						font-family: 'NanumBarunGothic';
+						font-size: 0.8rem;
+						color: $gray3;
+						line-height: 1.4rem;
+						@include box-sizing(border-box);
+					}
+				}
+				.text-product-info {
+					width: 100%;
+					position: relative;
+					@include flexbox();
+					border-top: 1px solid $gray4;
+					@include box-sizing(border-box);
+					margin-top: 0.6rem;
+					margin-bottom: 0.8rem;
+					.info-price {
+						width: calc( 100% - 6.6rem);
+						font-family: 'NanumBarunGothic';
+						font-weight: bold;
+						color: $gray1;
+						margin-top: 0.8rem;
+						display: inline-block;
+					}
+					.info-icon {
+						width: 6.6rem;
+						@include flexbox();
+						margin-top: 0.8rem;
+						.info-icon__tab {
+							margin-left: 0.2rem;
+							width: 2rem;
+							height: 1.4rem;
+							cursor: pointer;
+							img {
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.reply {
+	width: 100%;
+	margin-top: 7rem;
+	position: relative;
+	.title-h1 {
+		font-size: 1.6rem;
+		color: $gray1;
+		letter-spacing: 0.2rem;
+		width: 100%;
+		text-align: center;
+		font-family: 'BM DoHyeon';
+		position: relative;
+	}
+	.reply-write {
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 3% 30%;
+		background-color: $purple;
+		margin-top: 3rem;
+		@include flexbox();
+		.write-user {
+			width: 25%;
+			display: inline-block;
+			.user-profile {
+				width: 5rem;
+				height: 5rem;
+				border-radius: 5rem;
+				display: inline-block;
+				overflow: hidden;
+				margin-left: calc((100% - 5rem) / 2);
+				img {
+					width: 100%;
+				}
+			}
+			.user-name {
+				font-size: 1rem;
+				font-weight: bold;
+				font-family: 'NanumBarunGothic';
+				width: 100%;
+				text-align: center;
+				color: white;
+				margin-top: 1rem;
+				line-height: 1.2;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.write-form {
+			width: 75%;
+			display: inline-block;
+			textarea {
+				display: inline-block;
+				width: 100%;
+				height: 4.5rem;
+				font-size: 1rem;
+				color: $gray1;
+				line-height: 1.5;
+				font-family: 'NanumBarunGothic';
+			}
+			.write-form__btn {
+				border: none;
+				background-color: white;
+				color: $gray2;
+				width: 7rem;
+				text-align: center;
+				height: 3rem;
+				display: inline-block;
+				font-size: 1rem;
+				line-height: 3rem;
+				margin-left: calc(100% - 7rem);
+				margin-top: 1rem;
+				cursor: pointer;
+				@include transition(all 0.5s ease);
+				&:hover {
+					background-color: $purple-800;
+					color: white;
+				}
+			}
+		}
+	}
+	.reply-list {
+		width: 100%;
+		@include box-sizing(border-box);
+		padding: 0 30%;
+		margin-top: 3rem;
+		.reply-list__content {
+			width: 100%;
+			.content-reply {
+				width: 100%;
+				height: 8rem;
+				@include box-sizing(border-box);
+				padding: 2rem;
+				@include flexbox();
+				.user-profile {
+					width: 4rem;
+					height: 4rem;
+					border-radius: 4rem;
+					overflow: hidden;
+					img {
+						width: 100%;
+					}
+				}
+				.user-input {
+					width: calc(100% - 4rem);
+					@include box-sizing(border-box);
+					padding-left: 2rem;
+					.input-userinfo {
+						width: 100%;
+						@include flexbox();
+						margin-top: 0.5rem;					
+						.userinfo-user {
+							font-family: 'NanumBarunGothic';
+							color: $gray2;
+							font-size: 1rem;
+							font-weight: bold;
+							letter-spacing: 0.1rem;
+						}
+						.userinfo-time {
+							font-family: 'NanumBarunGothic';
+							color: $gray4;
+							font-size: 0.8rem;
+							margin-left: 1rem;
+							line-height: 1;
+							margin-top: 0.1rem;
+						}
+					}
+					.input-reply {
+						width: 100%;
+						margin-top: 1rem;
+						font-family: 'NanumBarunGothic';
+						color: $gray3;
+						font-size: 1rem;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+		.reply-list__navigation {
+			width: 100%;
+			@include flexbox();
+			@include justify-content(center);
+			border-top: 1px solid $gray4;
+			margin-top: 1rem;
+			.navi-tab {
+				width: 2rem;
+				height: 2rem;
+				border-radius: 2rem;
+				margin-left: 0.5rem;
+				cursor: pointer;
+				margin-top: 2rem;
+				display: inline-block;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
+				&.navi-arrow {
+					background-color: $purple;
+					@include box-sizing(border-box);
+					border: 1px solid $purple;
+					position: relative;
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $purple-800;
+					}
+					&:after {
+						content: '';
+						width: 0.5rem;
+						height: 0.5rem;
+						border-top: 1px solid white;
+						border-right: 1px solid white;
+					}
+					&.left {
+						&:after {
+							position: absolute;
+							top: 33%;
+							left: 38%;
+							@include transform(rotate(-135deg));
+						}
+					}
+					&.right {
+						&:after {
+							position: absolute;
+							top: 33%;
+							right: 38%;
+							@include transform(rotate(45deg));
+						}
+					}
+				}
+				&.navi-num {
+					@include box-sizing(border-box);
+					border: 1px solid $gray4;
+					color: $gray3;
+					font-family: 'NanumBarunGothic';
+					text-align: center;
+					background-color: white;
+					font-size: 0.8rem;
+					line-height: 2rem;
+					@include transition(all 0.5s ease);
+					&:hover {
+						background-color: $gray4;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
