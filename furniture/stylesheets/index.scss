@@ -654,7 +654,157 @@ body {
 				}
 			}
 		}
-		.all-bedroom {}
+		.all-bedroom {
+			width: 100%;
+			position: relative;
+			margin-top: 7rem;
+			@include box-sizing(border-box);
+			padding: 0 13%;
+			.all-bedroom-wrapper {
+				width: 80%;
+				margin-left: 20%;
+				@include flexbox();
+				position: relative;
+				.all-bedroom__graphic {
+					width: 60%;
+					height: 25vw;
+					position: relative;
+					display: inline-block;
+					.room-graphic-wrapper {
+						width: 100%;
+						position: relative;
+						.room-graphic {
+							width: 25vw;
+							height: 25vw;
+							border-radius: 50%;
+							overflow: hidden;
+							margin-left: 50%;
+							@include transform(translateX(-50%));
+							img {
+								width: 100%;
+							}
+							&.active {}
+						}						
+					}
+					.room-arrow {
+						width: 3rem;
+						height: 3rem;
+						background-color: transparent;
+						@include flexbox();
+						@include justify-content(center);
+						@include align-items(center);
+						display: inline-block;
+						position: absolute;
+						top: calc((100% - 3rem) / 2);
+						cursor: pointer;
+						&:after {
+							content: '';
+							width: 2rem;
+							height: 2rem;
+							display: inline-block;
+							border-top: 1px solid $purple;
+							border-left: 1px solid $purple;
+						}
+						&.prev {
+							&:after {
+								@include transform(rotate(-45deg));
+							}
+						}
+						&.next {
+							right: 0;
+							&:after {
+								@include transform(rotate(135deg));
+							}
+						}
+					}
+				}
+				.all-bedroom__text {
+					margin-left: 5%;
+					width: 35%;
+					display: inline-block;
+					.room-title-h1 {
+						width: 100%;
+						font-size: 1.6rem;
+						color: $gray1;
+						letter-spacing: 0.2rem;
+						width: 100%;
+						font-family: 'BM DoHyeon';
+						position: relative;
+					}
+					.room-content-wrapper {
+						width: 100%;
+						margin-top: 3rem;
+						position: relative;
+						.room-content {
+							width: 100%;
+							.room-content__title {
+								width: 100%;
+								font-family: 'NanumBarunGothic';
+								font-weight: bold;
+								font-size: 1.2rem;
+								line-height: 1.2;
+								letter-spacing: 0.2rem;
+								color: $gray2;
+								word-break: keep-all;
+							}
+							.room-content__desc {
+								width: 100%;
+								margin-top: 1.2rem;
+								font-family: 'NanumBarunGothic';
+								font-size: 0.9rem;
+								line-height: 1.5;
+								color: $gray2;
+								word-break: keep-all;
+							}
+							.room-content__btns {
+								width: 100%;
+								margin-top: 3rem;
+								@include flexbox();
+								.room-btn {
+									width: 10rem;
+									height: 10rem;
+									border-radius: 10rem;
+									margin-right: 1rem;
+									@include box-sizing(border-box);
+									border: 1px solid $purple;
+									background-color: $purple;
+									@include transition(all 0.5s ease);
+									&:hover {
+										background-color: $purple-800;
+									}
+									a {
+										text-decoration: none;
+										color: white;
+										word-break: keep-all;
+										width: 60%;
+										margin-left: 20%;
+										text-align: center;
+										display: block;
+										font-size: 1rem;
+										line-height: 1.5;
+										font-family: 'NanumBarunGothic';
+										margin-top: calc((100% - 3rem) / 2);
+									}
+									&.page-btn {
+										background-color: white;
+										&:hover {
+											a {
+												color: $purple-800;
+											}
+										}
+										a {
+											color: $purple;
+											@include transition(all 0.5s ease);
+										}
+									}
+								}
+							}
+							&.current {}
+						}
+					}
+				}
+			}
+		}
 		.all-livingroom {}
 	}
 }
