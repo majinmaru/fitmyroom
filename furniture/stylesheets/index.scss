@@ -654,36 +654,46 @@ body {
 				}
 			}
 		}
-		.all-bedroom {
+		.all-room {
 			width: 100%;
 			position: relative;
-			margin-top: 7rem;
+			margin-top: 9rem;
 			@include box-sizing(border-box);
 			padding: 0 13%;
-			.all-bedroom-wrapper {
+			&.left {
+				.all-room-wrapper {
+					margin-left: 0;
+					.all-room__text {
+						margin-left: 0;
+						margin-right: 5%;
+					}
+				}
+			}
+			.all-room-wrapper {
 				width: 80%;
 				margin-left: 20%;
 				@include flexbox();
 				position: relative;
-				.all-bedroom__graphic {
+				.all-room__graphic {
 					width: 60%;
 					height: 25vw;
 					position: relative;
 					display: inline-block;
 					.room-graphic-wrapper {
-						width: 100%;
-						position: relative;
+						width: 25vw;
+						height: 25vw;
+						border-radius: 50%;
+						overflow: hidden;
+						margin-left: 50%;
+						@include transform(translateX(-50%));
 						.room-graphic {
-							width: 25vw;
-							height: 25vw;
-							border-radius: 50%;
-							overflow: hidden;
-							margin-left: 50%;
-							@include transform(translateX(-50%));
-							img {
-								width: 100%;
+							width: 100%;
+							display: none;
+							&.active {
+								display: block;
+								@include animation(img-scale 5s ease);
+								@include transform(scale(1.05));
 							}
-							&.active {}
 						}						
 					}
 					.room-arrow {
@@ -718,7 +728,7 @@ body {
 						}
 					}
 				}
-				.all-bedroom__text {
+				.all-room__text {
 					margin-left: 5%;
 					width: 35%;
 					display: inline-block;
@@ -737,6 +747,8 @@ body {
 						position: relative;
 						.room-content {
 							width: 100%;
+							display: none;
+							opacity: 0;
 							.room-content__title {
 								width: 100%;
 								font-family: 'NanumBarunGothic';
@@ -799,12 +811,76 @@ body {
 									}
 								}
 							}
-							&.current {}
+							&.current {
+								display: block;
+								@include animation(to-left 0.5s ease);
+								opacity: 1;
+							}
 						}
 					}
 				}
 			}
 		}
-		.all-livingroom {}
+		.all-ad {
+			width: 100%;
+			position: relative;
+			margin-top: 7rem;
+			.all-ad-wrapper {
+				width: 100%;
+				@include flexbox();
+				@include box-sizing(border-box);
+				@include justify-content(center);
+				padding: 0 13%;
+				margin-top: 3rem;
+				.all-ad__tab {
+					width: 13rem;
+					height: 13rem;
+					border-radius: 50%;
+					overflow: hidden;
+					margin-left: 2rem;
+					position: relative;
+					display: inline-block;
+					&:hover {
+						img {
+							@include transform(scale(1.05));
+						}
+					}
+					&:after {
+						content: '';
+						width: 100%;
+						height: 100%;
+						background-color: $black-300;
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+					&:nth-of-type(1) {
+						margin-left: 0;
+					}
+					img {
+						width: 100%;
+						@include transition(all 0.5s ease);
+					}
+					p{
+						font-size: 1rem;
+						color: white;
+						letter-spacing: 0.1rem;
+						text-align: center;
+						font-family: 'NanumBarunGothic';
+						position: absolute;
+						top: 50%;
+						width: 60%;
+						margin-left: 20%;
+						@include transform(translateY(-50%));
+						z-index: 2;
+						cursor: pointer;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
 	}
 }
