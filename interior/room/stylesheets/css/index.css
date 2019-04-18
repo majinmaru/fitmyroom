@@ -65,9 +65,7 @@ html { font-size: 14px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 
 body { width: 100%; overflow-x: hidden; }
 
-.margin { width: 100%; position: relative; height: 3.5rem; }
-
-.ad { width: 100%; height: 10vw; position: relative; overflow: hidden; }
+.ad { width: 100%; height: 10vw; position: relative; overflow: hidden; margin-top: 3.5rem; }
 .ad img { width: 100%; position: absolute; top: -45%; }
 
 .page-navigation { width: 100%; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; margin-top: 5rem; }

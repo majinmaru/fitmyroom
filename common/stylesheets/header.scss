@@ -11,7 +11,10 @@
 		@include box-sizing(border-box);
 		padding: 0 5%;
 		@include flexbox();
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
 		z-index: 9999;
 		background-color: white;
 		.nav-left {
@@ -280,4 +283,159 @@
 			}
 		}
 	}
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+.header {
+	.nav {
+		.nav-left {
+			width: calc(100% / 4);
+			.nav-left__symbol {
+			}
+			.nav-left__logo {
+			}
+		}
+		.nav-center {
+			width: calc(100% / 4);
+			margin-left: 12.5%;
+			margin-right: 12.5%;
+			.nav-center__search-icon {
+			}
+			.nav-center__search-input {
+			}
+		}
+		.nav-right {
+			width: calc(100% / 4);
+			.nav-right__login {
+			}
+			.nav-right__menu {
+				&.open {
+					span {
+					}
+				}
+				span {
+				}
+			}
+		}
+	}
+	.bottom {
+		&.current {
+		}
+		.bottom-gnb {
+			.gnb-list {
+				width: 35%;
+				.gnb-list__tab {
+					span {
+						font-size: 1rem;
+					}
+				}
+			}
+			.gnb-content {
+				width: 65%;
+				.gnb-content__box {
+					&.current {
+					}
+					.box-goto {						
+						span {
+						}
+					}					
+				}
+			}
+		}
+		.bottom-ad {
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 767px) {
+html {
+	font-size: $mobile;
+}
+.header {
+	.nav {
+		.nav-left {
+			width: calc(100% / 4);
+			.nav-left__symbol {
+			}
+			.nav-left__logo {
+				display: none;
+			}
+		}
+		.nav-center {
+			width: 50%;
+			margin-left: 0;
+			margin-right: 0;
+			.nav-center__search-icon {
+			}
+			.nav-center__search-input {
+			}
+		}
+		.nav-right {
+			width: calc(100% / 4);
+			.nav-right__login {
+			}
+			.nav-right__menu {
+				&.open {
+					span {
+					}
+				}
+				span {
+				}
+			}
+		}
+	}
+	.bottom {
+		@include flex-direction(column);
+		&.current {
+		}
+		.bottom-gnb {
+			width: 100%;
+			height: 60%;
+			padding-left: 0;
+			@include flex-direction(column);
+			.gnb-list {
+				width: 100%;
+				height: 3rem;
+				@include flex-direction(row);
+				.gnb-list__tab {
+					width: 25%;
+					height: 100%;
+					display: inline-block;
+					&.active {
+						border-bottom: 3px solid $purple;
+						border-right: 0;
+					}
+					span {
+						font-size: 1rem;
+					}
+				}
+			}
+			.gnb-content {
+				width: 100%;
+				height: calc(100% - 3rem);
+				.gnb-content__box {
+					padding: 5% 15%;
+					&.current {
+					}
+					.box-goto {
+						text-align: center;
+						margin-top: 2rem;			
+						span {
+							font-size: 1.2rem;
+						}
+					}					
+				}
+			}
+		}
+		.bottom-ad {
+			width: 100%;
+			height: 40%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
 }
