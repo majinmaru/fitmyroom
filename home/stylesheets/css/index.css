@@ -158,8 +158,9 @@ body { width: 100%; overflow-x: hidden; }
 .designer-brand .designer-brand-content .brand-content__cont { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; margin-top: 3rem; padding: 0 20%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long { width: 25%; height: 33vw; margin-right: 3%; position: relative; overflow: hidden; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long img { height: 100%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover .cont-box-long__text { opacity: 1; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover img { -webkit-animation: img-scale 3s linear; animation: img-scale 3s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
-.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text { position: absolute; bottom: 8%; left: 10%; width: 80%; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text { position: absolute; bottom: 8%; left: 10%; width: 80%; opacity: 0; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; word-break: keep-all; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title:hover { text-decoration: underline; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
@@ -167,8 +168,9 @@ body { width: 100%; overflow-x: hidden; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper { width: 72%; position: relative; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box { width: 100%; height: 16vw; position: relative; overflow: hidden; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box img { width: 100%; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box:hover .cont-box__text { opacity: 1; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box:hover img { -webkit-animation: img-scale 3s linear; animation: img-scale 3s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
-.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text { position: absolute; width: 25%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-left: 65%; top: 0; left: 0; padding-top: 7%; }
+.designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text { position: absolute; width: 25%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-left: 65%; top: 0; left: 0; padding-top: 7%; opacity: 0; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-weight: bold; font-size: 1.2rem; line-height: 1.2; letter-spacing: 0.2rem; color: white; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title:hover { text-decoration: underline; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-brand { width: 100%; text-align: center; font-family: 'NanumBarunGothic'; font-size: 0.9rem; margin-top: 1rem; color: white; }
@@ -196,7 +198,7 @@ body { width: 100%; overflow-x: hidden; }
 .sale .sale-content { width: 100%; position: relative; }
 .sale .sale-content .brand-content__title { width: 100%; position: relative; }
 .sale .sale-content .brand-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
-.sale .sale-list { width: 100%; position: relative; margin-top: 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5%; }
+.sale .sale-list { width: 100%; height: 16vw; position: relative; margin-top: 3rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5%; overflow: hidden; }
 .sale .sale-list .sale-list__item { width: 22vw; height: 16vw; position: relative; overflow: hidden; display: inline-block; margin-left: 0.5%; margin-right: 0.5%; }
 .sale .sale-list .sale-list__item img { height: 100%; position: absolute; top: 0; left: 0; }
 .sale .sale-list .sale-list__item .item-info { width: 45%; height: 100%; position: absolute; top: 0; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 8% 0; }
@@ -207,5 +209,67 @@ body { width: 100%; overflow-x: hidden; }
 .sale .sale-list .sale-list__item .item-info .item-info__prev-price { font-family: 'NanumBarunGothic'; font-size: 0.8rem; text-decoration: line-through; color: white; width: 100%; font-weight: 300; margin-top: 2rem; }
 .sale .sale-list .sale-list__item .item-info .item-info__sale-price { font-family: 'NanumBarunGothic'; font-weight: bold; color: white; letter-spacing: 0.1rem; margin-top: 0.8rem; font-size: 1.5rem; }
 .sale .sale-list .sale-list__item .item-info .item-info__sale { position: absolute; width: 4rem; height: 4rem; font-size: 1rem; line-height: 4rem; font-family: 'BM DoHyeon'; color: white; background-color: #b5321c; bottom: 0; right: 0; text-align: center; }
+
+@media screen and (min-width: 768px) and (max-width: 1280px) { .main { height: 42vw; }
+  .main .main-slide-wrapper .main-slide img { width: auto; height: 100%; }
+  .main .main-slide-wrapper .main-slide.first img { position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+  .main .main-slide-wrapper .main-slide.second img { position: absolute; top: 0; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+  .main .main-slide-wrapper .main-slide.third img { position: absolute; top: 0; -webkit-animation: img-scale 5s linear; animation: img-scale 5s linear; }
+  .main .main-slide-wrapper .main-slide .main-slide__content { width: 30%; margin-left: 15%; }
+  .main .main-slide-wrapper .main-slide .main-slide__content .content-subtitle { margin-top: 35%; }
+  .winner { margin-top: 7rem; padding: 0 5%; }
+  .winner .winner-content .winner-content__box { height: 42vw; margin-left: calc(100% / 12); }
+  .winner .winner-content .winner-content__box .box-text { width: 38%; padding: 6% 8%; }
+  .winner .winner-content .winner-content__box .box-img { width: 62%; padding: 2%; }
+  .winner .winner-content .winner-content__box .box-img .img-slide .img-slide__info { padding: 15% 30%; }
+  .room-pick { margin-top: 9rem; }
+  .room-pick .room-pick-title { width: 35%; height: 41vw; padding-left: 5%; padding-top: 5%; padding-bottom: 5%; }
+  .room-pick .room-pick-title .room-pick-title__title { width: 70%; margin-left: 15%; }
+  .room-pick .room-pick-wrapper { width: 65%; height: 41vw; overflow-x: scroll; }
+  .room-pick .room-pick-wrapper .card-list { width: 130vw; }
+  .room-pick .room-pick-wrapper .card-list .card { width: 40vw; height: 38vw; padding: 2%; }
+  .designer-brand .designer-brand-content .brand-content__cont { padding: 0 10%; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long { width: 25%; height: 33vw; margin-right: 2%; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long img { height: auto; width: 100%; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long:hover img { -webkit-animation: img-scale 3s linear; animation: img-scale 3s linear; -webkit-transform: scale(1.05); -ms-transform: scale(1.05); transform: scale(1.05); }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text { position: absolute; bottom: 8%; left: 15%; width: 70%; opacity: 1; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__title { font-weight: bold; font-size: 1rem; line-height: 1.2; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__brand { font-size: 0.8rem; margin-top: 1rem; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-long .cont-box-long__text .long-text__desc { font-size: 0.8rem; line-height: 1.5; margin-top: 2rem; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper { width: 73%; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box { width: 100%; height: 22vw; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text { opacity: 1; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-title { font-size: 1rem; line-height: 1.2; letter-spacing: 0.2rem; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-brand { font-size: 0.8rem; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box .cont-box__text .cont-box__text-desc { font-size: 0.8rem; margin-top: 2rem; }
+  .designer-brand .designer-brand-content .brand-content__cont .cont-box-wrapper .cont-box.big { height: 29vw; }
+  .fixed { height: 40vw; }
+  .fixed .fixed-text { margin-left: 5%; height: 60%; top: 20%; }
+  .fixed .fixed-text .fixed-text__desc { width: 85%; }
+  .sale .sale-list { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0; height: 25vw; }
+  .sale .sale-list .sale-list__item { width: 40vw; height: 25vw; margin-left: 0; margin-right: 1%; }
+  .sale .sale-list .sale-list__item img { width: 100%; }
+  .sale .sale-list .sale-list__item .item-info .item-info__hashtag span { font-size: 0.8rem; }
+  .sale .sale-list .sale-list__item .item-info .item-info__title { font-size: 1rem; line-height: 1.4; }
+  .sale .sale-list .sale-list__item .item-info .item-info__brand { font-size: 0.8rem; }
+  .sale .sale-list .sale-list__item .item-info .item-info__prev-price { font-size: 0.7rem; margin-top: 1.6rem; }
+  .sale .sale-list .sale-list__item .item-info .item-info__sale-price { font-size: 1.5rem; } }
+@media screen and (max-width: 767px) { .main { height: 100vw; }
+  .main .main-slide-wrapper .main-slide img { width: auto; height: 100%; }
+  .main .main-slide-wrapper .main-slide.first img { width: 200%; height: auto; position: absolute; top: 45%; left: 23%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+  .main .main-slide-wrapper .main-slide.second { background-size: 200%; }
+  .main .main-slide-wrapper .main-slide.second img { width: 200%; height: auto; position: absolute; top: 35%; left: 23%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+  .main .main-slide-wrapper .main-slide.third img { position: absolute; top: 0; left: -95%; }
+  .main .main-slide-wrapper .main-slide .main-slide__content { width: 70%; margin-left: 15%; }
+  .main .main-slide-wrapper .main-slide .main-slide__content .content-subtitle { margin-top: 20%; }
+  .main .main-slide-wrapper .main-slide .main-slide__content .content-title { font-size: 1.8rem; }
+  .main .main-slide-wrapper .main-slide .main-slide__content .content-btn { margin-top: 10%; }
+  .main .main-navigation { width: 100%; height: 2rem; left: 0; bottom: 2rem; top: auto; padding-top: 0; padding: 0 10%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+  .main .main-navigation .navigation { width: calc(100% / 3); height: 2rem; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; margin-top: 0; }
+  .main .main-navigation .navigation.active .navigation-line { width: 4rem; }
+  .main .main-navigation .navigation.active .navigation-line:after { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; -webkit-transform-origin: center center; -ms-transform-origin: center center; transform-origin: center center; -webkit-animation: navi-line 5s linear; animation: navi-line 5s linear; }
+  .main .main-navigation .navigation.active .navigation-num { display: inline-block; }
+  .main .main-navigation .navigation .navigation-line { margin-left: calc((100% - 2rem) / 2); margin-top: 0; margin-right: 0; -webkit-transform-origin: center center; -ms-transform-origin: center center; transform-origin: center center; }
+  .main .main-navigation .navigation .navigation-num { margin-top: 5px; font-size: 1rem; line-height: 1; width: 100%; text-align: center; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -75,19 +75,36 @@ $(document).ready(function(){
 		axis:"x",
 	    theme: "minimal-dark"
 	});
-
-	$(".sale-list").slick({
-		centerMode: true,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		infinite: true,
-		arrow: true,
-		dots: false
-	});
+	function setSlide(){
+		if($(window).width() > 1280){
+			$(".sale-list").slick({
+				centerMode: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+				arrow: true,
+				dots: false
+			});
+		} else if($(window).width()>= 768 && $(window).width() <= 1280){
+			$(".sale-list").slick({
+				centerMode: true,
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true,
+				arrow: true,
+				dots: false
+			});
+		}
+	}
+	setSlide();
 
 	$(".fixed").paroller({
 		factor: 0.6,
 		type: 'background',
 		direction: 'vertical'
+	});
+
+	$(window).resize(function(){
+		setSlide();
 	});
 });
