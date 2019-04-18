@@ -8,7 +8,7 @@
 	position: relative;
 	margin-top: 7rem;
 	@include box-sizing(border-box);
-	padding: 0 5%;
+	padding: 2% 10%;
 	@include flexbox();
 	background-color: $footer-bg;
 	.footer-info {
@@ -117,4 +117,28 @@
 			background-repeat: no-repeat; 
 		}
 	}
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+.footer {
+	padding: 2% 10%;
+	.footer-info {
+		width: 55%;
+		padding-right: 0;
+		.footer-info__top {
+			.top-logo {
+				width: 18%;
+				img {
+					width: 100%;
+				}
+			}
+			.top-sitemap {
+				width: 77%;
+				padding-right: 15%;
+			}
+		}		
+	}
+	.footer-map {
+		width: 45%;
+	}
+}
 }
