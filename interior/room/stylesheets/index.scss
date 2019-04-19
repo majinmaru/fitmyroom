@@ -365,9 +365,6 @@ body {
 			width: 32%;
 			margin-left: 2%;
 			@include box-sizing(border-box);
-			padding-top: 2%;
-			padding-right: 2%;
-			padding-left: 2%;
 			border: 1px solid $gray4;
 			display: inline-block;
 			@include transition(all 0.5s ease);
@@ -416,6 +413,8 @@ body {
 					font-family: 'NanumBarunGothic';
 					color: $gray1;
 					cursor: pointer;
+					@include box-sizing(border-box);
+					padding-left: 1rem;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -427,6 +426,8 @@ body {
 					color: $gray3;
 					line-height: 1;
 					cursor: pointer;
+					@include box-sizing(border-box);
+					padding-left: 1rem;
 					&:hover {
 						text-decoration: underline;
 					}
@@ -436,6 +437,8 @@ body {
 					width: 100%;
 					@include flexbox();
 					position: relative;
+					@include box-sizing(border-box);
+					padding-left: 1rem;
 					.eval-graphic {
 						width: 80px;
 						height: 1.4rem;
@@ -481,6 +484,8 @@ body {
 						color: $gray1;
 						margin-top: 0.8rem;
 						display: inline-block;
+						@include box-sizing(border-box);
+						padding-left: 1rem;
 					}
 					.info-icon {
 						width: 6.6rem;

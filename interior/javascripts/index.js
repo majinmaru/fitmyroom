@@ -4,4 +4,16 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
 	});
+	function lnbSet(){
+		if($(window).width() < 768){
+			$(".lnb-list-wrapper").mCustomScrollbar({
+				axis:"x",
+			    theme: "minimal-dark"
+			});
+		}
+	}
+	lnbSet();
+	$(window).resize(function(){
+		lnbSet();
+	});
 });

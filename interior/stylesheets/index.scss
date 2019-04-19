@@ -13,11 +13,6 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
-.margin {
-	width: 100%;
-	position: relative;
-	height: $header-height;
-}
 .main {
 	width: 100%;
 	position: relative;
@@ -89,68 +84,73 @@ body {
 .lnb {
 	width: 100%;
 	position: relative;
-	.lnb-list {
+	overflow: hidden;
+	.lnb-list-wrapper {
 		width: 100%;
-		height: 4.5rem;
-		@include flexbox();
-		@include box-sizing(border-box);
-		@include justify-content(center);
-		padding: 0 15%;
-		background-color: $purple;
-		.lnb-tab {
-			list-style: none;
-			display: inline-block;
-			margin-left: 3rem;
+		position: relative;
+		.lnb-list {
+			width: 100%;
 			height: 4.5rem;
-			position: relative;
-			&:nth-of-type(1) {
-				margin-left: 0;
-			}
-			&.active {
-				&:after {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: calc((100% - 4rem) / 2);
-					width: 4rem;
-					height: 5px;
-					background-color: white;
+			@include flexbox();
+			@include box-sizing(border-box);
+			@include justify-content(center);
+			padding: 0 15%;
+			background-color: $purple;
+			.lnb-tab {
+				list-style: none;
+				display: inline-block;
+				margin-left: 3rem;
+				height: 4.5rem;
+				position: relative;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
+				&.active {
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: calc((100% - 4rem) / 2);
+						width: 4rem;
+						height: 5px;
+						background-color: white;
+					}
+				}
+				a {
+					line-height: 4.5rem;
+					font-size: 1rem;
+					color: white;
+					text-decoration: none;
+					display: inline;
 				}
 			}
-			a {
-				line-height: 4.5rem;
-				font-size: 1rem;
-				color: white;
-				text-decoration: none;
+			.lnb-top-btn {
+				list-style: none;
 				display: inline;
-			}
-		}
-		.lnb-top-btn {
-			list-style: none;
-			display: inline;
-			margin-left: 3rem;
-			height: 4.5rem;
-			position: relative;
-			.scroll-top-btn {
-				width: 2.5rem;
-				height: 2.5rem;
-				border-radius: 2.5rem;
-				background-color: white;
+				margin-left: 3rem;
+				height: 4.5rem;
 				position: relative;
-				margin-top: 1rem;
-				display: inline-block;
-				&:after {
-					content: '';
-					width: 0.5rem;
-					height: 0.5rem;
-					border-top: 1px solid $purple;
-					border-left: 1px solid $purple;
+				.scroll-top-btn {
+					width: 2.5rem;
+					height: 2.5rem;
+					border-radius: 2.5rem;
+					background-color: white;
+					position: relative;
+					margin-top: 1rem;
 					display: inline-block;
-					position: absolute;
-					top: 1.1rem;
-					left: 1rem;
-					@include transform(rotate(45deg));
-					cursor: pointer;
+					&:after {
+						content: '';
+						width: 0.5rem;
+						height: 0.5rem;
+						border-top: 1px solid $purple;
+						border-left: 1px solid $purple;
+						display: inline-block;
+						position: absolute;
+						top: 1.1rem;
+						left: 1rem;
+						@include transform(rotate(45deg));
+						cursor: pointer;
+					}
 				}
 			}
 		}
@@ -602,5 +602,307 @@ body {
 		}
 	}
 }
-@media screen and (min-width: 768px) and (max-width: 1280px) {}
-@media screen and (max-width: 767px) {}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+.main {
+	.main-bg {
+		img {
+		}
+	}
+	.main-text {
+		padding: 0;
+		.main-text__title {
+			width: 100%;
+			height: 30%;
+			@include flexbox();
+			@include justify-content(center);
+			img {
+				height: 100%;
+			}
+		}
+		.main-text__desc {
+			margin-top: 2rem;
+		}
+		.main-text__btn {
+		}
+	}
+}
+.winner-of-the-month {
+	.title-h1 {
+	}
+	.winner-wrapper {
+		padding: 0 5%;
+		.winner-card {
+			width: calc(98% / 3);
+			height: 30vw;
+			margin-left: 1%;
+			padding: 1%;
+			.winner-card__img {
+				height: 17vw;
+				img {
+				}
+			}
+			.winner-card__title {
+			}
+			.winner-card__user {
+			}
+			.winner-card-line {				
+			}
+		}
+	}
+}
+.quick-tab-wrapper {
+	margin-top: 7rem;
+	.quick-tab {
+		&:hover {
+			&:after {
+			}
+			img {
+			}
+		}
+		&:after {
+		}
+		img {
+		}
+		.quick-tab__text {
+			padding: 18%;
+			.title-h2 {
+			}
+			.tab-text-desc {
+				width: 64%;
+				margin-left: 18%;
+			}
+		}
+	}
+}
+.latest {
+	padding: 0 5%;
+	.title-h1 {
+	}
+	.interior-card-wrapper {
+		.interior-card {
+			height: 25vw;
+			padding: 1%;
+			margin-right: 2%;
+			&:nth-of-type(3n) {
+			}
+			.interior-card__img {
+				width: 100%;
+				height: 65%;
+				overflow: hidden;
+				position: relative;
+				img {
+					width: 100%;
+					@include transition(all 3s ease);
+				}
+			}
+			.interior-card__text {
+				.text-content {
+					.content-title {
+						.title-text {
+						}
+					}
+					.content-user {
+						font-size: 0.8rem;
+					}
+				}
+				.text-icon {
+					.icon-tab {
+						.icon-tab__img {
+							img {
+							}
+						}
+						.icon-tab__num {
+						}
+					}
+				}
+			}
+		}
+	}
+	.interior-card-more {
+		.more-line {
+		}
+		.more-btn {
+			.more-btn__text {
+			}
+			.more-btn__plus {
+				&:after {
+				}
+			}
+		}
+	}
+}
+}
+@media screen and (max-width: 767px) {
+.main {
+	.main-bg {
+		height: 80vw;
+		img {
+			width: auto;
+			height: 100%;
+			margin-left: -30%;
+		}
+	}
+	.main-text {
+		padding: 0;
+		width: 50%;
+		left: 25%;
+		height: 45vw;
+		top: 15vw;
+		.main-text__title {
+			img {
+			}
+		}
+		.main-text__desc {
+			margin-top: 2rem;
+		}
+		.main-text__btn {
+		}
+	}
+}
+.lnb {
+	.lnb-list-wrapper {
+		overflow: hidden;
+		.lnb-list {
+			@include flex-wrap(nowrap);
+			@include justify-content(flex-start);
+			@include flex(0 0 auto);
+			padding-left: 10%;
+			padding-right: 0;
+			width: 130vw;
+			.lnb-tab {
+				&.active {
+					&:after {
+					}
+				}
+				a {
+				}
+			}
+			.lnb-top-btn {
+				.scroll-top-btn {
+					&:after {
+					}
+				}
+			}
+		}
+	}
+}
+.winner-of-the-month {
+	.title-h1 {
+	}
+	.winner-wrapper {
+		padding: 0 5%;
+		@include flex-direction(column);
+		.winner-card {
+			width: 100%;
+			height: 85vw;
+			margin-left: 0;
+			padding: 1%;
+			margin-top: 1rem;
+			.winner-card__img {
+				height: 55vw;
+				img {
+				}
+			}
+			.winner-card__title {
+			}
+			.winner-card__user {
+			}
+			.winner-card-line {				
+			}
+		}
+	}
+}
+.quick-tab-wrapper {
+	margin-top: 4rem;
+	.quick-tab {
+		height: 45vw;
+		&:hover {
+			&:after {
+			}
+			img {
+				@include transform(scale(1.05) translateX(-50%));
+			}
+		}
+		&:after {
+		}
+		img {
+			height: 100%;
+			width: auto;
+			position: absolute;
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+		.quick-tab__text {
+			padding: 20%;
+			.title-h2 {
+				font-size: 1rem;
+			}
+			.tab-text-desc {
+				width: 100%;
+				margin-left: 0;
+				margin-top: 1rem;
+				font-size: 0.8rem;
+			}
+		}
+	}
+}
+.latest {
+	padding: 0 5%;
+	.title-h1 {
+	}
+	.interior-card-wrapper {
+		@include flex-direction(column);
+		.interior-card {
+			width: 100%;
+			height: 80vw;
+			padding: 0;
+			margin-right: 0;
+			margin-top: 3rem;
+			&:nth-of-type(3n) {
+			}
+			.interior-card__img {
+				width: 100%;
+				height: 70%;
+				img {
+				}
+			}
+			.interior-card__text {
+				height: 25%;
+				.text-content {
+					@include box-sizing(border-box);
+					padding-left: 3%;
+					.content-title {
+						.title-text {
+						}
+					}
+					.content-user {
+						font-size: 0.8rem;
+					}
+				}
+				.text-icon {
+					.icon-tab {
+						.icon-tab__img {
+							img {
+							}
+						}
+						.icon-tab__num {
+						}
+					}
+				}
+			}
+		}
+	}
+	.interior-card-more {
+		.more-line {
+		}
+		.more-btn {
+			.more-btn__text {
+			}
+			.more-btn__plus {
+				&:after {
+				}
+			}
+		}
+	}
+}
+}
