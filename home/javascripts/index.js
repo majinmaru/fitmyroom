@@ -64,7 +64,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$(".winner-cheer").paroller({
+	$(".cheer-box-wrapper").paroller({
 		factor: 0.5,
 		type: 'foreground',
 		direction: 'horizontal',
