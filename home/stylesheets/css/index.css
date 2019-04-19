@@ -119,7 +119,7 @@ body { width: 100%; overflow-x: hidden; }
 .winner .winner-content .winner-content-arrow .arrow img { width: 100%; height: 100%; }
 .winner .winner-content .winner-content-arrow .arrow.prev img { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
 
-.winner-cheer { width: 100%; position: relative; margin-top: 5rem; }
+.winner-cheer { width: 100%; position: relative; margin-top: 5rem; overflow-x: hidden; }
 .winner-cheer .cheer-box-wrapper { width: 135vw; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; margin-left: -10%; }
 .winner-cheer .cheer-box-wrapper .cheer-box { width: 20%; margin-right: 5%; height: 10vw; position: relative; overflow: hidden; }
 .winner-cheer .cheer-box-wrapper .cheer-box:nth-of-type(2n-1) img { margin-top: 7%; }
