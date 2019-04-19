@@ -83,8 +83,18 @@ body {
 }
 .lnb {
 	width: 100%;
-	position: relative;
+	position: absolute;
+	top: calc(30vw + 3.5rem);
+	left: 0;
+	right: 0;
 	overflow: hidden;
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9997;
+	}
 	.lnb-list-wrapper {
 		width: 100%;
 		position: relative;
@@ -159,7 +169,7 @@ body {
 .winner-of-the-month {
 	width: 100%;
 	position: relative;
-	margin-top: 7rem;
+	margin-top: 10rem;
 	.title-h1 {
 		font-size: 1.6rem;
 		color: $gray1;
@@ -760,6 +770,7 @@ body {
 	}
 }
 .lnb {
+	top: calc(80vw + 3.5rem);
 	.lnb-list-wrapper {
 		overflow: hidden;
 		.lnb-list {

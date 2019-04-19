@@ -22,6 +22,23 @@ $(document).ready(function(){
 		}
 	}
 	lnbSet();
+	$(".scroll-top-btn").click(function(e){
+		e.preventDefault();
+		$("html").animate({
+			scrollTop: 0
+		}, 500);
+	});
+	function stickyLnb(){
+		var stickyLnbTop = $(".all-wrapper").offset().top;
+		var scrollTop = $(window).scrollTop();
+		var windowWidth = $(window).width();
+		if (scrollTop >= stickyLnbTop) {
+			$(".lnb").addClass('sticky');
+		} else if(scrollTop < stickyLnbTop) {
+			$(".lnb").removeClass('sticky');
+		}
+	}
+	stickyLnb();
 	$(".room-arrow").click(function(e){
 		var currentRoom = $(this).parents(".all-room");
 		var currentRoomImg = currentRoom.find(".room-graphic").filter('.active');
@@ -56,4 +73,7 @@ $(document).ready(function(){
 		adTabSet();
 		lnbSet();
 	});
+	$(window).scroll(function(){
+		stickyLnb();
+	})
 });

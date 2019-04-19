@@ -75,7 +75,8 @@ body { width: 100%; overflow-x: hidden; }
 .main .main-text .main-text__btn { text-decoration: none; color: #8002c4; font-family: 'NanumBarunGothic'; font-size: 1rem; width: 100%; text-align: center; width: 70%; height: 3rem; line-height: 3rem; background-color: white; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; margin-left: 15%; display: block; margin-top: 2rem; }
 .main .main-text .main-text__btn:hover { background-color: #a537ed; color: white; }
 
-.lnb { width: 100%; position: relative; overflow: hidden; }
+.lnb { width: 100%; position: absolute; top: calc(30vw + 3.5rem); left: 0; right: 0; overflow: hidden; }
+.lnb.sticky { position: fixed; top: 0; left: 0; right: 0; z-index: 9997; }
 .lnb .lnb-list-wrapper { width: 100%; position: relative; }
 .lnb .lnb-list-wrapper .lnb-list { width: 100%; height: 4.5rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 0 15%; background-color: #8002c4; }
 .lnb .lnb-list-wrapper .lnb-list .lnb-tab { list-style: none; display: inline-block; margin-left: 3rem; height: 4.5rem; position: relative; }
@@ -86,7 +87,7 @@ body { width: 100%; overflow-x: hidden; }
 .lnb .lnb-list-wrapper .lnb-list .lnb-top-btn .scroll-top-btn { width: 2.5rem; height: 2.5rem; border-radius: 2.5rem; background-color: white; position: relative; margin-top: 1rem; display: inline-block; }
 .lnb .lnb-list-wrapper .lnb-list .lnb-top-btn .scroll-top-btn:after { content: ''; width: 0.5rem; height: 0.5rem; border-top: 1px solid #8002c4; border-left: 1px solid #8002c4; display: inline-block; position: absolute; top: 1.1rem; left: 1rem; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); cursor: pointer; }
 
-.winner-of-the-month { width: 100%; position: relative; margin-top: 7rem; }
+.winner-of-the-month { width: 100%; position: relative; margin-top: 10rem; }
 .winner-of-the-month .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
 .winner-of-the-month .winner-wrapper { width: 100%; margin-top: 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 10%; display: -webkit-box; display: -ms-flexbox; display: flex; position: relative; }
 .winner-of-the-month .winner-wrapper .winner-card { width: calc(96% / 3); height: 25vw; margin-left: 2%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 2%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; background-color: white; }
@@ -169,6 +170,7 @@ body { width: 100%; overflow-x: hidden; }
   .main .main-bg img { width: auto; height: 100%; margin-left: -30%; }
   .main .main-text { padding: 0; width: 50%; left: 25%; height: 45vw; top: 15vw; }
   .main .main-text .main-text__desc { margin-top: 2rem; }
+  .lnb { top: calc(80vw + 3.5rem); }
   .lnb .lnb-list-wrapper { overflow: hidden; }
   .lnb .lnb-list-wrapper .lnb-list { -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-pack: flex-start; -ms-flex-pack: flex-start; justify-content: flex-start; -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; padding-left: 10%; padding-right: 0; width: 130vw; }
   .winner-of-the-month .winner-wrapper { padding: 0 5%; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }

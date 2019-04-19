@@ -154,7 +154,7 @@ body { width: 100%; overflow-x: hidden; }
 .designer-brand { width: 100%; position: relative; margin-top: 9rem; }
 .designer-brand .designer-brand-content { width: 100%; position: relative; }
 .designer-brand .designer-brand-content .brand-content__title { width: 100%; position: relative; }
-.designer-brand .designer-brand-content .brand-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; }
+.designer-brand .designer-brand-content .brand-content__title .title-h1 { font-size: 1.6rem; color: #262626; letter-spacing: 0.2rem; width: 100%; text-align: center; font-family: 'BM DoHyeon'; position: relative; word-break: keep-all; }
 .designer-brand .designer-brand-content .brand-content__cont { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; margin-top: 3rem; padding: 0 20%; display: -webkit-box; display: -ms-flexbox; display: flex; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long { width: 25%; height: 33vw; margin-right: 3%; position: relative; overflow: hidden; cursor: pointer; }
 .designer-brand .designer-brand-content .brand-content__cont .cont-box-long img { height: 100%; position: relative; -webkit-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }

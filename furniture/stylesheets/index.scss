@@ -62,7 +62,18 @@ body {
 }
 .lnb {
 	width: 100%;
-	position: relative;
+	position: absolute;
+	top: calc(30vw + 3.5rem);
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 9997;
+	}
 	.lnb-list-wrapper {
 		width: 100%;
 		position: relative;
@@ -148,11 +159,11 @@ body {
 	.all-wrapper {
 		width: 100%;
 		position: relative;
+		margin-top: 8.5rem;
 		.all-search {
 			width: 100%;
 			@include box-sizing(border-box);
 			padding: 0 5%;
-			margin-top: 5rem;
 			.all-search__title {
 				font-family: 'NanumBarunGothic';
 				color: $gray1;
@@ -1175,6 +1186,7 @@ body {
 	}
 }
 .lnb {
+	top: calc(80vw + 3.5rem);
 	.lnb-list-wrapper {
 		overflow: hidden;
 		.lnb-list {
@@ -1349,6 +1361,7 @@ body {
 						.dbb-box-bottom {
 							height: 55vw;
 							.dbb-box-purple {
+								display: none;
 								img {
 									width: 100%;
 									@include transform(translateY(-50%) rotate(90deg));
@@ -1356,12 +1369,13 @@ body {
 								}
 							}
 							.dbb-box-right {
+								width: 100%;
 								img {
 									height: 100%;
 									width: auto;
 									position: absolute;
 									top: 0;
-									right: -30%;
+									right: 0;
 								}
 								.designerbrand-box__text {
 									width: 40%;
