@@ -237,7 +237,7 @@ body { width: 100%; overflow-x: hidden; }
   .lnb .lnb-list-wrapper .lnb-list { -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-pack: flex-start; -ms-flex-pack: flex-start; justify-content: flex-start; -webkit-box-flex: 0 0 auto; -ms-flex: 0 0 auto; flex: 0 0 auto; padding-left: 10%; padding-right: 0; width: 150vw; }
   .page-tab .all-wrapper .all-search .all-search__box { width: 80%; margin-left: 10%; }
   .page-tab .all-wrapper .all-search .all-search__hashtag { width: 90%; margin-left: 5%; }
-  .page-tab .all-wrapper .all-search .all-search__hashtag .hashtag-tab { font-size: 0.7rem; margin-right: 1rem; margin-top: 0.6rem; padding: 0.7rem 1.5rem; }
+  .page-tab .all-wrapper .all-search .all-search__hashtag .hashtag-tab { font-size: 0.7rem; margin-right: 0.5rem; margin-top: 0.6rem; padding: 0.7rem 1.5rem; }
   .page-tab .all-wrapper .all-best { padding: 0 5%; }
   .page-tab .all-wrapper .all-best .all-best__item-list { -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
   .page-tab .all-wrapper .all-best .all-best__item-list .all-best__item { width: 100%; margin-left: 0; margin-top: 3rem; }
