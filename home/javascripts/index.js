@@ -94,12 +94,23 @@ $(document).ready(function(){
 				arrow: true,
 				dots: false
 			});
+		} else if($(window).width() < 768){
+			$(".sale-list").slick({
+				centerMode: true,
+				centerPadding: '20px',
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				arrow: true,
+				dots: false
+			});
 		}
 	}
 	setSlide();
 
 	$(".fixed").paroller({
 		factor: 0.6,
+		factorXs: 0.2,
 		type: 'background',
 		direction: 'vertical'
 	});
