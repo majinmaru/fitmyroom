@@ -16,7 +16,9 @@
 	<link rel="stylesheet" type="text/css" href="https://majinmaru.github.io/fitmyroom/common/stylesheets/css/header.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://majinmaru.github.io/fitmyroom/common/stylesheets/css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="https://majinmaru.github.io/fitmyroom/lib/stylesheets/jquery.mCustomScrollbar.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://majinmaru.github.io/fitmyroom/lib/javascripts/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -147,16 +149,18 @@
 		</div>
 	</section>
 	<section class="lnb">
-		<ul class="lnb-list">
-			<li class="lnb-tab active"><a href="#">전체보기</a></li>
-			<li class="lnb-tab"><a href="#">디자이너가구</a></li>
-			<li class="lnb-tab"><a href="#">침실</a></li>
-			<li class="lnb-tab"><a href="#">거실</a></li>
-			<li class="lnb-tab"><a href="#">서재</a></li>
-			<li class="lnb-tab"><a href="#">주방</a></li>
-			<li class="lnb-tab"><a href="#">인테리어소품</a></li>
-			<li class="lnb-top-btn"><span class="scroll-top-btn"></span></li>
-		</ul>
+		<div class="lnb-list-wrapper">
+			<ul class="lnb-list">
+				<li class="lnb-tab active"><a href="#">전체보기</a></li>
+				<li class="lnb-tab"><a href="#">디자이너가구</a></li>
+				<li class="lnb-tab"><a href="#">침실</a></li>
+				<li class="lnb-tab"><a href="#">거실</a></li>
+				<li class="lnb-tab"><a href="#">서재</a></li>
+				<li class="lnb-tab"><a href="#">주방</a></li>
+				<li class="lnb-tab"><a href="#">인테리어소품</a></li>
+				<li class="lnb-top-btn"><span class="scroll-top-btn"></span></li>
+			</ul>
+		</div>
 	</section>
 	<section class="page-tab">
 		<div class="all-wrapper">
@@ -500,31 +504,32 @@
 			<div class="all-ad">
 				<h1 class="title-h1">요즘 대세는?</h1>
 				<div class="all-ad-wrapper">
-					<div class="all-ad__tab">
-						<img src="images/ad-01.jpg" />
-						<p>#간절기이불</p>
-					</div>
-					<div class="all-ad__tab">
-						<img src="images/ad-02.jpg" />
-						<p>#자취생필수템</p>
-					</div>
-					<div class="all-ad__tab">
-						<img src="images/ad-03.jpg" />
-						<p>#레트로</p>
-					</div>
-					<div class="all-ad__tab">
-						<img src="images/ad-04.jpg" />
-						<p>#클래식아이템</p>
-					</div>
-					<div class="all-ad__tab">
-						<img src="images/ad-05.jpg" />
-						<p>#1인가구</p>
-					</div>
+					<div class="all-ad-tab-list">
+						<div class="all-ad__tab">
+							<img src="images/ad-01.jpg" />
+							<p>#간절기 이불</p>
+						</div>
+						<div class="all-ad__tab">
+							<img src="images/ad-02.jpg" />
+							<p>#자취생 필수템</p>
+						</div>
+						<div class="all-ad__tab">
+							<img src="images/ad-03.jpg" />
+							<p>#레트로</p>
+						</div>
+						<div class="all-ad__tab">
+							<img src="images/ad-04.jpg" />
+							<p>#클래식 아이템</p>
+						</div>
+						<div class="all-ad__tab">
+							<img src="images/ad-05.jpg" />
+							<p>#1인가구</p>
+						</div>
+					</div>					
 				</div>
 			</div>
 		</div>
 	</section>
-
 	<footer class="footer">
 		<div class="footer-info">
 			<div class="footer-info__top">

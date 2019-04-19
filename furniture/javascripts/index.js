@@ -4,7 +4,24 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(this).siblings().removeClass('active');
 	});
-
+	function adTabSet(){
+		if($(window).width() <= 1280){
+			$(".all-ad-wrapper").mCustomScrollbar({
+				axis:"x",
+			    theme: "minimal-dark"
+			});
+		}
+	}
+	adTabSet();
+	function lnbSet(){
+		if($(window).width() < 768){
+			$(".lnb-list-wrapper").mCustomScrollbar({
+				axis:"x",
+			    theme: "minimal-dark"
+			});
+		}
+	}
+	lnbSet();
 	$(".room-arrow").click(function(e){
 		var currentRoom = $(this).parents(".all-room");
 		var currentRoomImg = currentRoom.find(".room-graphic").filter('.active');
@@ -34,5 +51,9 @@ $(document).ready(function(){
 				currentRoom.find(".room-content").first().addClass('current');
 			}
 		}
+	});
+	$(window).resize(function(){
+		adTabSet();
+		lnbSet();
 	});
 });
